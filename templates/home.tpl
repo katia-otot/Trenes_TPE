@@ -26,7 +26,7 @@
   </div>
   <div class="col">
     <div class="card h-100">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Shinkansen_500_Kyoto_2005-03-19.jpg" class="card-img-top" alt="...">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Shinkansen_500_Kyoto_2005-03-19.jpg" class="card-img-top" alt="">
       <div class="card-body">
         <h5 class="card-title">Electrificación y dieselización</h5>
         <p class="card-text">LLa primera línea de ferrocarril convencional electríficada fue la línea Roslag en Suecia. En la década de 1890 algunas grandes ciudades, como Londres, París y México, utilizaron esta nueva técnica para construir líneas de metro urbanas.</p>
