@@ -10,7 +10,7 @@ $controllerHome = new homeController;
 $controllerLogin = new loginController;
 $controllerLocomotora = new locomotorasController;
 $controllerVagon = new vagonesController;
-$controllerSignup = new signupController;
+// $controllerSignup = new signupController;
 
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];
@@ -27,9 +27,9 @@ switch ($params[0]) {
     case 'Acceder':
         $controllerLogin->showLogin();
         break;
-    case 'Registro':
-        $controllerSignup->showSignup();
-        break;
+    // case 'Registro':
+    //     $controllerSignup->showSignup();
+    //     break;
     case 'Locomotoras':
         $controllerLocomotora->showLocomotoras();
         break;
