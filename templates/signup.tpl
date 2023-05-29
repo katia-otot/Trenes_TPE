@@ -1,8 +1,8 @@
 {include file="header.tpl"}
 <div class = "login-form">
-    <h2> Iniciar sesión </h2>
-    <form action="login" method="POST">
-        <div class=form-group">
+    <h2> Formulario de registro</h2>
+    <form  method="POST">
+        <div class=form-group>
             <label for="user"> Usuario:</label>
             <input type="text" id="user" name="user" required>
         </div>
