@@ -11,5 +11,5 @@
     
     <title>Trenes</title>
 </head>
-<body>
+<body class="container-fluid">
     

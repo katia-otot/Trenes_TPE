@@ -11,8 +11,14 @@ class loginModel{
         $sentencia = $this -> db -> prepare("SELECT * FROM  usuario");
         $sentencia -> execute();
         $usuarios = $sentencia -> fetchAll(PDO::FETCH_OBJ);
-
         return $usuarios;
+    }
+    public function getUsuarioByName($nombre){
+        $sentencia = $this -> db -> prepare("SELECT * FROM  usuario WHERE nombre=?");
+        $sentencia -> execute([$nombre]);
+        $usuarios = $sentencia -> fetch(PDO::FETCH_OBJ);
+        return $usuarios;
+
     }
 }
 

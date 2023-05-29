@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-05-29 22:04:38
+/* Smarty version 4.3.1, created on 2023-05-29 22:42:46
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_647505562dd148_09911173',
+  'unifunc' => 'content_64750e46721bc1_00244790',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '44551a09bbd1b456817ae3de04aa4ecaa08b30a8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\header.tpl',
-      1 => 1685390676,
+      1 => 1685392964,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_647505562dd148_09911173 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64750e46721bc1_00244790 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +35,6 @@ function content_647505562dd148_09911173 (Smarty_Internal_Template $_smarty_tpl)
     
     <title>Trenes</title>
 </head>
-<body>
+<body class="container-fluid">
     <?php }
 }

@@ -27,9 +27,9 @@ switch ($params[0]) {
     case 'Acceder':
         $controllerLogin->showLogin();
         break;
-    // case 'Registro':
-    //     $controllerSignup->showSignup();
-    //     break;
+    case 'login':
+        $controllerLogin->chequearLogin();
+        break;
     case 'Locomotoras':
         $controllerLocomotora->showLocomotoras();
         break;

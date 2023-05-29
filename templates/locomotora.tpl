@@ -1,9 +1,11 @@
 {include file="header.tpl"}
-<header> 
+{include file="nav.tpl"}
+
+<header > 
     <h1> Trenes</h1>
 </header>
 <section >
-    <table class="table table table-bordered table align-middle"">
+    <table class="table table table-bordered table align-middle">
     <thead>
         <tr>
             <th>Modelo</th>
@@ -26,4 +28,5 @@
     </tbody>
     </table>
 </section>
+
 {include file="footer.tpl"}
