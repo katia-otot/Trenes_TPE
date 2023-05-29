@@ -24,16 +24,16 @@ switch ($params[0]) {
     case 'index':
         $controllerHome->home();
         break;
-    case 'showlogin':
+    case 'Acceder':
         $controllerLogin->showLogin();
         break;
-    case 'showsignup':
+    case 'Registro':
         $controllerSignup->showSignup();
         break;
-    case 'showtrenes':
+    case 'Locomotoras':
         $controllerLocomotora->showLocomotoras();
         break;
-    case 'showvagones':
+    case 'Vagones':
         if (isset($params[1]))
             $tren_id = $params[1];
         else

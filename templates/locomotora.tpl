@@ -20,7 +20,7 @@
                 <td>{$locomotora -> lugar_fabricacion}</td>
                 
 
-                  <td><input type="submit" value="Vagones" onclick="window.location='showvagones/' + {$locomotora -> id_locomotora};" /> </td>
+                  <td><input type="submit" value="Vagones" onclick="window.location='Vagones/' + {$locomotora -> id_locomotora};" /> </td>
             </tr>
         {/foreach}
     </tbody>
