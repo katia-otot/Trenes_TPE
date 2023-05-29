@@ -13,3 +13,5 @@ class homeView{
         $this -> smarty -> display ('templates/home.tpl');
     }
 }
+
+// echo "Hola"

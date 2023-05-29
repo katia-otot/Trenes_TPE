@@ -16,3 +16,5 @@ class locomotorasView{
     }
 
 }
+
+// echo"Chau"
