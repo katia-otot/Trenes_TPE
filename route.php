@@ -3,14 +3,12 @@ require_once "controllers/homeController.php";
 require_once "controllers/loginController.php";
 require_once "controllers/locomotorasController.php";
 require_once "controllers/vagonesController.php";
-require_once "controllers/signupController.php";
 define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
 
 $controllerHome = new homeController;
 $controllerLogin = new loginController;
 $controllerLocomotora = new locomotorasController;
 $controllerVagon = new vagonesController;
-// $controllerSignup = new signupController;
 
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];
