@@ -1,9 +1,11 @@
 {include file="header.tpl"}
-<header> 
-    <h1> title </h1>
+{include file="nav.tpl"}
+
+<header > 
+    <h1> Trenes</h1>
 </header>
-<section>
-    <table>
+<section >
+    <table class="table table table-bordered table align-middle">
     <thead>
         <tr>
             <th>Modelo</th>
@@ -12,7 +14,7 @@
 
         </tr>
     </thead>
-    <tbody>
+    <tbody class="table-group-divider">
         {foreach from = $locomotoras item = $locomotora}
             <tr>
                 <td>{$locomotora -> modelo}</td>
@@ -20,10 +22,11 @@
                 <td>{$locomotora -> lugar_fabricacion}</td>
                 
 
-                  <td><input type="submit" value="Vagones" onclick="window.location='showvagones/' + {$locomotora -> id_locomotora};" /> </td>
+                  <td><input type="submit" value="Vagones" onclick="window.location='Vagones/' + {$locomotora -> id_locomotora};" /> </td>
             </tr>
         {/foreach}
     </tbody>
     </table>
 </section>
+
 {include file="footer.tpl"}

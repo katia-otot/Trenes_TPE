@@ -1,9 +1,12 @@
 {include file="header.tpl"}
+{include file="nav.tpl"}
+
 <header> 
-    <h1> title </h1>
+<h1> Vagones</h1>
+
 </header>
 <section>
-    <table>
+    <table class="table table table-bordered table align-middle">
     <thead>
         <tr>
             <th>Número de vagón</th>
@@ -13,7 +16,7 @@
             <th>locomotora</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody class="table-group-divider">
         {foreach from = $vagones item = $vagon}
             <tr>
                 <td>{$vagon -> nro_vagon}</td>

@@ -1,24 +1,37 @@
 <?php
+<<<<<<< HEAD
 /* Smarty version 4.3.1, created on 2023-05-29 20:25:43
+=======
+/* Smarty version 4.3.1, created on 2023-05-30 00:16:40
+>>>>>>> prueba
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\vagones.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
+<<<<<<< HEAD
   'unifunc' => 'content_6474ee27a68df6_91822677',
+=======
+  'unifunc' => 'content_647524481bfde9_35570548',
+>>>>>>> prueba
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '12918525d5ce604f1b8b03cefd24e5042fcdbc6b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\vagones.tpl',
+<<<<<<< HEAD
       1 => 1685384548,
+=======
+      1 => 1685398596,
+>>>>>>> prueba
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:header.tpl' => 1,
+<<<<<<< HEAD
     'file:footer.tpl' => 1,
   ),
 ),false)) {
@@ -30,6 +43,23 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 </header>
 <section>
     <table>
+=======
+    'file:nav.tpl' => 1,
+    'file:footer.tpl' => 1,
+  ),
+),false)) {
+function content_647524481bfde9_35570548 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+$_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<header> 
+<h1> Vagones</h1>
+
+</header>
+<section>
+    <table class="table table table-bordered table align-middle">
+>>>>>>> prueba
     <thead>
         <tr>
             <th>Número de vagón</th>
@@ -39,7 +69,11 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
             <th>locomotora</th>
         </tr>
     </thead>
+<<<<<<< HEAD
     <tbody>
+=======
+    <tbody class="table-group-divider">
+>>>>>>> prueba
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['vagones']->value, 'vagon');
 $_smarty_tpl->tpl_vars['vagon']->do_else = true;
