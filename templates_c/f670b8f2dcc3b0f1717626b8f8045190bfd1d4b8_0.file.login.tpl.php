@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-05-29 22:33:08
+/* Smarty version 4.3.1, created on 2023-05-30 01:49:04
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_64750c042d4a05_95224667',
+  'unifunc' => 'content_647539f0d7c072_14310452',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f670b8f2dcc3b0f1717626b8f8045190bfd1d4b8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\login.tpl',
-      1 => 1685392386,
+      1 => 1685404142,
       2 => 'file',
     ),
   ),
@@ -22,28 +22,38 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_64750c042d4a05_95224667 (Smarty_Internal_Template $_smarty_tpl) {
+function content_647539f0d7c072_14310452 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-<h2 class="col d-flex justify-content-center"> Iniciar sesión </h2>
-<div class="col d-flex justify-content-center">
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card border-0 shadow rounded-3 my-5">
+        <div class="card-body p-4 p-sm-5">
+          <h5 class="card-title text-center mb-5 fw-light fs-5">Iniciar sesion en Ferrocarriles</h5>
+          <form action="login" method="POST" >
+            <div class="form-floating mb-3">
+              <input  class="form-control" id="floatingInput" placeholder="name@example.com" name="user" required>
+              <label for="floatingInput">Usuario</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" required >
+              <label for="floatingPassword">Contraseña</label>
+            </div>
 
-
-    <form action="login" method="POST" >
+      
+            <div class="d-grid">
+              <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Iniciar sesión</button>
+            </div>
+            <hr class="my-4">
     
-        <div class="form-outline mb-4">
-            <label  class="form-label" for="form2Example1"> Usuario:</label>
-            <input type="text"  id="form2Example1" name="user" required class="form-control">
+          </form>
         </div>
-        <div class="form-outline mb-4">
-            <label class="form-label" for="form2Example2">Contraseña:</label>
-            <input type="password"  name="password" required id="form2Example2" class="form-control">
-        </div>
-        <div class="col d-flex justify-content-center">
-            <input type="submit" value="Acceder" class="btn btn-primary btn-block mb-4">
       </div>
-    </form>
+    </div>
   </div>
+</div>
   <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-}
+?>
+  <?php }
 }

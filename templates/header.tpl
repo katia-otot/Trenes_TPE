@@ -11,5 +11,5 @@
     
     <title>Trenes</title>
 </head>
-<body class="container-fluid">
+<body class="container-fluid d-flex flex-column">
     
