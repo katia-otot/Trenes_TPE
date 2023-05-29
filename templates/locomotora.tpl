@@ -1,9 +1,9 @@
 {include file="header.tpl"}
 <header> 
-    <h1> title </h1>
+    <h1> Trenes</h1>
 </header>
-<section>
-    <table>
+<section >
+    <table class="table table table-bordered table align-middle"">
     <thead>
         <tr>
             <th>Modelo</th>
@@ -12,7 +12,7 @@
 
         </tr>
     </thead>
-    <tbody>
+    <tbody class="table-group-divider">
         {foreach from = $locomotoras item = $locomotora}
             <tr>
                 <td>{$locomotora -> modelo}</td>

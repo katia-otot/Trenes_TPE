@@ -1,17 +1,20 @@
 {include file="header.tpl"}
-<div class = "login-form">
-    <h2> Iniciar sesión </h2>
-    <form action="login" method="POST">
-        <div class=form-group">
-            <label for="user"> Usuario:</label>
-            <input type="text" id="user" name="user" required>
+<h2 class="col d-flex justify-content-center"> Iniciar sesión </h2>
+<div class="col d-flex justify-content-center">
+
+
+    <form action="login" method="POST" >
+    
+        <div class="form-outline mb-4">
+            <label  class="form-label" for="form2Example1"> Usuario:</label>
+            <input type="text"  id="form2Example1" name="user" required class="form-control">
         </div>
-        <div class="form-group">
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
+        <div class="form-outline mb-4">
+            <label class="form-label" for="form2Example2">Contraseña:</label>
+            <input type="password"  name="password" required id="form2Example2" class="form-control">
         </div>
-        <div class="form-group">
-            <input type="submit" value="Iniciar">
+        <div class="col d-flex justify-content-center">
+            <input type="submit" value="Acceder" class="btn btn-primary btn-block mb-4">
       </div>
     </form>
   </div>

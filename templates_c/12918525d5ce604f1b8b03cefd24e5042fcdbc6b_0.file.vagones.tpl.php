@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-05-29 21:01:05
+/* Smarty version 4.3.1, created on 2023-05-29 22:35:58
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\vagones.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_6474f671812229_24635262',
+  'unifunc' => 'content_64750cae7d54c4_47019928',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '12918525d5ce604f1b8b03cefd24e5042fcdbc6b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\vagones.tpl',
-      1 => 1685384548,
+      1 => 1685392547,
       2 => 'file',
     ),
   ),
@@ -22,14 +22,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6474f671812229_24635262 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64750cae7d54c4_47019928 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <header> 
-    <h1> title </h1>
+<h1> Vagones</h1>
+
 </header>
 <section>
-    <table>
+    <table class="table">
     <thead>
         <tr>
             <th>Número de vagón</th>

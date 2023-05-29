@@ -1,9 +1,10 @@
 {include file="header.tpl"}
 <header> 
-    <h1> title </h1>
+<h1> Vagones</h1>
+
 </header>
 <section>
-    <table>
+    <table class="table">
     <thead>
         <tr>
             <th>Número de vagón</th>
