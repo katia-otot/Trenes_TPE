@@ -32,11 +32,18 @@ switch ($params[0]) {
         $controllerLocomotora->showLocomotoras();
         break;
     case 'Vagones':
-        if (isset($params[1]))
+        if (isset($params[1])){
+
             $tren_id = $params[1];
-        else
+            echo "vagones id";
+       
+        }
+        else{
             $tren_id = null;
+            echo"vagones todos";
+        }
         $controllerVagon->showVagones($tren_id);
+ 
         break;
     default:
         # code...

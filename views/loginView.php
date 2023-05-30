@@ -1,5 +1,6 @@
 <?php
 require_once('libs/smarty/Smarty.class.php');
+require_once('controllers/loginController.php');
 
 class loginView{
     private $smarty;
@@ -11,5 +12,7 @@ class loginView{
     public function showLogin(){
         $this -> smarty -> assign('BASE_URL', BASE_URL);
         $this -> smarty -> display ('templates/login.tpl');
+
     }
+
 }
