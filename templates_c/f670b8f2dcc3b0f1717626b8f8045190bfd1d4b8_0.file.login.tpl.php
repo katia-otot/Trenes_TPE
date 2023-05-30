@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-05-30 04:28:51
+/* Smarty version 4.3.1, created on 2023-05-30 22:24:51
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_64755f633a2371_32677523',
+  'unifunc' => 'content_64765b93ba4457_21948168',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f670b8f2dcc3b0f1717626b8f8045190bfd1d4b8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\login.tpl',
-      1 => 1685413729,
+      1 => 1685478269,
       2 => 'file',
     ),
   ),
@@ -22,10 +22,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_64755f633a2371_32677523 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64765b93ba4457_21948168 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-  <div class="container">
+<div class="container">
   <div class="row">
     <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
       <div class="card border-0 shadow rounded-3 my-5">
