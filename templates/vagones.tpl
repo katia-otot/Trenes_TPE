@@ -24,7 +24,7 @@
                 <td>{$vagon -> tipo}</td>
                 <td>{$vagon -> capacidad_max}</td>
                 <td>{$vagon -> modelo}</td>
-                <td>{$vagon -> locomotora_id}</td>
+                <td>{$vagon -> locomotora_modelo}</td>
                 <td><input class="btn btn-outline-secondary" type="submit" value="Ver más"/></td>
             </tr>
         {/foreach}
