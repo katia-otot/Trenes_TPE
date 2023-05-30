@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-05-30 01:57:23
+/* Smarty version 4.3.1, created on 2023-05-30 01:59:09
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_64753be3874429_95248210',
+  'unifunc' => 'content_64753c4da939f7_96528079',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '659a6cfc90fbc9612be1d9bb3a325e1a4c01f9e0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\home.tpl',
-      1 => 1685404316,
+      1 => 1685404734,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_64753be3874429_95248210 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64753c4da939f7_96528079 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -52,7 +52,7 @@ $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smart
   </div>
   <div class="col">
     <div class="card h-100">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Shinkansen_500_Kyoto_2005-03-19.jpg" class="card-img-top" alt="...">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Shinkansen_500_Kyoto_2005-03-19.jpg" class="card-img-top" alt="">
       <div class="card-body">
         <h5 class="card-title">Electrificación y dieselización</h5>
         <p class="card-text">LLa primera línea de ferrocarril convencional electríficada fue la línea Roslag en Suecia. En la década de 1890 algunas grandes ciudades, como Londres, París y México, utilizaron esta nueva técnica para construir líneas de metro urbanas.</p>

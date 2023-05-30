@@ -32,7 +32,7 @@ class loginController
         // echo $hash;
         $usuario = $this->model->getUsuarioByName($user);
         $passw = $usuario->clave;
-
+//hay que ver que pasa si el usuario tampoco existe en la base de datos
 
         if (password_verify($password, $passw)) {
             echo "Acceso exitoso";
