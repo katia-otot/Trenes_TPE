@@ -11,14 +11,12 @@ class vagonesController{
         $this -> view = new vagonesView();
     }
 
-    public function showVagones($tren_id){
-        if ($tren_id == NULL)
+    public function showVagones($locomotora_id){
+        if ($locomotora_id == NULL)
             $vagones = $this -> model -> getVagones();
         else 
-            $vagones = $this -> model -> getVagon($tren_id);
-            
+            $vagones = $this -> model -> getVagonesDeLocomotora($locomotora_id); 
         $this -> view -> showVagones($vagones);
 
-        
     }
 }

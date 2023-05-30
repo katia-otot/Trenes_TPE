@@ -7,14 +7,14 @@ class vagonesModel{
     }
 
     public function getVagones(){
-        $sentencia = $this -> db -> prepare("SELECT * FROM vagon");
+        $sentencia =$this->db->prepare("SELECT vagon.* , locomotora.modelo as locomotora_modelo FROM vagon JOIN locomotora ON vagon.locomotora_id = locomotora.id_locomotora;");
         $sentencia -> execute();
         $vagon = $sentencia -> fetchAll(PDO::FETCH_OBJ);
 
-        return $vagon;
+       return $vagon;
     }
-    public function getVagon($locomotora_id){
-        $sentencia = $this -> db -> prepare("SELECT * FROM vagon WHERE locomotora_id = $locomotora_id");
+    public function getVagonesDeLocomotora ($locomotora_id){
+        $sentencia = $this -> db -> prepare("SELECT vagon.* , locomotora.modelo as locomotora_modelo FROM vagon JOIN locomotora ON vagon.locomotora_id = locomotora.id_locomotora and locomotora_id = $locomotora_id");
         $sentencia -> execute();
         $vagon = $sentencia -> fetchAll(PDO::FETCH_OBJ);
 
@@ -23,12 +23,11 @@ class vagonesModel{
     // VER FUNCION INNER JOIN PARA MOSTRAR MODELO EN VEZ DE ID DE LOCOMOTORA
 
     
-    // public function getModelo($locomotora_id){
-    //     $sentencia =$this->db->prepare("SELECT locomotora.modelo FROM locomotora INNER JOIN vagon ON vagon.$locomotora_id = locomotora.$locomotora_id");
-    //     $sentencia -> execute();
-    //     $vagon = $sentencia -> fetchAll(PDO::FETCH_OBJ);
+   /* public function getModelo(){
+        $sentencia =$this->db->prepare("SELECT vagon.* , locomotora.modelo as locomotora FROM vagon JOIN locomotora ON vagon.locomotora_id = locomotora.id_locomotora;");
+        $sentencia -> execute();
+        $vagon = $sentencia -> fetchAll(PDO::FETCH_OBJ);
 
-    //     return $vagon;
-    // }
-    // 
+       return $vagon;
+    }*/
 }
