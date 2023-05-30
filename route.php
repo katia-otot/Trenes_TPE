@@ -13,13 +13,13 @@ $controllerVagon = new vagonesController;
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];
 } else {
-    $action = 'index';
+    $action = 'Ferrocarriles';
 }
 
 $params = explode('/', $action);
 
 switch ($params[0]) {
-    case 'index':
+    case 'Ferrocarriles':
         $controllerHome->home();
         break;
     case 'Acceder':

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-05-30 04:51:20
+/* Smarty version 4.3.1, created on 2023-05-30 23:48:35
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\locomotora.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_647564a88978b7_50232181',
+  'unifunc' => 'content_64766f33bd6247_11409787',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd65a5dd0afdbb15cabfb01ffe3e583b268e41c6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\locomotora.tpl',
-      1 => 1685415079,
+      1 => 1685483308,
       2 => 'file',
     ),
   ),
@@ -23,13 +23,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_647564a88978b7_50232181 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64766f33bd6247_11409787 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 <header > 
-    <h1> Trenes</h1>
+    <h1> Locomotoras</h1>
 </header>
 <section >
     <table class="table table table-bordered table align-middle">

@@ -24,7 +24,7 @@
 
             }{/if} *}
             <hr class="my-4">
-    <a href="index" style="text-decoration:none; padding-left:40%"
+    <a href="Ferrocarriles" style="text-decoration:none; padding-left:40%"
     >Ir al inicio</a>
           </form>
         </div>
