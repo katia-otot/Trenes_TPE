@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-05-30 02:24:16
+/* Smarty version 4.3.1, created on 2023-05-30 22:19:29
   from 'C:\xampp\htdocs\web2\Trenes_TPE\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_647542308c3c64_57831776',
+  'unifunc' => 'content_64765a51804047_44936190',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e552968fa057e43140d752a71ddb5d58eaf3d939' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\Trenes_TPE\\templates\\login.tpl',
-      1 => 1685406066,
+      1 => 1685477949,
       2 => 'file',
     ),
   ),
@@ -22,10 +22,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_647542308c3c64_57831776 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64765a51804047_44936190 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-  <div class="container">
+<div class="container">
   <div class="row">
     <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
       <div class="card border-0 shadow rounded-3 my-5">
@@ -43,9 +43,9 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 
       
             <div class="d-grid">
-              <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Iniciar sesión</button>
+              <button class="btn   text-uppercase fw-bold btn-outline-secondary" type="submit">Iniciar sesión</button>
             </div>
-            <hr class="my-4">
+                        <hr class="my-4">
     <a href="index" style="text-decoration:none; padding-left:40%"
     >Ir al inicio</a>
           </form>
