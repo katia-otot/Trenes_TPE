@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-05-30 22:24:31
+/* Smarty version 4.3.1, created on 2023-05-31 00:03:25
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_64765b7fc880d6_44591763',
+  'unifunc' => 'content_647672ad11ca13_69316426',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '44551a09bbd1b456817ae3de04aa4ecaa08b30a8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\header.tpl',
-      1 => 1685478269,
+      1 => 1685484108,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64765b7fc880d6_44591763 (Smarty_Internal_Template $_smarty_tpl) {
+function content_647672ad11ca13_69316426 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +33,7 @@ function content_64765b7fc880d6_44591763 (Smarty_Internal_Template $_smarty_tpl)
  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"><?php echo '</script'; ?>
 >
     
-    <title>Trenes</title>
+    <title>Ferrocarriles</title>
 </head>
 <body class="container-fluid d-flex flex-column">
     <?php }
