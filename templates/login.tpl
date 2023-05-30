@@ -39,7 +39,8 @@
               <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Iniciar sesión</button>
             </div>
             <hr class="my-4">
-    
+    <a href="index" style="text-decoration:none; padding-left:40%"
+    >Ir al inicio</a>
           </form>
         </div>
       </div>
