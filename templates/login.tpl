@@ -36,7 +36,7 @@
 
       
             <div class="d-grid">
-              <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Iniciar sesión</button>
+              <button class="btn   text-uppercase fw-bold btn-outline-secondary" type="submit">Iniciar sesión</button>
             </div>
             {* {if ($_SESSION["logueado"] eq false) }{
                 <p>Error de logueo</p>

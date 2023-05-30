@@ -9,11 +9,12 @@
     <table class="table table table-bordered table align-middle">
     <thead>
         <tr>
-            <th>Número de vagón</th>
+            <th>N° Vagón</th>
             <th>Tipo</th>
             <th>Capacidad máxima</th>
             <th>Modelo</th>
-            <th>locomotora</th>
+            <th>Locomotora</th>
+            <th>Descripción</th>
         </tr>
     </thead>
     <tbody class="table-group-divider">
@@ -23,7 +24,8 @@
                 <td>{$vagon -> tipo}</td>
                 <td>{$vagon -> capacidad_max}</td>
                 <td>{$vagon -> modelo}</td>
-                <td>{$vagon -> tren_id}</td>
+                <td>{$vagon -> locomotora_id}</td>
+                <td><input class="btn btn-outline-secondary" type="submit" value="Ver más"/></td>
             </tr>
         {/foreach}
     </tbody>
