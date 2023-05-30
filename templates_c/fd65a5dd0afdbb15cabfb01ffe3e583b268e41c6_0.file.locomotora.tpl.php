@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-05-30 01:59:12
+/* Smarty version 4.3.1, created on 2023-05-30 04:51:20
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\locomotora.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_64753c507d2245_91269376',
+  'unifunc' => 'content_647564a88978b7_50232181',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd65a5dd0afdbb15cabfb01ffe3e583b268e41c6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\locomotora.tpl',
-      1 => 1685404316,
+      1 => 1685415079,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_64753c507d2245_91269376 (Smarty_Internal_Template $_smarty_tpl) {
+function content_647564a88978b7_50232181 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -38,6 +38,7 @@ $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smart
             <th>Modelo</th>
             <th>Año de fabricación</th>
             <th>País de fabricación</th>
+            <th>Vagones</th>
 
         </tr>
     </thead>
@@ -57,7 +58,7 @@ $_smarty_tpl->tpl_vars['locomotora']->do_else = false;
 </td>
                 
 
-                  <td><input type="submit" value="Vagones" onclick="window.location='Vagones/' + <?php echo $_smarty_tpl->tpl_vars['locomotora']->value->id_locomotora;?>
+                  <td><input class="btn btn-outline-secondary" type="submit" value="Ver" onclick="window.location='Vagones/' + <?php echo $_smarty_tpl->tpl_vars['locomotora']->value->id_locomotora;?>
 ;" /> </td>
             </tr>
         <?php

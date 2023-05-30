@@ -13,11 +13,22 @@ class vagonesModel{
 
         return $vagon;
     }
-    public function getVagon($tren_id){
-        $sentencia = $this -> db -> prepare("SELECT * FROM vagon WHERE tren_id = $tren_id");
+    public function getVagon($locomotora_id){
+        $sentencia = $this -> db -> prepare("SELECT * FROM vagon WHERE locomotora_id = $locomotora_id");
         $sentencia -> execute();
         $vagon = $sentencia -> fetchAll(PDO::FETCH_OBJ);
 
         return $vagon;
     }
+    // VER FUNCION INNER JOIN PARA MOSTRAR MODELO EN VEZ DE ID DE LOCOMOTORA
+
+    
+    // public function getModelo($locomotora_id){
+    //     $sentencia =$this->db->prepare("SELECT locomotora.modelo FROM locomotora INNER JOIN vagon ON vagon.$locomotora_id = locomotora.$locomotora_id");
+    //     $sentencia -> execute();
+    //     $vagon = $sentencia -> fetchAll(PDO::FETCH_OBJ);
+
+    //     return $vagon;
+    // }
+    // 
 }

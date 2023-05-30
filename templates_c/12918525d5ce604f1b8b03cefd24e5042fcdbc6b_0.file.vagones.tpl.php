@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-05-30 01:59:13
+/* Smarty version 4.3.1, created on 2023-05-30 05:35:43
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\vagones.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_64753c51286ef7_16872092',
+  'unifunc' => 'content_64756f0f7da687_33199169',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '12918525d5ce604f1b8b03cefd24e5042fcdbc6b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\vagones.tpl',
-      1 => 1685404316,
+      1 => 1685417740,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_64753c51286ef7_16872092 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64756f0f7da687_33199169 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -36,11 +36,12 @@ $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smart
     <table class="table table table-bordered table align-middle">
     <thead>
         <tr>
-            <th>Número de vagón</th>
+            <th>N° Vagón</th>
             <th>Tipo</th>
             <th>Capacidad máxima</th>
             <th>Modelo</th>
-            <th>locomotora</th>
+            <th>Locomotora</th>
+            <th>Descripción</th>
         </tr>
     </thead>
     <tbody class="table-group-divider">
@@ -59,8 +60,9 @@ $_smarty_tpl->tpl_vars['vagon']->do_else = false;
 </td>
                 <td><?php echo $_smarty_tpl->tpl_vars['vagon']->value->modelo;?>
 </td>
-                <td><?php echo $_smarty_tpl->tpl_vars['vagon']->value->tren_id;?>
+                <td><?php echo $_smarty_tpl->tpl_vars['vagon']->value->locomotora_id;?>
 </td>
+                <td><input class="btn btn-outline-secondary" type="submit" value="Ver más"/></td>
             </tr>
         <?php
 }

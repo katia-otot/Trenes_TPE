@@ -21,27 +21,42 @@ class loginController
     }
     public function chequearLogin()
     {
-        echo "entre a la funcion";
+        // echo "entre a la funcion";
         //Chequear que los datos lleguen
         if (isset($_POST['user']) && isset($_POST['password'])) {
             $user = ($_POST['user']);
             $password = ($_POST['password']);
+            $usuario = $this->model->getUsuarioByName($user);
+  
+            if ($usuario != null) {
+                // echo"conozco calve";
+                $passw = $usuario->clave;
+                // $user= $usuario->nombre;
+            } 
+            else {
+                // echo"else password";
+                $passw = '';
+                // $user='';
+               
+            }
         }
-        // $hash=password_hash($password, PASSWORD_DEFAULT);
-        // var_dump($_POST);
-        // echo $hash;
-        $usuario = $this->model->getUsuarioByName($user);
-        $passw = $usuario->clave;
-//hay que ver que pasa si el usuario tampoco existe en la base de datos
+   
+
+        //hay que ver que pasa si el usuario tampoco existe en la base de datos
+
+
 
         if (password_verify($password, $passw)) {
             echo "Acceso exitoso";
             session_start();
-            $_SESSION["logueado"]=true;
-            $_SESSION["username"]=$usuario->nombre;
+            $_SESSION["logueado"] = true;
+            $_SESSION["username"] = $usuario->nombre;
+            // echo "Sesion iniciada como:". $_SESSION["username"];
+            // var_dump($_SESSION);
             Header("Location:index");
         } else {
-
+            // var_dump($usuario);
+            // $this->view->showLogin();
             echo "Acceso fallido";
         }
         // var_dump($usuario);
