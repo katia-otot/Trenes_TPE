@@ -11,7 +11,7 @@
           <a class="nav-link " aria-current="page" href="{$BASE_URL}Locomotoras">Locomotoras</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="{$BASE_URL}Vagones">Vagones</a>
+          <a class="nav-link " href="¨{$BASE_URL}Vagones">Vagones</a>
         </li>
         <li class="nav-item">
           <a class="nav-link " href="{$BASE_URL}Acceder">Acceder</a>
