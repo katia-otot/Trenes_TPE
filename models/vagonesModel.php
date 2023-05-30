@@ -20,14 +20,5 @@ class vagonesModel{
 
         return $vagon;
     }
-    // VER FUNCION INNER JOIN PARA MOSTRAR MODELO EN VEZ DE ID DE LOCOMOTORA
-
     
-   /* public function getModelo(){
-        $sentencia =$this->db->prepare("SELECT vagon.* , locomotora.modelo as locomotora FROM vagon JOIN locomotora ON vagon.locomotora_id = locomotora.id_locomotora;");
-        $sentencia -> execute();
-        $vagon = $sentencia -> fetchAll(PDO::FETCH_OBJ);
-
-       return $vagon;
-    }*/
 }
