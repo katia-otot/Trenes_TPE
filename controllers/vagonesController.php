@@ -19,4 +19,9 @@ class vagonesController{
         $this -> view -> showVagones($vagones);
 
     }
+
+    public function showVagon($id_vagon){
+        $vagon = $this -> model -> getVagon($id_vagon);
+        $this -> view -> showVagon($vagon);
+    }
 }

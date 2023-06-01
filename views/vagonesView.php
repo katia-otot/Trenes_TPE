@@ -15,4 +15,9 @@ class vagonesView{
         $this -> smarty -> display('templates/vagones.tpl');
     }
 
+    public function showVagon($vagon){
+        $this -> smarty -> assign('BASE_URL', BASE_URL);
+        $this -> smarty -> assign('vagon', $vagon);
+        $this -> smarty -> display('templates/vagon.tpl');
+    }
 }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-05-31 00:00:46
+/* Smarty version 4.3.1, created on 2023-06-02 01:00:56
   from 'C:\xampp\htdocs\web2\Trenes_TPE\templates\vagones.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_6476720ed75987_66800415',
+  'unifunc' => 'content_64792328bcaf34_50143725',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '07a177833fbefd9f408c539155bdac20ef64e816' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\Trenes_TPE\\templates\\vagones.tpl',
-      1 => 1685484042,
+      1 => 1685660439,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6476720ed75987_66800415 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64792328bcaf34_50143725 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -62,7 +62,10 @@ $_smarty_tpl->tpl_vars['vagon']->do_else = false;
 </td>
                 <td><?php echo $_smarty_tpl->tpl_vars['vagon']->value->locomotora_modelo;?>
 </td>
-                <td><input class="btn btn-outline-secondary" type="submit" value="Ver más"/></td>
+                
+                <td><input class="btn btn-outline-secondary" type="submit" value="Ver más" onclick="window.location='<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+Vagon/' + <?php echo $_smarty_tpl->tpl_vars['vagon']->value->id_vagon;?>
+;"/></td>
             </tr>
         <?php
 }

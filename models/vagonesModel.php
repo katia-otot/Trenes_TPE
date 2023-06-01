@@ -21,4 +21,11 @@ class vagonesModel{
         return $vagon;
     }
     
+    public function getVagon($id_vagon){
+        $sentencia =$this->db->prepare("SELECT vagon.* , locomotora.modelo as locomotora_modelo FROM vagon JOIN locomotora ON vagon.locomotora_id = locomotora.id_locomotora and id_vagon = $id_vagon");
+        $sentencia -> execute();
+        $vagon = $sentencia -> fetchAll(PDO::FETCH_OBJ);
+
+       return $vagon;
+    }
 }

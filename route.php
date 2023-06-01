@@ -33,18 +33,19 @@ switch ($params[0]) {
         break;
     case 'Vagones':
         if (isset($params[1])){
-
             $locomotora_id = $params[1];
-            // echo "vagones id";
-       
-        }
-        else{
+        }else{
             $locomotora_id = null;
-            // echo"vagones todos";
         }
         $controllerVagon->showVagones($locomotora_id);
- 
         break;
+    case 'Vagon':
+        if (isset($params[1])){
+            $id_vagon = $params[1];
+        }else{
+            $id_vagon = null;
+        }
+        $controllerVagon -> showVagon($id_vagon);
     default:
         # code...
         break;
