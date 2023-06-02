@@ -33,4 +33,44 @@
     </tbody>
     </table>
 </section>
+<section>
+{* {if} *}
+    {* bg-dark text-white-50 *}
+    <form method="POST">
+    <div class="input-group input-group-sm mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-sm">Locomotora</span>
+
+    <select class="form-select" aria-label="Default select example">
+  <option selected>Poner locomotoras</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+</div>
+    <div class="input-group input-group-sm mb-3">
+  <span class="input-group-text " id="inputGroup-sizing-sm">Número de vagón</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+</div>
+    <div class="input-group input-group-sm mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-sm">Tipo de vagón</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+</div>
+<div class="input-group input-group-sm mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-sm">Capacidad máxima</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+</div>
+<div class="input-group input-group-sm mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-sm">Modelo</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+</div>
+<div class="d-grid">
+<div style="display:flex; justify-content: center">
+
+<button class="btn   text-uppercase fw-bold btn-outline-secondary" style=" width:80px;
+height:45px; margin-bottom:1%; align:center"type="submit">Enviar</button>
+</div>
+</div>
+
+    </form>
+{* {/if} *}
 {include file="footer.tpl"}
