@@ -28,6 +28,9 @@ switch ($params[0]) {
     case 'login':
         $controllerLogin->chequearLogin();
         break;
+    case 'Cerrar':
+        $controllerLogin -> logout();
+        break;
     case 'Locomotoras':
         $controllerLocomotora->showLocomotoras();
         break;

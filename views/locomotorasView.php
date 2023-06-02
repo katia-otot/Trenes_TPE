@@ -12,6 +12,7 @@ class locomotorasView{
     public function showLocomotoras($locomotoras){
         $this -> smarty -> assign('BASE_URL', BASE_URL);
         $this -> smarty -> assign('locomotoras', $locomotoras);
+        $this -> smarty -> assign('logueado', isset($_SESSION));
         $this -> smarty -> display('templates/locomotora.tpl');
     }
 
