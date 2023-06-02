@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-05-31 00:00:10
+/* Smarty version 4.3.1, created on 2023-06-03 01:52:26
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_647671ea2c1f02_70109721',
+  'unifunc' => 'content_647a80ba73e4a3_58543513',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f670b8f2dcc3b0f1717626b8f8045190bfd1d4b8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\login.tpl',
-      1 => 1685483953,
+      1 => 1685749701,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_647671ea2c1f02_70109721 (Smarty_Internal_Template $_smarty_tpl) {
+function content_647a80ba73e4a3_58543513 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <div class="container">

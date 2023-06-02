@@ -25,14 +25,9 @@
                 <td>{$vagon -> capacidad_max}</td>
                 <td>{$vagon -> modelo}</td>
                 <td>{$vagon -> locomotora_modelo}</td>
-<<<<<<< HEAD
              <td ><a   href="{$BASE_URL}Vagon/{$vagon -> id_vagon}" class="btn btn-outline-secondary"> Ver más</a></td>
                 {* <td><input class="btn btn-outline-secondary" type="submit" value="Ver más" onclick="window.location='{$BASE_URL}Vagon/' + {$vagon -> id_vagon};"/></td> *}
 
-=======
-                
-                <td><input class="btn btn-outline-secondary" type="submit" value="Ver más" onclick="window.location='{$BASE_URL}Vagon/' + {$vagon -> id_vagon};"/></td>
->>>>>>> 2a0c64f74cd8e728423ca9c302e5b8f44194b022
             </tr>
         {/foreach}
     </tbody>
