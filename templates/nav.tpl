@@ -18,7 +18,11 @@
         </li>
       </ul>
       <span class="navbar-text">
-  Cerrar sesión
+
+      {if $logueado}
+        <a href="{BASE_URL}Cerrar"> Cerrar sesión</a>
+      {/if}
+
       </span>
     </div>
   </div>

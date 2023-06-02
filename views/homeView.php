@@ -8,15 +8,13 @@ class homeView{
         $this -> smarty = new Smarty();
     }
 
-    public function showHome(){
+    public function showHome($logueado){
         $this -> smarty -> assign('BASE_URL', BASE_URL);
+       
+        $this -> smarty -> assign('logueado', $logueado);
         $this -> smarty -> display ('templates/home.tpl');
         
     }
-    // public function showNav(){
-    //     $this -> smarty -> assign('nombreUser', $_SESSION["username"]);
-    //     $this -> smarty -> display ('templates/nav.tpl');
-    // }
 }
 
 

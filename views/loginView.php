@@ -11,6 +11,7 @@ class loginView{
 
     public function showLogin(){
         $this -> smarty -> assign('BASE_URL', BASE_URL);
+        $this -> smarty -> assign('logueado', isset($_SESSION));
         $this -> smarty -> display ('templates/login.tpl');
 
     }

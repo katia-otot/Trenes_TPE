@@ -5,7 +5,7 @@
       <div class="card border-0 shadow rounded-3 my-5">
         <div class="card-body p-4 p-sm-5">
           <h5 class="card-title text-center mb-5 fw-light fs-5">Iniciar sesion en Ferrocarriles</h5>
-          <form action="Ferrocarriles" method="POST" >
+          <form action="login" method="POST" >
             <div class="form-floating mb-3">
               <input  class="form-control" id="floatingInput" placeholder="name@example.com" name="user" required>
               <label for="floatingInput">Usuario</label>

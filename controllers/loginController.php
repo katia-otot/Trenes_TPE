@@ -14,52 +14,53 @@ class loginController
         $this->view = new loginView();
     }
 
-    public function showLogin()
-    {
-        $this->model->getUsuarios();
+    public function showLogin() {
         $this->view->showLogin();
     }
-    public function chequearLogin()
-    {
+
+    public function chequearLogin(){
         // echo "entre a la funcion";
         //Chequear que los datos lleguen
-        if (isset($_POST['user']) && isset($_POST['password'])) {
-            $user = ($_POST['user']);
-            $password = ($_POST['password']);
+        if (!empty($_POST['user']) && !empty($_POST['password'])) {
+            $user = $_POST['user'];
+            $password = $_POST['password'];
+
             $usuario = $this->model->getUsuarioByName($user);
   
-            if ($usuario != null) {
-                // echo"conozco calve";
-                $passw = $usuario->clave;
-                // $user= $usuario->nombre;
+            if ($usuario == null) {
+                echo "Acceso fallido";
+                Header("Location:". BASE_URL . "login");
+                die();
             } 
-            else {
-                // echo"else password";
-                $passw = '';
-                // $user='';
-               
+
+            if (password_verify($password, $usuario -> clave)) {
+                echo "Acceso exitoso";
+                session_start();
+                $_SESSION["logueado"] = true;
+                $_SESSION["username"] = $usuario->nombre;
+                echo "Sesion iniciada como:". $_SESSION["username"];
+                var_dump($_SESSION);
+                Header("Location:". BASE_URL . "Ferrocarriles");
+            } else {
+                echo "Acceso fallido";
+                Header("Location:". BASE_URL . "login");
             }
+            
         }
-   
-
-        //hay que ver que pasa si el usuario tampoco existe en la base de datos
-
-
-
-        if (password_verify($password, $passw)) {
-            echo "Acceso exitoso";
-            session_start();
-            $_SESSION["logueado"] = true;
-            $_SESSION["username"] = $usuario->nombre;
-            // echo "Sesion iniciada como:". $_SESSION["username"];
-            // var_dump($_SESSION);
-            Header("Location:index");
-        } else {
-            // var_dump($usuario);
-            // $this->view->showLogin();
+        else{
             echo "Acceso fallido";
+            Header("Location:". BASE_URL . "login");
         }
-        // var_dump($usuario);
+    }
 
+    public function isLoggedIn() {
+        session_start();
+        return isset($_SESSION["logueado"]);
+    }
+
+    public function logout() {
+        session_start();
+        session_destroy();
+        Header("Location:". BASE_URL . "Ferrocarriles");
     }
 }

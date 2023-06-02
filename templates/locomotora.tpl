@@ -22,8 +22,9 @@
                 <td>{$locomotora -> anio_fabricacion}</td>
                 <td>{$locomotora -> lugar_fabricacion}</td>
                 
+                <td><input class="btn btn-outline-secondary" type="submit" value="Ver" onclick="window.location='Vagones/' + {$locomotora -> id_locomotora};" /> </td>
 
-                  <td><input class="btn btn-outline-secondary" type="submit" value="Ver" onclick="window.location='Vagones/' + {$locomotora -> id_locomotora};" /> </td>
+                
             </tr>
         {/foreach}
     </tbody>

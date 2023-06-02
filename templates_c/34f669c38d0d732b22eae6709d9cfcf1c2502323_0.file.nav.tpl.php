@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-05-31 00:13:01
+/* Smarty version 4.3.1, created on 2023-06-02 23:47:18
   from 'C:\xampp\htdocs\web2\Trenes_TPE\templates\nav.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_647674ed1ecd75_93124033',
+  'unifunc' => 'content_647a6366d26076_41997103',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '34f669c38d0d732b22eae6709d9cfcf1c2502323' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\Trenes_TPE\\templates\\nav.tpl',
-      1 => 1685484652,
+      1 => 1685742430,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_647674ed1ecd75_93124033 (Smarty_Internal_Template $_smarty_tpl) {
+function content_647a6366d26076_41997103 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-body-tertiary ">
   <div class="container-fluid">
@@ -45,7 +45,12 @@ Acceder">Acceder</a>
         </li>
       </ul>
       <span class="navbar-text">
-  Cerrar sesión
+
+      <?php if ($_smarty_tpl->tpl_vars['logueado']->value) {?>
+        <a href="<?php echo BASE_URL;?>
+Cerrar"> Cerrar sesión</a>
+      <?php }?>
+
       </span>
     </div>
   </div>
