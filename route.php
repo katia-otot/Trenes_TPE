@@ -65,29 +65,20 @@ switch ($params[0]) {
         break;
     case 'Borrar':
 
-        // obtengo el parametro de la acción
+      
         
         $id_locomotora = $params[1];
         $controllerLocomotora->deleteLocomotora($id_locomotora);
-        $id_vagon = $params[1];
-        $controllerVagon->deleteVagon($id_vagon);
+        //NO ANDA EL VAGON NO SE DONDE PONERLO
+        // $id_vagon = $params[1];
+        // $controllerVagon->deleteVagon($id_vagon);
         break;
     case 'Modificar':
         // $id_locomotora = $params[1];
         // $controllerLocomotora->updateLocomotoraById($id_locomotora);
         
         break;
-    // case 'Vagon':
-    //     if (isset($params[1])) {
-    //         $id_vagon = $params[1];
-    //         // echo"vagones todos";
-    //     } else {
-    //         $locomotora_id = null;
-    //         // echo "vagones id";
-    //     }
-    //     $controllerVagon->showVagones($locomotora_id);
 
-    //     break;
     default:
         # code...
         break;
