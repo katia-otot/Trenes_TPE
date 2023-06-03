@@ -41,17 +41,20 @@
             <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text " id="inputGroup-sizing-sm">Modelo</span>
                 <input type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-sm" name="modelo" value="{$valueModelo}" required>
+                    aria-describedby="inputGroup-sizing-sm" name="modelo" required>
+                    {* value="{$valueModelo} *}
             </div>
             <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-sm">Año de fabricación</span>
                 <input type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-sm" name="anio_fabricacion" value="{$valueAnio}" required>
+                    aria-describedby="inputGroup-sizing-sm" name="anio_fabricacion"  required>
+                    {* value="{$valueAnio}" *}
             </div>
             <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-sm">Lugar de fabricación</span>
                 <input type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-sm" name="lugar_fabricacion" value="{$valueLugar}" required>
+                    aria-describedby="inputGroup-sizing-sm" name="lugar_fabricacion"  required>
+                    {* value="{$valueLugar}" *}
             </div>
             <div class="d-grid">
                 <div style="display:flex; justify-content: center">

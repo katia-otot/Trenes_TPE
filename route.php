@@ -34,6 +34,7 @@ switch ($params[0]) {
         break;
     case 'Locomotoras':
         $controllerLocomotora->showLocomotoras();
+    
         // if (isset($params[1])) {
         // "Ingresando" == $params[1];
         // }
@@ -65,8 +66,11 @@ switch ($params[0]) {
     case 'Borrar':
 
         // obtengo el parametro de la acción
+        
         $id_locomotora = $params[1];
         $controllerLocomotora->deleteLocomotora($id_locomotora);
+        $id_vagon = $params[1];
+        $controllerVagon->deleteVagon($id_vagon);
         break;
     case 'Modificar':
         // $id_locomotora = $params[1];

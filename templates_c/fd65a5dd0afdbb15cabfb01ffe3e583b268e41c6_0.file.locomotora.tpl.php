@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-03 07:13:47
+/* Smarty version 4.3.1, created on 2023-06-03 18:16:34
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\locomotora.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_647acc0bab9479_86600659',
+  'unifunc' => 'content_647b67627c6e36_11898702',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd65a5dd0afdbb15cabfb01ffe3e583b268e41c6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\locomotora.tpl',
-      1 => 1685769180,
+      1 => 1685808991,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_647acc0bab9479_86600659 (Smarty_Internal_Template $_smarty_tpl) {
+function content_647b67627c6e36_11898702 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -79,21 +79,18 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text " id="inputGroup-sizing-sm">Modelo</span>
                 <input type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-sm" name="modelo" value="<?php echo $_smarty_tpl->tpl_vars['valueModelo']->value;?>
-" required>
-            </div>
+                    aria-describedby="inputGroup-sizing-sm" name="modelo" required>
+                                </div>
             <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-sm">Año de fabricación</span>
                 <input type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-sm" name="anio_fabricacion" value="<?php echo $_smarty_tpl->tpl_vars['valueAnio']->value;?>
-" required>
-            </div>
+                    aria-describedby="inputGroup-sizing-sm" name="anio_fabricacion"  required>
+                                </div>
             <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-sm">Lugar de fabricación</span>
                 <input type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-sm" name="lugar_fabricacion" value="<?php echo $_smarty_tpl->tpl_vars['valueLugar']->value;?>
-" required>
-            </div>
+                    aria-describedby="inputGroup-sizing-sm" name="lugar_fabricacion"  required>
+                                </div>
             <div class="d-grid">
                 <div style="display:flex; justify-content: center">
 

@@ -33,4 +33,12 @@ class vagonesModel{
         $vagon = $sentencia -> fetchAll(PDO::FETCH_OBJ);
         return $vagon;
     }
+
+    function deleteVagonById($id_vagon)
+    {
+        $sentencia = $this->db->prepare("DELETE FROM vagon WHERE id_vagon=?");
+        $sentencia->execute([$id_vagon]);
+        Header("Location:". BASE_URL . "Vagones");
+
+    }
 }

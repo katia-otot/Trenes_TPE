@@ -33,6 +33,7 @@ class locomotorasView{
         
     }
     public function ABM(){
+        $this -> smarty -> assign('BASE_URL', BASE_URL);
         
         // $this -> smarty -> assign('logueado', isset($_SESSION));
         // $this -> smarty -> assign('logueado', $logueado);

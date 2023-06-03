@@ -56,5 +56,9 @@ class vagonesController
         $this->view->showVagon($vagon, $logueado);
         // $this -> view -> showVagon($vagon->id_vagon);
     }
-
+    function deleteVagon($id_vagon)
+    {
+        $this->model->deleteVagonById($id_vagon);
+        // header("Location: " . BASE_URL);
+    }
 }
