@@ -31,7 +31,8 @@ class locomotorasController
             $anio_fabricacion = $_POST["anio_fabricacion"];
             $lugar_fabricacion = $_POST["lugar_fabricacion"];
             $this->model->insertLocomotora($modelo, $anio_fabricacion, $lugar_fabricacion);
-            header("Location: " . BASE_URL);
+            $this->view ->ABM();
+            // header("Location: " . BASE_URL);
         }
         // if(!empty($_POST['modelo'])and !empty($_POST['anio_fabricacion'])and !empty($_POST['lugar_fabricacion'])){
 

@@ -41,4 +41,5 @@ class vagonesView{
         $this -> smarty -> display('templates/vagon.tpl');
 
     }
+  
 }
