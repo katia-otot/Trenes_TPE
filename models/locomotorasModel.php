@@ -26,7 +26,8 @@ class locomotorasModel{
         $sentencia->execute([$modelo, $anio_fabricacion, $lugar_fabricacion]);
 // header("Content-Type: text/html; charset=UTF-8");
 
-        Header("Location:". BASE_URL . "Locomotoras");
+        // Header("Location:". BASE_URL . "Locomotoras");
+        Header("Location:". BASE_URL . "Agregado");
         
     }
 
@@ -34,7 +35,7 @@ class locomotorasModel{
     {
         $sentencia = $this->db->prepare("DELETE FROM locomotora WHERE id_locomotora=?");
         $sentencia->execute([$id_locomotora]);
-        Header("Location:". BASE_URL . "Locomotoras");
+        Header("Location:". BASE_URL . "Eliminado");
 
     }
     // function updateLocomotoraById($modelo, $anio_fabricacion, $lugar_fabricacion,$id_locomotora){

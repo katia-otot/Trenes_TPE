@@ -31,19 +31,19 @@ class vagonesController
         
         $this->view->showVagones($vagones, $logueado);
     }
-    public function showModeloLocomotora()
-    {
-        $modeloLocomotora = $this->model->getLocomotoraByVagon();
-        var_dump($modeloLocomotora);
-        $logueado = $this->loginController->isLoggedIn();
+    // public function showModeloLocomotora()
+    // {
+    //     $modeloLocomotora = $this->model->getLocomotoraByVagon();
+    //     var_dump($modeloLocomotora);
+    //     $logueado = $this->loginController->isLoggedIn();
 
-        $this->view->showLocomotoraByVagon($modeloLocomotora, $logueado);
-    }
+    //     $this->view->showLocomotoraByVagon($modeloLocomotora, $logueado);
+    // }
 
-    // public function showLocomotoraByVagon($locomotoras, $logueado){
+    // public function showLocomotoraByVagon($locomotoras){
     //     $locomotoras = $this->locomotoraModel->getLocomotoras();
     //     var_dump($locomotoras);
-
+    //     $logueado = $this->loginController->isLoggedIn();
     //     $this->view-> showLocomotoraByVagon($locomotoras, $logueado);
 
     // }

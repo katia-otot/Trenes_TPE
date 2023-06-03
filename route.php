@@ -33,19 +33,25 @@ switch ($params[0]) {
         $controllerLogin->logout();
         break;
     case 'Locomotoras':
+
+
         $controllerLocomotora->showLocomotoras();
-    
-        // if (isset($params[1])) {
-        // "Ingresando" == $params[1];
-        // }
         break;
     case 'Vagones':
         if (isset($params[1])) {
             $locomotora_id = $params[1];
         } else {
             $locomotora_id = null;
+
+
+
+            // $controllerVagon->showModeloLocomotora();
         }
+        // $controllerLocomotora->showModeloLocomotora();
         $controllerVagon->showVagones($locomotora_id);
+        // $controllerVagon-> showLocomotoraByVagon($locomotoras);
+
+
         // VER DONDE VA EL CONTROLLER PARA QUE ANDE
         // $controllerVagon->showModeloLocomotora(); 
         // 
@@ -65,11 +71,11 @@ switch ($params[0]) {
         break;
     case 'Borrar':
 
-      
-        
+
+
         $id_locomotora = $params[1];
         $controllerLocomotora->deleteLocomotora($id_locomotora);
-//FALTA ESTO PARA QUE ANDE EL BORRAR DE VAGON
+        //FALTA ESTO PARA QUE ANDE EL BORRAR DE VAGON
 
         // $id_vagon = $params[1];
         // $controllerVagon->deleteVagon($id_vagon);
@@ -77,9 +83,14 @@ switch ($params[0]) {
     case 'Modificar':
         // $id_locomotora = $params[1];
         // $controllerLocomotora->updateLocomotoraById($id_locomotora);
-        
-        break;
 
+        break;
+    case 'Agregado':
+        $controllerLocomotora->agregado();
+        break;
+    case 'Eliminado':
+        $controllerLocomotora->eliminado();
+        break;
     default:
         # code...
         break;

@@ -2,18 +2,21 @@
 require_once "./models/locomotorasModel.php";
 require_once "./controllers/loginController.php";
 require_once "./views/locomotorasView.php";
+require_once "./views/vagonesView.php";
 
 class locomotorasController
 {
     private $model;
     private $view;
     private $loginController;
+    private $vagonesView;
 
     function __construct()
     {
         $this->model = new locomotorasModel();
         $this->view = new locomotorasView();
         $this->loginController = new loginController();
+        $this->vagonesView = new vagonesView();
     }
 
     public function showLocomotoras()
@@ -22,6 +25,14 @@ class locomotorasController
 
         $locomotoras = $this->model->getLocomotoras();
         $this->view->showLocomotoras($locomotoras, $logueado);
+    }
+
+    public function showModeloLocomotora(){
+        $logueado = $this->loginController->isLoggedIn();
+
+        $locomotoras = $this->model->getLocomotoras();
+        $this->vagonesView-> showLocomotoraByVagon($locomotoras,$logueado);
+
     }
     function insertLocomotora()
     {
@@ -34,8 +45,16 @@ class locomotorasController
             // header("Location: " . BASE_URL);
         }
         // if(!empty($_POST['modelo'])and !empty($_POST['anio_fabricacion'])and !empty($_POST['lugar_fabricacion'])){
-
-        // }
+            
+            // }
+        }
+        function agregado(){
+            
+            $this->view->agregado();
+    }
+        function eliminado(){
+            
+            $this->view->eliminado();
     }
     function deleteLocomotora($id_locomotora)
     {
