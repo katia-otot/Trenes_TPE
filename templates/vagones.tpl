@@ -41,10 +41,12 @@
   <span class="input-group-text" id="inputGroup-sizing-sm">Locomotora</span>
 
     <select class="form-select" aria-label="Default select example">
-  <option selected>Poner locomotoras</option>
-  <option value="1">One</option>
+    {foreach from=$vagones item=vagon}
+  <option selected>{$vagon->modelo}</option>
+  {* <option value="1">One</option>
   <option value="2">Two</option>
-  <option value="3">Three</option>
+  <option value="3">Three</option> *}
+    {/foreach}
 </select>
 </div>
     <div class="input-group input-group-sm mb-3">

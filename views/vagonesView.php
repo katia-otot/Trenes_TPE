@@ -28,8 +28,8 @@ class vagonesView{
         $this -> smarty -> assign('numero', $vagon->nro_vagon);
         $this -> smarty -> assign('descripcion', $vagon->descripcion);
         // $this -> smarty -> assign('logueado', isset($_SESSION));
-        $this -> smarty -> assign('logueado', $logueado);
         $this -> smarty -> assign('logueado', isset($_SESSION));
+        $this -> smarty -> assign('logueado', $logueado);
         $this -> smarty -> display('templates/vagon.tpl');
     }
 }
