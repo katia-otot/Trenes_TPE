@@ -69,7 +69,8 @@ switch ($params[0]) {
         
         $id_locomotora = $params[1];
         $controllerLocomotora->deleteLocomotora($id_locomotora);
-        //NO ANDA EL VAGON NO SE DONDE PONERLO
+//FALTA ESTO PARA QUE ANDE EL BORRAR DE VAGON
+
         // $id_vagon = $params[1];
         // $controllerVagon->deleteVagon($id_vagon);
         break;
