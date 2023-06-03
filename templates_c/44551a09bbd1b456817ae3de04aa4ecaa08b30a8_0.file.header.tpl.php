@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-05-31 00:03:25
+/* Smarty version 4.3.1, created on 2023-06-03 06:25:11
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_647672ad11ca13_69316426',
+  'unifunc' => 'content_647ac0a7d96c53_60956180',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_647672ad11ca13_69316426 (Smarty_Internal_Template $_smarty_tpl) {
+function content_647ac0a7d96c53_60956180 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>

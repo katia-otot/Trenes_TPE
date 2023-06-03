@@ -22,13 +22,14 @@
                 <td>{$locomotora -> anio_fabricacion}</td>
                 <td>{$locomotora -> lugar_fabricacion}</td>
                 
-                <td ><a   href="Vagones/{$locomotora -> id_locomotora}" class="btn btn-outline-secondary"> Ver</a></td>
+                <td ><a   href="Vagones/{$locomotora ->id_locomotora}" class="btn btn-outline-secondary"> Ver</a></td>
                 {if $logueado}
-                <td ><a   href="#" class="btn btn-outline-secondary" name="btnModificarLocomotora"> Modificar</a>
-                <a   href="#" class="btn btn-outline-secondary" name="btnEliminarLocomotora"> Eliminar</a></td>
+                <td ><a   href="Modificar/{$locomotora->id_locomotora}" class="btn btn-outline-secondary" name="btnModificarLocomotora"> Modificar</a>
+                <a   href="Borrar/{$locomotora->id_locomotora}" class="btn btn-outline-secondary" name="btnEliminarLocomotora"> Eliminar</a></td>
                 {/if}
                   {* <td><input class="btn btn-outline-secondary" type="submit" value="Ver" onclick="window.location='Vagones/' + {$locomotora -> id_locomotora};" /> </td> *}
             </tr>
+         
         {/foreach}
     </tbody>
     </table>
@@ -40,17 +41,17 @@
             <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text " id="inputGroup-sizing-sm">Modelo</span>
                 <input type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-sm" name="modelo">
+                    aria-describedby="inputGroup-sizing-sm" name="modelo" value="{$valueModelo}">
             </div>
             <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-sm">Año de fabricación</span>
                 <input type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-sm" name="anio_fabricacion">
+                    aria-describedby="inputGroup-sizing-sm" name="anio_fabricacion" value="{$valueAnio}">
             </div>
             <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-sm">Lugar de fabricación</span>
                 <input type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-sm" name="lugar_fabricacion">
+                    aria-describedby="inputGroup-sizing-sm" name="lugar_fabricacion" value="{$valueLugar}">
             </div>
             <div class="d-grid">
                 <div style="display:flex; justify-content: center">
