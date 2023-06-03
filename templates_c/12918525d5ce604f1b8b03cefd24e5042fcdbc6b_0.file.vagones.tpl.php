@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-03 22:52:44
+/* Smarty version 4.3.1, created on 2023-06-04 00:05:43
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\vagones.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_647ba81c143255_67703043',
+  'unifunc' => 'content_647bb937d96525_77117244',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '12918525d5ce604f1b8b03cefd24e5042fcdbc6b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\vagones.tpl',
-      1 => 1685825562,
+      1 => 1685829938,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_647ba81c143255_67703043 (Smarty_Internal_Template $_smarty_tpl) {
+function content_647bb937d96525_77117244 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -61,7 +61,7 @@ Vagon/<?php echo $_smarty_tpl->tpl_vars['vagon']->value->id_vagon;?>
 " class="btn btn-outline-secondary"> Ver más</a></td>
                                 <?php if ($_smarty_tpl->tpl_vars['logueado']->value) {?>
                   <td ><a   href="#" class="btn btn-outline-secondary"> Modificar</a>
-                  <a   href="Borrar/<?php echo $_smarty_tpl->tpl_vars['vagon']->value->id_vagon;?>
+                  <a   href="borrarVagon/<?php echo $_smarty_tpl->tpl_vars['vagon']->value->id_vagon;?>
 " class="btn btn-outline-secondary"> Eliminar</a></td>
                   <?php }?>
             </tr>

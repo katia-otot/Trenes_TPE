@@ -35,6 +35,7 @@ class locomotorasView{
     public function agregado(){
         $this -> smarty -> assign('BASE_URL', BASE_URL);
         $this -> smarty -> assign('estado', "agregado");
+        $this -> smarty -> assign('dir', "Locomotoras");
         
         // $this -> smarty -> assign('logueado', isset($_SESSION));
         // $this -> smarty -> assign('logueado', $logueado);
@@ -43,6 +44,7 @@ class locomotorasView{
     public function eliminado(){
         $this -> smarty -> assign('BASE_URL', BASE_URL);
         $this -> smarty -> assign('estado', "eliminado");
+        $this -> smarty -> assign('dir', "Locomotoras");
         
         // $this -> smarty -> assign('logueado', isset($_SESSION));
         // $this -> smarty -> assign('logueado', $logueado);

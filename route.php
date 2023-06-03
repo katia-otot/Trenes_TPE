@@ -69,7 +69,7 @@ switch ($params[0]) {
 
         $controllerLocomotora->insertLocomotora();
         break;
-    case 'Borrar':
+    case 'borrarLocomotora':
 
 
 
@@ -77,19 +77,24 @@ switch ($params[0]) {
         $controllerLocomotora->deleteLocomotora($id_locomotora);
         //FALTA ESTO PARA QUE ANDE EL BORRAR DE VAGON
 
-        // $id_vagon = $params[1];
-        // $controllerVagon->deleteVagon($id_vagon);
         break;
+        case 'borrarVagon':
+            
+            $id_vagon = $params[1];
+            $controllerVagon->deleteVagon($id_vagon);
     case 'Modificar':
         // $id_locomotora = $params[1];
         // $controllerLocomotora->updateLocomotoraById($id_locomotora);
 
         break;
-    case 'Agregado':
+    case 'locomotoraAgregada':
         $controllerLocomotora->agregado();
         break;
-    case 'Eliminado':
+    case 'locomotoraEliminada':
         $controllerLocomotora->eliminado();
+        break;
+    case 'vagonEliminado':
+        $controllerVagon->eliminado();
         break;
     default:
         # code...

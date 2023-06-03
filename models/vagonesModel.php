@@ -40,7 +40,7 @@ class vagonesModel{
     {
         $sentencia = $this->db->prepare("DELETE FROM vagon WHERE id_vagon=?");
         $sentencia->execute([$id_vagon]);
-        Header("Location:". BASE_URL . "Vagones");
+        Header("Location:". BASE_URL . "vagonEliminado");
 
     }
 }

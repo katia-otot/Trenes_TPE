@@ -61,4 +61,9 @@ class vagonesController
         $this->model->deleteVagonById($id_vagon);
         // header("Location: " . BASE_URL);
     }
+ 
+    function eliminado(){
+        
+        $this->view->eliminado();
+}
 }
