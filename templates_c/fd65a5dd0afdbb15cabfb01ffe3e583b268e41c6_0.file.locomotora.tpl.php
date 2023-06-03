@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-03 02:51:13
+/* Smarty version 4.3.1, created on 2023-06-03 03:37:30
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\locomotora.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_647a8e81780ca0_57793627',
+  'unifunc' => 'content_647a995aa063e3_29609225',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd65a5dd0afdbb15cabfb01ffe3e583b268e41c6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\locomotora.tpl',
-      1 => 1685753471,
+      1 => 1685756249,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_647a8e81780ca0_57793627 (Smarty_Internal_Template $_smarty_tpl) {
+function content_647a995aa063e3_29609225 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -59,6 +59,10 @@ $_smarty_tpl->tpl_vars['locomotora']->do_else = false;
                 
                 <td ><a   href="Vagones/<?php echo $_smarty_tpl->tpl_vars['locomotora']->value->id_locomotora;?>
 " class="btn btn-outline-secondary"> Ver</a></td>
+                <?php if ($_smarty_tpl->tpl_vars['logueado']->value) {?>
+                <td ><a   href="#" class="btn btn-outline-secondary"> Modificar</a>
+                <a   href="#" class="btn btn-outline-secondary"> Eliminar</a></td>
+                <?php }?>
                               </tr>
         <?php
 }

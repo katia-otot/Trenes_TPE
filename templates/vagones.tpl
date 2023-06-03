@@ -27,7 +27,10 @@
                 <td>{$vagon -> modelo}</td> *}
              <td ><a   href="{$BASE_URL}Vagon/{$vagon -> id_vagon}" class="btn btn-outline-secondary"> Ver más</a></td>
                 {* <td><input class="btn btn-outline-secondary" type="submit" value="Ver más" onclick="window.location='{$BASE_URL}Vagon/' + {$vagon -> id_vagon};"/></td> *}
-
+                {if $logueado}
+                  <td ><a   href="#" class="btn btn-outline-secondary"> Modificar</a>
+                  <a   href="#" class="btn btn-outline-secondary"> Eliminar</a></td>
+                  {/if}
             </tr>
         {/foreach}
     </tbody>
