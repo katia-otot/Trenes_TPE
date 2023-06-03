@@ -21,5 +21,29 @@ class locomotorasController{
         $locomotoras = $this -> model -> getLocomotoras();
         $this -> view -> showLocomotoras($locomotoras, $logueado);
     }
+    function insertLocomotora(){
+        if (isset($_POST['modelo']) and isset($_POST['anio_fabricacion'])and isset($_POST['lugar_fabricacion'])){
+            
+            $modelo = $_POST["modelo"];
+            $anio_fabricacion = $_POST["anio_fabricacion"];
+            $lugar_fabricacion = $_POST["lugar_fabricacion"];
+            $this->model->insertLocomotora($modelo, $anio_fabricacion, $lugar_fabricacion);
+        header("Location: " . BASE_URL); 
+
+        }
+        // if(!empty($_POST['modelo'])and !empty($_POST['anio_fabricacion'])and !empty($_POST['lugar_fabricacion'])){
+        
+        // }
+      }
+    
+
+
+    //   function BorrarTarea($param){
+    //     $this->model->BorrarTarea($param[0]);
+    //   }
+    
+    //   function CompletarTarea($param){
+    //   $this->model->CompletarTarea($param[0]);
+    //   } 
 
 }
