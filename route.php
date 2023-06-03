@@ -23,38 +23,46 @@ switch ($params[0]) {
     case 'Ferrocarriles':
         $controllerHome->home();
         break;
-        case 'Acceder':
-            $controllerLogin->showLogin();
-            break;
+    case 'Acceder':
+        $controllerLogin->showLogin();
+        break;
     case 'Accediendo':
         $controllerLogin->chequearLogin();
         break;
     case 'Cerrar':
-        $controllerLogin -> logout();
+        $controllerLogin->logout();
         break;
     case 'Locomotoras':
         $controllerLocomotora->showLocomotoras();
-        break;
-    case 'Vagones':
-        if (isset($params[1])){
-            $locomotora_id = $params[1];
-        }else{
-            $locomotora_id = null;
-        }
-        $controllerVagon->showVagones($locomotora_id); 
-        // VER DONDE VA EL CONTROLLER PARA QUE ANDE
-        // $controllerVagon->showModeloLocomotora(); 
-// 
-        // $controllerVagon->showLocomotoraByVagon($locomotoras, $logueado);
-        break;
-        case 'Vagon':
-            if (isset($params[1])){
-                $id_vagon = $params[1];
-            }else{
-                $id_vagon = null;
-            }
-            $controllerVagon -> showVagon($id_vagon);
-            default:
-            # code...
+        // if (isset($params[1])) {
+            // "Ingresando" == $params[1];
+            // }
             break;
+            case 'Vagones':
+                if (isset($params[1])) {
+                    $locomotora_id = $params[1];
+                } else {
+                    $locomotora_id = null;
+                }
+                $controllerVagon->showVagones($locomotora_id);
+                // VER DONDE VA EL CONTROLLER PARA QUE ANDE
+                // $controllerVagon->showModeloLocomotora(); 
+                // 
+                // $controllerVagon->showLocomotoraByVagon($locomotoras, $logueado);
+                break;
+                case 'Vagon':
+                    if (isset($params[1])) {
+                        $id_vagon = $params[1];
+                    } else {
+                        $id_vagon = null;
+                    }
+                    $controllerVagon->showVagon($id_vagon);
+                    break;
+                    case 'Agregar':
+                        
+                        $controllerLocomotora->insertLocomotora();
+        break;
+    default:
+        # code...
+        break;
 }

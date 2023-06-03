@@ -47,7 +47,6 @@ class vagonesController
     //     $this->view-> showLocomotoraByVagon($locomotoras, $logueado);
 
     // }
-
     public function showVagon($id_vagon)
     {
         $vagon = $this->model->getVagon($id_vagon);
@@ -57,4 +56,5 @@ class vagonesController
         $this->view->showVagon($vagon, $logueado);
         // $this -> view -> showVagon($vagon->id_vagon);
     }
+
 }
