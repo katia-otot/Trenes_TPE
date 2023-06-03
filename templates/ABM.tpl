@@ -18,7 +18,7 @@ height: 100vh;
 justify-content: center;
 align-items: center;">
 
-<div class="alert alert-danger d-flex align-items-center" role="alert" >
+<div class="alert alert-success d-flex align-items-center" role="alert" >
   {* <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg> *}
   <div >
   <h4 class="alert-heading" >Usuario y/o contraseña incorrecto</h4>

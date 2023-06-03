@@ -9,6 +9,7 @@ $controllerHome = new homeController;
 $controllerLogin = new loginController;
 $controllerLocomotora = new locomotorasController;
 $controllerVagon = new vagonesController;
+// $controllerVagonModelo = new vagonesController;
 
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];
@@ -25,34 +26,56 @@ switch ($params[0]) {
     case 'Acceder':
         $controllerLogin->showLogin();
         break;
-    case 'login':
+    case 'Accediendo':
         $controllerLogin->chequearLogin();
+        break;
+    case 'Cerrar':
+        $controllerLogin->logout();
         break;
     case 'Locomotoras':
         $controllerLocomotora->showLocomotoras();
+    
+        // if (isset($params[1])) {
+        // "Ingresando" == $params[1];
+        // }
         break;
     case 'Vagones':
         if (isset($params[1])) {
-
             $locomotora_id = $params[1];
-            echo "vagones id";
-            if (isset($params[2])) {
-                $id_vagon= $params[2];
-                $controllerVagon->showVagon($id_vagon);
-
-                // echo"vagones todos";
-            }
         } else {
             $locomotora_id = null;
-            echo"vagones todos";
-            if (isset($params[1])) {
-                $id_vagon= $params[1];
-                // echo"vagones todos";
-                $controllerVagon->showVagon($id_vagon);
-            }
         }
         $controllerVagon->showVagones($locomotora_id);
+        // VER DONDE VA EL CONTROLLER PARA QUE ANDE
+        // $controllerVagon->showModeloLocomotora(); 
+        // 
+        // $controllerVagon->showLocomotoraByVagon($locomotoras, $logueado);
+        break;
+    case 'Vagon':
+        if (isset($params[1])) {
+            $id_vagon = $params[1];
+        } else {
+            $id_vagon = null;
+        }
+        $controllerVagon->showVagon($id_vagon);
+        break;
+    case 'Agregar':
 
+        $controllerLocomotora->insertLocomotora();
+        break;
+    case 'Borrar':
+
+        // obtengo el parametro de la acción
+        
+        $id_locomotora = $params[1];
+        $controllerLocomotora->deleteLocomotora($id_locomotora);
+        $id_vagon = $params[1];
+        $controllerVagon->deleteVagon($id_vagon);
+        break;
+    case 'Modificar':
+        // $id_locomotora = $params[1];
+        // $controllerLocomotora->updateLocomotoraById($id_locomotora);
+        
         break;
     // case 'Vagon':
     //     if (isset($params[1])) {

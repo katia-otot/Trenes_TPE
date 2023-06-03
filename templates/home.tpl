@@ -8,7 +8,7 @@
     <div class="col">
       <div class="card h-100">
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/TGV_double_decker_DSC00132.jpg"
-          class="card-img-top" alt="...">
+          class="card-img-top" style="max-height: 280px; object-fit: cover;">
         <div class="card-body">
           <h5 class="card-title">Ferrocarril</h5>
           <p class="card-text">El ferrocarril (del latín: ferre,​ ‘hierro’, y carril) o transporte ferroviario es un
@@ -19,7 +19,7 @@
     <div class="col">
       <div class="card h-100">
         <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/La_Porte%C3%B1a.jpg" class="card-img-top"
-          alt="...">
+        style="max-height: 280px; object-fit: cover;" >
         <div class="card-body">
           <h5 class="card-title">Líneas sobre carriles</h5>
           <p class="card-text">La primera noticia de un sistema de transporte sobre carriles fue una línea de tres
@@ -30,7 +30,7 @@
     <div class="col">
       <div class="card h-100">
         <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Shinkansen_500_Kyoto_2005-03-19.jpg"
-          class="card-img-top" alt="">
+          class="card-img-top" style="max-height: 280px; object-fit: cover;">
         <div class="card-body">
           <h5 class="card-title">Electrificación y dieselización</h5>
           <p class="card-text">LLa primera línea de ferrocarril convencional electríficada fue la línea Roslag en
@@ -43,7 +43,7 @@
       <div class="card h-100">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/4/46/Brno%2C_Brno_M%C4%9Bsto%2C_historick%C3%A1_ko%C5%88sk%C3%A1_tramvaj.jpg"
-          class="card-img-top" alt="...">
+          class="card-img-top"  style="max-height: 280px; object-fit: cover;" >
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
@@ -55,7 +55,7 @@
       <div class="card h-100">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Tren_a_las_nubes_cruzando_Viaducto_la_Polvorilla.jpg"
-          class="card-img-top" alt="...">
+          class="card-img-top" style="max-height: 280px; object-fit: cover;">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
@@ -67,7 +67,7 @@
       <div class="card h-100">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Naples%2C_Central_station%2C_gorgeous_long-distance_train.jpg"
-          class="card-img-top" alt="...">
+          class="card-img-top" style="max-height: 280px; object-fit: cover;">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
