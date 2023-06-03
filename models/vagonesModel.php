@@ -20,5 +20,11 @@ class vagonesModel{
 
         return $vagon;
     }
-    
+    public function getVagon($id_vagon){
+        $sentencia =$this->db->prepare("SELECT * FROM vagon WHERE id_vagon =$id_vagon");
+        $sentencia -> execute($id_vagon);
+        $vagon = $sentencia -> fetchAll(PDO::FETCH_OBJ);
+        return $vagon;
+
+    }
 }

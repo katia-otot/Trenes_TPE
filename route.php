@@ -32,19 +32,39 @@ switch ($params[0]) {
         $controllerLocomotora->showLocomotoras();
         break;
     case 'Vagones':
-        if (isset($params[1])){
+        if (isset($params[1])) {
 
             $locomotora_id = $params[1];
-            // echo "vagones id";
-       
-        }
-        else{
+            echo "vagones id";
+            if (isset($params[2])) {
+                $id_vagon= $params[2];
+                $controllerVagon->showVagon($id_vagon);
+
+                // echo"vagones todos";
+            }
+        } else {
             $locomotora_id = null;
-            // echo"vagones todos";
+            echo"vagones todos";
+            if (isset($params[1])) {
+                $id_vagon= $params[1];
+                // echo"vagones todos";
+                $controllerVagon->showVagon($id_vagon);
+            }
         }
         $controllerVagon->showVagones($locomotora_id);
- 
+
         break;
+    // case 'Vagon':
+    //     if (isset($params[1])) {
+    //         $id_vagon = $params[1];
+    //         // echo"vagones todos";
+    //     } else {
+    //         $locomotora_id = null;
+    //         // echo "vagones id";
+    //     }
+    //     $controllerVagon->showVagones($locomotora_id);
+
+    //     break;
     default:
         # code...
         break;
