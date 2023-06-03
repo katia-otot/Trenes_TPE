@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-03 23:47:30
+/* Smarty version 4.3.1, created on 2023-06-04 00:04:43
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\locomotora.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_647bb4f21ac015_64240059',
+  'unifunc' => 'content_647bb8fb394890_63868108',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd65a5dd0afdbb15cabfb01ffe3e583b268e41c6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\locomotora.tpl',
-      1 => 1685828831,
+      1 => 1685829878,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_647bb4f21ac015_64240059 (Smarty_Internal_Template $_smarty_tpl) {
+function content_647bb8fb394890_63868108 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -62,7 +62,7 @@ $_smarty_tpl->tpl_vars['locomotora']->do_else = false;
                 <?php if ($_smarty_tpl->tpl_vars['logueado']->value) {?>
                 <td ><a   href="Modificar/<?php echo $_smarty_tpl->tpl_vars['locomotora']->value->id_locomotora;?>
 " class="btn btn-outline-secondary" name="btnModificarLocomotora"> Modificar</a>
-                <a   href="Borrar/<?php echo $_smarty_tpl->tpl_vars['locomotora']->value->id_locomotora;?>
+                <a   href="borrarLocomotora/<?php echo $_smarty_tpl->tpl_vars['locomotora']->value->id_locomotora;?>
 " class="btn btn-outline-secondary" name="btnEliminarLocomotora"> Eliminar</a></td>
                 <?php }?>
                               </tr>
@@ -83,7 +83,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                 </div>
             <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-sm">Año de fabricación</span>
-                <input type="text" class="form-control" aria-label="Sizing example input"
+                <input type="number" class="form-control" aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-sm" name="anio_fabricacion"  required>
                                 </div>
             <div class="input-group input-group-sm mb-3">

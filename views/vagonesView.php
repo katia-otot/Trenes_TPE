@@ -43,5 +43,13 @@ class vagonesView
         $this -> smarty -> display('templates/vagones.tpl');
 
     }
-  
+    public function eliminado(){
+        $this -> smarty -> assign('BASE_URL', BASE_URL);
+        $this -> smarty -> assign('estado', "eliminado");
+        $this -> smarty -> assign('dir', "Vagones");
+        
+        // $this -> smarty -> assign('logueado', isset($_SESSION));
+        // $this -> smarty -> assign('logueado', $logueado);
+        $this -> smarty -> display('templates/ABM.tpl');
+    }
 }

@@ -32,10 +32,10 @@ justify-content: center;
 align-items: center;">
 
 <div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">Se ha {$estado} un nuevo registro correctamete.</h4>
+  <h4 class="alert-heading">Se ha {$estado} un registro correctamete.</h4>
   <p style="text-align:center;" >Vuelva para verlo</p>
   <hr>
-  <a href="{$BASE_URL}Locomotoras" class="mb-0" style="padding-left:45%">Volver</a>
+  <a href="{$BASE_URL}{$dir}" class="mb-0" style="padding-left:45%">Volver</a>
   {* <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p> *}
 </div>
 </div> 

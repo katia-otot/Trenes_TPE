@@ -27,12 +27,12 @@ class locomotorasController
         $this->view->showLocomotoras($locomotoras, $logueado);
     }
 
-    public function showModeloLocomotora(){
+    public function showModeloLocomotora()
+    {
         $logueado = $this->loginController->isLoggedIn();
 
         $locomotoras = $this->model->getLocomotoras();
-        $this->vagonesView-> showLocomotoraByVagon($locomotoras,$logueado);
-
+        $this->vagonesView->showLocomotoraByVagon($locomotoras, $logueado);
     }
     function insertLocomotora()
     {
@@ -45,16 +45,18 @@ class locomotorasController
             // header("Location: " . BASE_URL);
         }
         // if(!empty($_POST['modelo'])and !empty($_POST['anio_fabricacion'])and !empty($_POST['lugar_fabricacion'])){
-            
-            // }
-        }
-        function agregado(){
-            
-            $this->view->agregado();
+
+        // }
     }
-        function eliminado(){
-            
-            $this->view->eliminado();
+    function agregado()
+    {
+
+        $this->view->agregado();
+    }
+    function eliminado()
+    {
+
+        $this->view->eliminado();
     }
     function deleteLocomotora($id_locomotora)
     {
