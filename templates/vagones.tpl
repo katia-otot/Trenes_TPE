@@ -54,21 +54,25 @@
     {/foreach}
 </select>
 </div>
-    <div class="input-group input-group-sm mb-3">
-  <span class="input-group-text " id="inputGroup-sizing-sm">Número de vagón</span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
-</div>
-    <div class="input-group input-group-sm mb-3">
-  <span class="input-group-text" id="inputGroup-sizing-sm">Tipo de vagón</span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
-</div>
 <div class="input-group input-group-sm mb-3">
-  <span class="input-group-text" id="inputGroup-sizing-sm">Capacidad máxima</span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
-</div>
 <div class="input-group input-group-sm mb-3">
   <span class="input-group-text" id="inputGroup-sizing-sm">Modelo</span>
   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+</div>
+<span class="input-group-text" id="inputGroup-sizing-sm">Tipo de vagón</span>
+<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+</div>
+    <div class="input-group input-group-sm mb-3">
+  <span class="input-group-text " id="inputGroup-sizing-sm">Número de vagón</span>
+  <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+</div>
+<div class="input-group input-group-sm mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-sm">Capacidad máxima</span>
+  <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+</div>
+<div class="input-group input-group-sm mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-sm">Descripción</span>
+  <textarea type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required></textarea>
 </div>
 <div class="d-grid">
 <div style="display:flex; justify-content: center">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-04 00:05:43
+/* Smarty version 4.3.1, created on 2023-06-04 00:22:14
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\vagones.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_647bb937d96525_77117244',
+  'unifunc' => 'content_647bbd16e7d480_07766692',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '12918525d5ce604f1b8b03cefd24e5042fcdbc6b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\vagones.tpl',
-      1 => 1685829938,
+      1 => 1685830930,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_647bb937d96525_77117244 (Smarty_Internal_Template $_smarty_tpl) {
+function content_647bbd16e7d480_07766692 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -92,21 +92,25 @@ $_smarty_tpl->tpl_vars['locomotora']->do_else = false;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </select>
 </div>
-    <div class="input-group input-group-sm mb-3">
-  <span class="input-group-text " id="inputGroup-sizing-sm">Número de vagón</span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
-</div>
-    <div class="input-group input-group-sm mb-3">
-  <span class="input-group-text" id="inputGroup-sizing-sm">Tipo de vagón</span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
-</div>
 <div class="input-group input-group-sm mb-3">
-  <span class="input-group-text" id="inputGroup-sizing-sm">Capacidad máxima</span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
-</div>
 <div class="input-group input-group-sm mb-3">
   <span class="input-group-text" id="inputGroup-sizing-sm">Modelo</span>
   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+</div>
+<span class="input-group-text" id="inputGroup-sizing-sm">Tipo de vagón</span>
+<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+</div>
+    <div class="input-group input-group-sm mb-3">
+  <span class="input-group-text " id="inputGroup-sizing-sm">Número de vagón</span>
+  <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+</div>
+<div class="input-group input-group-sm mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-sm">Capacidad máxima</span>
+  <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+</div>
+<div class="input-group input-group-sm mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-sm">Descripción</span>
+  <textarea type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required></textarea>
 </div>
 <div class="d-grid">
 <div style="display:flex; justify-content: center">
