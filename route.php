@@ -25,7 +25,7 @@ switch ($params[0]) {
     case 'Acceder':
         $controllerLogin->showLogin();
         break;
-    case 'login':
+    case 'Accediendo':
         $controllerLogin->chequearLogin();
         break;
     case 'Cerrar':

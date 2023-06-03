@@ -29,7 +29,7 @@ class loginController
   
             if ($usuario == null) {
                 echo "Acceso fallido";
-                Header("Location:". BASE_URL . "login");
+                Header("Location:". BASE_URL . "Accediendo");
                 die();
             } 
 
@@ -41,15 +41,17 @@ class loginController
                 echo "Sesion iniciada como:". $_SESSION["username"];
                 var_dump($_SESSION);
                 Header("Location:". BASE_URL . "Ferrocarriles");
+                // Header("Location:". BASE_URL . "Vagones");
             } else {
                 echo "Acceso fallido";
-                Header("Location:". BASE_URL . "login");
+                Header("Location:". BASE_URL . "Accediendo");
             }
             
         }
         else{
             echo "Acceso fallido";
-            Header("Location:". BASE_URL . "login");
+
+            // Header("Location:". BASE_URL . "login");
         }
     }
 

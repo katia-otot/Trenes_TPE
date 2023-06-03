@@ -34,7 +34,7 @@
     </table>
 </section>
 <section>
-{* {if} *}
+{if $logueado }
     {* bg-dark text-white-50 *}
     <form method="POST">
     <div class="input-group input-group-sm mb-3">
@@ -72,5 +72,5 @@ height:45px; margin-bottom:1%; align:center"type="submit">Enviar</button>
 </div>
 
     </form>
-{* {/if} *}
+{/if}
 {include file="footer.tpl"}

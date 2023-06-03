@@ -31,7 +31,7 @@
 </section>
 <section>
 {* bg-dark text-white-50 *}
-    {* {if ($_SESSION["logueado"] == true) } *}
+    {if $logueado }
         <form method="POST">
             <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text " id="inputGroup-sizing-sm">Modelo</span>
@@ -57,6 +57,6 @@ height:45px; margin-bottom:1%; align:center" type="submit">Enviar</button>
             </div>
 
         </form>
-    {* {/if} *}
+    {/if}
 </section>
 {include file="footer.tpl"}
