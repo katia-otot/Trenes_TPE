@@ -17,8 +17,11 @@ class vagonesView{
     }
 
     public function showVagon($vagon){
+        // var_dump($vagon);
         $this -> smarty -> assign('BASE_URL', BASE_URL);
-        $this -> smarty -> assign('vagon', $vagon);
+        $this -> smarty -> assign('vagon', $vagon->id_vagon);
+        $this -> smarty -> assign('cap_max', $vagon->capacidad_max);
+        $this -> smarty -> assign('modelo', $vagon->modelo);
         $this -> smarty -> assign('logueado', isset($_SESSION));
         $this -> smarty -> display('templates/vagon.tpl');
     }

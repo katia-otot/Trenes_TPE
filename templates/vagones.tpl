@@ -9,22 +9,22 @@
     <table class="table table table-bordered table align-middle">
     <thead>
         <tr>
+        <th>Locomotora</th>
+        <th>Tipo</th>
             <th>N° Vagón</th>
-            <th>Tipo</th>
-            <th>Capacidad máxima</th>
-            <th>Modelo</th>
-            <th>Locomotora</th>
+            {* <th>Capacidad máxima</th>
+            <th>Modelo</th> *}
             <th>Descripción</th>
         </tr>
     </thead>
     <tbody class="table-group-divider">
         {foreach from = $vagones item = $vagon}
             <tr>
+            <td>{$vagon -> locomotora_modelo}</td>
+            <td>{$vagon -> tipo}</td>
                 <td>{$vagon -> nro_vagon}</td>
-                <td>{$vagon -> tipo}</td>
-                <td>{$vagon -> capacidad_max}</td>
-                <td>{$vagon -> modelo}</td>
-                <td>{$vagon -> locomotora_modelo}</td>
+                {* <td>{$vagon -> capacidad_max}</td>
+                <td>{$vagon -> modelo}</td> *}
              <td ><a   href="{$BASE_URL}Vagon/{$vagon -> id_vagon}" class="btn btn-outline-secondary"> Ver más</a></td>
                 {* <td><input class="btn btn-outline-secondary" type="submit" value="Ver más" onclick="window.location='{$BASE_URL}Vagon/' + {$vagon -> id_vagon};"/></td> *}
 
