@@ -32,8 +32,17 @@ class locomotorasView{
         $this -> smarty -> display ('templates/home.tpl');
         
     }
-    public function ABM(){
+    public function agregado(){
         $this -> smarty -> assign('BASE_URL', BASE_URL);
+        $this -> smarty -> assign('estado', "agregado");
+        
+        // $this -> smarty -> assign('logueado', isset($_SESSION));
+        // $this -> smarty -> assign('logueado', $logueado);
+        $this -> smarty -> display('templates/ABM.tpl');
+    }
+    public function eliminado(){
+        $this -> smarty -> assign('BASE_URL', BASE_URL);
+        $this -> smarty -> assign('estado', "eliminado");
         
         // $this -> smarty -> assign('logueado', isset($_SESSION));
         // $this -> smarty -> assign('logueado', $logueado);

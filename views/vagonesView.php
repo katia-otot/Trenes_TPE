@@ -34,13 +34,13 @@ class vagonesView
         $this -> smarty -> assign('logueado', $logueado);
         $this -> smarty -> display('templates/vagon.tpl');
     }
-    public function showLocomotoraByVagon($modeloLocomotora,$logueado){
+    public function showLocomotoraByVagon($locomotoras,$logueado){
         $this -> smarty -> assign('BASE_URL', BASE_URL);
-        $this -> smarty -> assign('locomotoraModelo', $modeloLocomotora);
+        $this -> smarty -> assign('locomotoras, $locomotoras');
 
         $this -> smarty -> assign('logueado', isset($_SESSION));
         $this -> smarty -> assign('logueado', $logueado);
-        $this -> smarty -> display('templates/vagon.tpl');
+        $this -> smarty -> display('templates/vagones.tpl');
 
     }
   

@@ -44,9 +44,9 @@
   <span class="input-group-text" id="inputGroup-sizing-sm">Locomotora</span>
 
     <select class="form-select" aria-label="Default select example" required>
-    {foreach from=$locomotoraModelo item=$modelo}
+    {foreach from=$locomotoras item=$locomotora}
       
-  <option>{$modelo->locomotora_modelo}</option>
+  <option>{$locomotoras->locomotora_modelo}</option>
   {* <option selected>{$locomotoraModelo}</option> *}
   {* <option value="1">One</option>
   <option value="2">Two</option>

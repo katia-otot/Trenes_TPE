@@ -27,12 +27,14 @@ class vagonesModel{
         
         return $vagon;
     }
-    public function getLocomotoraByVagon(){
-        $sentencia = $this -> db -> prepare("SELECT locomotora.modelo as locomotora_modelo FROM vagon JOIN locomotora ON vagon.locomotora_id = locomotora.id_locomotora");
-        $sentencia -> execute();
-        $vagon = $sentencia -> fetchAll(PDO::FETCH_OBJ);
-        return $vagon;
-    }
+    // public function getLocomotoraByVagon(){
+    //     $sentencia = $this -> db -> prepare("SELECT locomotora.modelo as locomotora_modelo FROM vagon JOIN locomotora ON vagon.locomotora_id = locomotora.id_locomotora");
+    //     $sentencia -> execute();
+      
+    //     $vagon = $sentencia -> fetchAll(PDO::FETCH_OBJ);
+    //     var_dump($vagon);
+    //     return $vagon;
+    // }
 
     function deleteVagonById($id_vagon)
     {

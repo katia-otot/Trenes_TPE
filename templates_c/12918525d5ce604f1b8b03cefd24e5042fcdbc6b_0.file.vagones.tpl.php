@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-03 20:36:12
+/* Smarty version 4.3.1, created on 2023-06-03 22:52:44
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\vagones.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_647b881c5c50a2_14276240',
+  'unifunc' => 'content_647ba81c143255_67703043',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '12918525d5ce604f1b8b03cefd24e5042fcdbc6b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\vagones.tpl',
-      1 => 1685817218,
+      1 => 1685825562,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_647b881c5c50a2_14276240 (Smarty_Internal_Template $_smarty_tpl) {
+function content_647ba81c143255_67703043 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -79,13 +79,13 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
     <select class="form-select" aria-label="Default select example" required>
     <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['locomotoraModelo']->value, 'modelo');
-$_smarty_tpl->tpl_vars['modelo']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['modelo']->value) {
-$_smarty_tpl->tpl_vars['modelo']->do_else = false;
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['locomotoras']->value, 'locomotora');
+$_smarty_tpl->tpl_vars['locomotora']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['locomotora']->value) {
+$_smarty_tpl->tpl_vars['locomotora']->do_else = false;
 ?>
       
-  <option><?php echo $_smarty_tpl->tpl_vars['modelo']->value->locomotora_modelo;?>
+  <option><?php echo $_smarty_tpl->tpl_vars['locomotoras']->value->locomotora_modelo;?>
 </option>
         <?php
 }
