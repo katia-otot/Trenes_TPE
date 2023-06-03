@@ -9,6 +9,7 @@ $controllerHome = new homeController;
 $controllerLogin = new loginController;
 $controllerLocomotora = new locomotorasController;
 $controllerVagon = new vagonesController;
+// $controllerVagonModelo = new vagonesController;
 
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];
@@ -22,9 +23,9 @@ switch ($params[0]) {
     case 'Ferrocarriles':
         $controllerHome->home();
         break;
-    case 'Acceder':
-        $controllerLogin->showLogin();
-        break;
+        case 'Acceder':
+            $controllerLogin->showLogin();
+            break;
     case 'Accediendo':
         $controllerLogin->chequearLogin();
         break;
@@ -40,16 +41,20 @@ switch ($params[0]) {
         }else{
             $locomotora_id = null;
         }
-        $controllerVagon->showVagones($locomotora_id);
+        $controllerVagon->showVagones($locomotora_id); 
+        // VER DONDE VA EL CONTROLLER PARA QUE ANDE
+        // $controllerVagon->showModeloLocomotora(); 
+// 
+        // $controllerVagon->showLocomotoraByVagon($locomotoras, $logueado);
         break;
-    case 'Vagon':
-        if (isset($params[1])){
-            $id_vagon = $params[1];
-        }else{
-            $id_vagon = null;
-        }
-        $controllerVagon -> showVagon($id_vagon);
-    default:
-        # code...
-        break;
+        case 'Vagon':
+            if (isset($params[1])){
+                $id_vagon = $params[1];
+            }else{
+                $id_vagon = null;
+            }
+            $controllerVagon -> showVagon($id_vagon);
+            default:
+            # code...
+            break;
 }
