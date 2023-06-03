@@ -35,11 +35,11 @@ class locomotorasModel{
         $sentencia = $this->db->prepare("DELETE FROM locomotora WHERE id_locomotora=?");
         $sentencia->execute([$id_locomotora]);
     }
-    function updateLocomotoraById($modelo, $anio_fabricacion, $lugar_fabricacion,$id_locomotora){
-        $sentencia = $this->db->prepare("UPDATE locomotora SET modelo=?,anio_fabricacion=?,lugar_fabricacion=? WHERE id_locomotora=?");
-        $sentencia->execute([$modelo, $anio_fabricacion, $lugar_fabricacion,$id_locomotora]);
-        // $this->insertLocomotora($modelo, $anio_fabricacion, $lugar_fabricacion);
-    }
+    // function updateLocomotoraById($modelo, $anio_fabricacion, $lugar_fabricacion,$id_locomotora){
+    //     $sentencia = $this->db->prepare("UPDATE locomotora SET modelo=?,anio_fabricacion=?,lugar_fabricacion=? WHERE id_locomotora=?");
+    //     $sentencia->execute([$modelo, $anio_fabricacion, $lugar_fabricacion,$id_locomotora]);
+    //     // $this->insertLocomotora($modelo, $anio_fabricacion, $lugar_fabricacion);
+    // }
 
     
 }

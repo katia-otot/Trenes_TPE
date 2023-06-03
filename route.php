@@ -69,8 +69,8 @@ switch ($params[0]) {
         $controllerLocomotora->deleteLocomotora($id_locomotora);
         break;
     case 'Modificar':
-        $id_locomotora = $params[1];
-        $controllerLocomotora->updateLocomotoraById($id_locomotora);
+        // $id_locomotora = $params[1];
+        // $controllerLocomotora->updateLocomotoraById($id_locomotora);
         
         break;
     default:

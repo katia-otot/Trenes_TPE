@@ -42,23 +42,23 @@ class locomotorasController
         $this->model->deleteLocomotoraById($id_locomotora);
         header("Location: " . BASE_URL);
     }
-    function updateLocomotoraById($id_locomotora)
-    {
-        $locomotora = $this->model->getLocomotora($id_locomotora);
-        // var_dump($locomotora);
-        $logueado = $this->loginController->isLoggedIn();
-        $_POST["modelo"] = $locomotora->modelo;
-        $_POST["anio_fabricacion"] = $locomotora->anio_fabricacion;
-        $_POST["lugar_fabricacion"] = $locomotora->lugar_fabricacion;
-        $this->model->updateLocomotoraById($_POST["modelo"],  $_POST["anio_fabricacion"], $_POST["lugar_fabricacion"], $id_locomotora);
+    // function updateLocomotoraById($id_locomotora)
+    // {
+    //     $locomotora = $this->model->getLocomotora($id_locomotora);
+    //     // var_dump($locomotora);
+    //     $logueado = $this->loginController->isLoggedIn();
+    //     $_POST["modelo"] = $locomotora->modelo;
+    //     $_POST["anio_fabricacion"] = $locomotora->anio_fabricacion;
+    //     $_POST["lugar_fabricacion"] = $locomotora->lugar_fabricacion;
+    //     $this->model->updateLocomotoraById($_POST["modelo"],  $_POST["anio_fabricacion"], $_POST["lugar_fabricacion"], $id_locomotora);
 
-        //   if (isset($_POST['modelo']) and isset($_POST['anio_fabricacion'])and isset($_POST['lugar_fabricacion'])){
-        //       $anio_fabricacion = $_POST["anio_fabricacion"];
-        //       $lugar_fabricacion = $_POST["lugar_fabricacion"];
-        //     //   header("Location: " . BASE_URL);
-        //     }
-        $this->view->showLocomotoras($id_locomotora, $logueado);
-    }
+    //     //   if (isset($_POST['modelo']) and isset($_POST['anio_fabricacion'])and isset($_POST['lugar_fabricacion'])){
+    //     //       $anio_fabricacion = $_POST["anio_fabricacion"];
+    //     //       $lugar_fabricacion = $_POST["lugar_fabricacion"];
+    //     //     //   header("Location: " . BASE_URL);
+    //     //     }
+    //     $this->view->showLocomotoras($id_locomotora, $logueado);
+    // }
 
 
 

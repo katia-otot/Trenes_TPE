@@ -15,5 +15,12 @@ class loginView{
         $this -> smarty -> display ('templates/login.tpl');
 
     }
+    public function showError(){
+        $this -> smarty -> assign('BASE_URL', BASE_URL);
+        $this -> smarty -> assign('logueado', isset($_SESSION));
+
+        $this -> smarty -> display ('templates/error.tpl');
+
+    }
 
 }

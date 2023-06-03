@@ -14,11 +14,13 @@ class loginController
         $this->view = new loginView();
     }
 
-    public function showLogin() {
+    public function showLogin()
+    {
         $this->view->showLogin();
     }
 
-    public function chequearLogin(){
+    public function chequearLogin()
+    {
         // echo "entre a la funcion";
         //Chequear que los datos lleguen
         if (!empty($_POST['user']) && !empty($_POST['password'])) {
@@ -26,43 +28,46 @@ class loginController
             $password = $_POST['password'];
 
             $usuario = $this->model->getUsuarioByName($user);
-  
+
             if ($usuario == null) {
                 echo "Acceso fallido";
-                Header("Location:". BASE_URL . "Accediendo");
+                Header("Location:" . BASE_URL . "Accediendo");
                 die();
-            } 
+            }
 
-            if (password_verify($password, $usuario -> clave)) {
+            if (password_verify($password, $usuario->clave)) {
                 echo "Acceso exitoso";
                 session_start();
                 $_SESSION["logueado"] = true;
                 $_SESSION["username"] = $usuario->nombre;
-                echo "Sesion iniciada como:". $_SESSION["username"];
+                echo "Sesion iniciada como:" . $_SESSION["username"];
                 var_dump($_SESSION);
-                Header("Location:". BASE_URL . "Ferrocarriles");
+                Header("Location:" . BASE_URL . "Ferrocarriles");
                 // Header("Location:". BASE_URL . "Vagones");
             } else {
-                echo "Acceso fallido";
-                Header("Location:". BASE_URL . "Accediendo");
+                $this->view->showError();
+                // echo "Acceso fallido";
+                // Header("Location:". BASE_URL . "Accediendo");
             }
-            
-        }
-        else{
-            echo "Acceso fallido";
+        } else {
+            $this->view->showError();
+
+            // echo "Acceso fallido";
 
             // Header("Location:". BASE_URL . "login");
         }
     }
 
-    public function isLoggedIn() {
+    public function isLoggedIn()
+    {
         session_start();
         return isset($_SESSION["logueado"]);
     }
 
-    public function logout() {
+    public function logout()
+    {
         session_start();
         session_destroy();
-        Header("Location:". BASE_URL . "Ferrocarriles");
+        Header("Location:" . BASE_URL . "Ferrocarriles");
     }
 }

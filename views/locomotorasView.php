@@ -18,9 +18,9 @@ class locomotorasView{
         // $this -> smarty -> assign('valueModelo', $_POST["modelo"]);
         // $this -> smarty -> assign('valueAnio', $_POST["anio_fabricacion"]);
         // $this -> smarty -> assign('valueLugar', $_POST["lugar_fabricacion"]);
-        $this -> smarty -> assign('valueModelo', $_POST["modelo"]);
-        $this -> smarty -> assign('valueAnio', $_POST["anio_fabricacion"]);
-        $this -> smarty -> assign('valueLugar', $_POST["lugar_fabricacion"]);
+        // $this -> smarty -> assign('valueModelo', $_POST["modelo"]);
+        // $this -> smarty -> assign('valueAnio', $_POST["anio_fabricacion"]);
+        // $this -> smarty -> assign('valueLugar', $_POST["lugar_fabricacion"]);
         $this -> smarty -> assign('logueado', isset($_SESSION));
         $this -> smarty -> assign('logueado', $logueado);
 
