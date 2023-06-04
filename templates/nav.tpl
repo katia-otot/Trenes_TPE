@@ -20,11 +20,11 @@
 
 
         {if $logueado}
-          {* <p>Hola Admin </p>   *}
+
           <a class="nav-item "  href="{BASE_URL}Cerrar"> Cerrar sesión</a>
         {else}
           <a class="nav-link  " href="{$BASE_URL}Acceder">Acceder</a>
-          {* {/elseif} *}
+       
         {/if}
 
 
