@@ -1,10 +1,10 @@
 {include file="header.tpl"}
 {include file="nav.tpl"}
-<form action="{$BASE_URL}insertOrUpdateVagon" method="POST">
-<input type = "hidden" name="id_vagon" value="{$vagon->id_vagon}"/>
+<form action="{$BASE_URL}insertarOmodificarVagon" method="POST" style="margin-top:1%;>">
+<input type = "hidden" name="id_vagon" value="{$vagon->id_vagon}">
 <div class="input-group input-group-sm mb-3">
     <span class="input-group-text">Locomotora</span>
-    <select name="locomotora_id"  required>
+    <select name="locomotora_id" class="form-select" aria-label="Default select example" required>
     {foreach from = $locomotoras item = $locomotora}
         {if ($locomotora->id_locomotora eq $vagon->locomotora_id )}
             <option selected value="{$locomotora->id_locomotora}">{$locomotora->modelo}</option>

@@ -81,7 +81,7 @@ switch ($params[0]) {
         $controllerVagon -> showFormulario($id_vagon);
         break;
 
-    case 'insertOrUpdateLocomotora':
+    case 'insertarOmodificarLocomotora':
         $id_locomotora = $_POST['id_locomotora'];
         $modelo = $_POST["modelo"];
         $anio_fabricacion = $_POST["anio_fabricacion"];
@@ -89,7 +89,7 @@ switch ($params[0]) {
         $controllerLocomotora -> insertOrUpdateLocomotora($id_locomotora, $modelo, $anio_fabricacion, $lugar_fabricacion);
         break;
 
-    case 'insertOrUpdateVagon':
+    case 'insertarOmodificarVagon':
         $id_vagon = $_POST['id_vagon'];
         $nro_vagon = $_POST["nro_vagon"];
         $tipo = $_POST["tipo"];

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-04 04:40:09
+/* Smarty version 4.3.1, created on 2023-06-04 23:46:35
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\nav.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_647bf989d4bda1_02119347',
+  'unifunc' => 'content_647d063b64aca5_31192350',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '326dd85216d71eaf51417f8063362ec81d259c6b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\nav.tpl',
-      1 => 1685845056,
+      1 => 1685913873,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_647bf989d4bda1_02119347 (Smarty_Internal_Template $_smarty_tpl) {
+function content_647d063b64aca5_31192350 (Smarty_Internal_Template $_smarty_tpl) {
 ?><nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-body-tertiary ">
   <div class="container-fluid">
     <a class="navbar-brand active" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>

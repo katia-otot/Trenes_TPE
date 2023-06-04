@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-04 04:40:28
+/* Smarty version 4.3.1, created on 2023-06-05 00:02:43
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\formularioLocomotora.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_647bf99cdf3530_71234201',
+  'unifunc' => 'content_647d0a03e1a204_17869940',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4da386fa853820b03f8b6220c343392e88d43699' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\formularioLocomotora.tpl',
-      1 => 1685845056,
+      1 => 1685916161,
       2 => 'file',
     ),
   ),
@@ -23,14 +23,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_647bf99cdf3530_71234201 (Smarty_Internal_Template $_smarty_tpl) {
+function content_647d0a03e1a204_17869940 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <form action="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-insertOrUpdateLocomotora" method="POST">
+insertarOmodificarLocomotora" method="POST" style="margin-top:1%;>">
 <input type = "hidden" name="id_locomotora" value="<?php echo $_smarty_tpl->tpl_vars['locomotora']->value->id_locomotora;?>
-"/>
+">
 
 <div class="input-group input-group-sm mb-3">
     <span class="input-group-text">Modelo</span>
@@ -39,8 +39,8 @@ insertOrUpdateLocomotora" method="POST">
 </div>
 <div class="input-group input-group-sm mb-3">
     <span class="input-group-text">Año de fabricación</span>
-    <input type="text" class="form-control" name="anio_fabricacion" value="<?php echo $_smarty_tpl->tpl_vars['locomotora']->value->anio_fabricacion;?>
-"/>
+    <input type="number" class="form-control" name="anio_fabricacion" value="<?php echo $_smarty_tpl->tpl_vars['locomotora']->value->anio_fabricacion;?>
+" required/>
         
 </div>
 <div class="input-group input-group-sm mb-3">

@@ -6,12 +6,12 @@
   align-items: center;">
 
   <div class="alert alert-success" role="alert">
-    <h4 class="alert-heading">Seguro que quiere {$estado} esta {$registro}.</h4>
-    <p>
-    <a href="{$BASE_URL}{$si}" class="mb-0" style="padding-left:45%">Si</a>
+    <h4 class="alert-heading">¿Seguro quiere {$estado} esta {$registro}?</h4>
+    <div style="margin-left:34%">
+      <a href="{$BASE_URL}{$si}" class="mb-0 btn   text-uppercase fw-bold btn-outline-secondary" style="text-decoration:none; margin-right:15%">SI</a>
 
-    <a href="{$BASE_URL}{$no}" class="mb-0" style="padding-left:45%">No</a>
+      <a href="{$BASE_URL}{$no}" class="mb-0 btn   text-uppercase fw-bold btn-outline-secondary" style="text-decoration:none">NO</a>
 
-  </p>
+    </div>
   </div>
-</div> 
+</div>

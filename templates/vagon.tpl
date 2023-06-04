@@ -19,7 +19,7 @@
             <p class="card-text">{$vagon -> capacidad_max}</p>
         </div>
     </div>
-    <div class="card">
+    <div class="card" style="margin-bottom:1%">
         <h5 class="card-header">Descripción</h5>
         <div class="card-body">
             <p class="card-text">{$vagon -> descripcion}</p>

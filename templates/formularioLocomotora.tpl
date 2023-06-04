@@ -1,7 +1,7 @@
 {include file="header.tpl"}
 {include file="nav.tpl"}
-<form action="{$BASE_URL}insertOrUpdateLocomotora" method="POST">
-<input type = "hidden" name="id_locomotora" value="{$locomotora->id_locomotora}"/>
+<form action="{$BASE_URL}insertarOmodificarLocomotora" method="POST" style="margin-top:1%;>">
+<input type = "hidden" name="id_locomotora" value="{$locomotora->id_locomotora}">
 
 <div class="input-group input-group-sm mb-3">
     <span class="input-group-text">Modelo</span>
@@ -9,7 +9,7 @@
 </div>
 <div class="input-group input-group-sm mb-3">
     <span class="input-group-text">Año de fabricación</span>
-    <input type="text" class="form-control" name="anio_fabricacion" value="{$locomotora->anio_fabricacion}"/>
+    <input type="number" class="form-control" name="anio_fabricacion" value="{$locomotora->anio_fabricacion}" required/>
         
 </div>
 <div class="input-group input-group-sm mb-3">
