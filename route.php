@@ -100,7 +100,6 @@ switch ($params[0]) {
         $controllerVagon -> insertOrUpdateVagon($id_vagon, $nro_vagon, $tipo, $capacidad_max, $modelo, $descripcion, $locomotora_id);
         break;
 
-    
     default:
         # code...
         break;
