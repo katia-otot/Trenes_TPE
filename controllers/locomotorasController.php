@@ -26,10 +26,14 @@ class locomotorasController{
         $locomotoras = $this->model->getLocomotoras();
         $this->view->showLocomotoras($locomotoras, $logueado);
     }
+    
+    public function confirmarDeleteLocomotora($id_locomotora){
+        $this->view->confirmacion($id_locomotora);
+    }
 
     function deleteLocomotora($id_locomotora){
         $this->model->deleteLocomotora($id_locomotora);
-        header("Location: " . BASE_URL . "Locomotoras");
+        $this->view->eliminado();
     } 
 
     function insertOrUpdateLocomotora($id_locomotora, $modelo, $anio_fabricacion, $lugar_fabricacion){
@@ -38,7 +42,7 @@ class locomotorasController{
         }else{
             $this -> model -> updateLocomotora($id_locomotora, $modelo, $anio_fabricacion, $lugar_fabricacion);
         }
-        header("Location: " . BASE_URL . "Locomotoras");
+        $this->view->agregado();
     }
 
     public function showFormulario($id_locomotora){

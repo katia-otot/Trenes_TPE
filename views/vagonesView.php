@@ -35,4 +35,20 @@ class vagonesView
         $this -> smarty -> assign('locomotoras', $locomotoras);
         $this -> smarty -> display ('templates/formularioVagon.tpl');
     }
+
+    public function agregado(){
+        $this -> smarty -> assign('registro', "un vagón");
+        $this->smarty->assign('BASE_URL', BASE_URL);
+        $this->smarty->assign('estado', "modificado y/o agregado");
+        $this->smarty->assign('dir', "Vagones");
+        $this->smarty->display('templates/ABM.tpl');
+    }
+
+    public function eliminado(){
+        $this->smarty->assign('BASE_URL', BASE_URL);
+        $this->smarty->assign('estado', "eliminado");
+        $this->smarty->assign('dir', "Vagones");
+        $this -> smarty -> assign('registro', "un vagón");
+        $this->smarty->display('templates/ABM.tpl');
+    }
 }

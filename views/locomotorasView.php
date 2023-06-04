@@ -30,5 +30,30 @@ class locomotorasView{
         $this -> smarty -> assign('locomotora', $locomotora);
         $this -> smarty -> display ('templates/formularioLocomotora.tpl');
     }
+
+    public function agregado(){
+        $this -> smarty -> assign('BASE_URL', BASE_URL);
+        $this -> smarty -> assign('registro', "una locomotora");
+        $this -> smarty -> assign('estado', "modificado y/o agregado");
+        $this -> smarty -> assign('dir', "Locomotoras");
+        $this -> smarty -> display('templates/ABM.tpl');
+    }
+
+    public function eliminado(){
+        $this -> smarty -> assign('registro', "una locomotora");
+        $this -> smarty -> assign('BASE_URL', BASE_URL);
+        $this -> smarty -> assign('estado', "eliminado");
+        $this -> smarty -> assign('dir', "Locomotoras");
+        $this -> smarty -> display('templates/ABM.tpl');
+    }
+
+    public function confirmacion($id_locomotora){
+        $this -> smarty -> assign('BASE_URL', BASE_URL);
+        $this -> smarty -> assign('estado', "eliminar");
+        $this -> smarty -> assign('registro',  "locomotora");
+        $this -> smarty -> assign('si', "BorrarLocomotora/{$id_locomotora}");
+        $this -> smarty -> assign('no', "Locomotoras");
+        $this -> smarty -> display('templates/confirmacion.tpl');
+    }
 }
 

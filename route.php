@@ -36,8 +36,6 @@ switch ($params[0]) {
         break;
 
     case 'Locomotoras':
-
-
         $controllerLocomotora->showLocomotoras();
         break;
 
@@ -67,6 +65,12 @@ switch ($params[0]) {
         $id_locomotora = $params[1];
         $controllerLocomotora->deleteLocomotora($id_locomotora);
         break;
+
+    case 'ConfirmarBorrarLocomotora':
+        $id_locomotora = $params[1];
+        $controllerLocomotora->confirmarDeleteLocomotora($id_locomotora);
+        break;
+
     case 'formularioLocomotora':
         $id_locomotora = $params[1];
         $controllerLocomotora -> showFormulario($id_locomotora);
@@ -95,6 +99,8 @@ switch ($params[0]) {
         $locomotora_id = $_POST["locomotora_id"];
         $controllerVagon -> insertOrUpdateVagon($id_vagon, $nro_vagon, $tipo, $capacidad_max, $modelo, $descripcion, $locomotora_id);
         break;
+
+    
     default:
         # code...
         break;

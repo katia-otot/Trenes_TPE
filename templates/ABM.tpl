@@ -1,0 +1,14 @@
+{include file="header.tpl"}
+<div class="container" style="display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;">
+
+  <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Se ha {$estado} {$registro} correctamente.</h4>
+    <p style="text-align:center;" >Vuelva para verlo</p>
+    <hr>
+    <a href="{$BASE_URL}{$dir}" class="mb-0" style="padding-left:45%">Volver</a>
+  </div>
+</div> 

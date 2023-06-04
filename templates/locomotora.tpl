@@ -25,7 +25,7 @@
                 <td ><a   href="Vagones/{$locomotora ->id_locomotora}" class="btn btn-outline-secondary"> Ver</a></td>
                 {if $logueado}
                 <td ><a   href="formularioLocomotora/{$locomotora->id_locomotora}" class="btn btn-outline-secondary" name="btnModificarLocomotora"> Modificar</a>
-                <a   href="BorrarLocomotora/{$locomotora->id_locomotora}" class="btn btn-outline-secondary" name="btnEliminarLocomotora"> Eliminar</a></td>
+                <a   href="ConfirmarBorrarLocomotora/{$locomotora->id_locomotora}" class="btn btn-outline-secondary" name="btnEliminarLocomotora"> Eliminar</a></td>
                 {/if}
             </tr>
          

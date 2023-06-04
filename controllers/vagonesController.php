@@ -1,11 +1,9 @@
 <?php
 require_once "./models/vagonesModel.php";
-// require_once "./models/locomotorasModel.php";
 require_once "./views/vagonesView.php";
 require_once "./controllers/loginController.php";
 
-class vagonesController
-{
+class vagonesController{
     private $model;
     private $view;
     private $loginController;
@@ -30,25 +28,25 @@ class vagonesController
    
     public function showVagon($id_vagon) {
         $vagon = $this->model->getVagon($id_vagon);
-        // var_dump($vagon);
         $logueado = $this->loginController->isLoggedIn();
 
         $this->view->showVagon($vagon, $logueado);
-        // $this -> view -> showVagon($vagon->id_vagon);
     }
 
-    function deleteVagon($id_vagon) {
+    public function deleteVagon($id_vagon) {
         $this->model->deleteVagon($id_vagon);
-        Header("Location:". BASE_URL . "Vagones");
+
+        $this->view->eliminado();
     }
 
-    function insertOrUpdateVagon($id_vagon, $nro_vagon, $tipo, $capacidad_max, $modelo, $descripcion, $locomotora_id){
+    public function insertOrUpdateVagon($id_vagon, $nro_vagon, $tipo, $capacidad_max, $modelo, $descripcion, $locomotora_id){
         if($id_vagon == 0){
             $this->model->insertVagon($nro_vagon, $tipo, $capacidad_max, $modelo, $descripcion, $locomotora_id);
         }else{
             $this -> model -> updateVagon($id_vagon, $nro_vagon, $tipo, $capacidad_max, $modelo, $descripcion, $locomotora_id);
         }
-        header("Location: " . BASE_URL . "Vagones");
+
+        $this->view->agregado();
     }
  
     public function showFormulario($id_vagon){
@@ -63,5 +61,4 @@ class vagonesController
         }
         $this -> view -> showFormulario($vagon, $logueado, $locomotoras);
     }
- 
 }
