@@ -1,5 +1,7 @@
 {include file="header.tpl"}
 {include file="nav.tpl"}
+<h2> Ingrese una locomotora</h2>
+
 <form action="{$BASE_URL}insertarOmodificarLocomotora" method="POST" style="margin-top:1%;>">
 <input type = "hidden" name="id_locomotora" value="{$locomotora->id_locomotora}">
 

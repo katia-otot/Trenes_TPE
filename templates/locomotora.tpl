@@ -2,7 +2,7 @@
 {include file="nav.tpl"}
 
 <header > 
-    <h1> Locomotoras</h1>
+    <h2> Locomotoras</h2>
 </header>
 <section >
     <table class="table table table-bordered table align-middle">

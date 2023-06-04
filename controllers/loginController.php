@@ -37,6 +37,7 @@ class loginController
                 $_SESSION["username"] = $usuario->nombre;
                 // echo "Sesion iniciada como:" . $_SESSION["username"];
                 // var_dump($_SESSION);
+             
                 Header("Location:" . BASE_URL . "Ferrocarriles");
             } else {
                 $this->view->showError();
@@ -48,6 +49,7 @@ class loginController
 
     public function isLoggedIn(){
         session_start();
+  
         return isset($_SESSION["logueado"]);
     }
 

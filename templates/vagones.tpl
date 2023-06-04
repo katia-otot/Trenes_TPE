@@ -2,7 +2,7 @@
 {include file="nav.tpl"}
 
 <header>
-    <h1> Vagones</h1>
+    <h2> Vagones</h2>
 
 </header>
 <section>

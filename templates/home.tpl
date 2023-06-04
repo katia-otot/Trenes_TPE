@@ -3,7 +3,7 @@
 
 
 <header>
-  <h1>Historia</h1>
+  <h2>Historia</h2>
   <div class="row row-cols-1 row-cols-md-3 g-4" style="padding-bottom:2%">
     <div class="col">
       <div class="card h-100">
@@ -33,9 +33,8 @@
           class="card-img-top" style="max-height: 280px; object-fit: cover;">
         <div class="card-body">
           <h5 class="card-title">Electrificación y dieselización</h5>
-          <p class="card-text">LLa primera línea de ferrocarril convencional electríficada fue la línea Roslag en
-            Suecia. En la década de 1890 algunas grandes ciudades, como Londres, París y México, utilizaron esta nueva
-            técnica para construir líneas de metro urbanas.</p>
+          <p class="card-text">La primera línea de ferrocarril convencional electríficada fue la línea Roslag en
+            Suecia. En la década de 1890 algunas grandes ciudades, como Londres, París y México.</p>
         </div>
       </div>
     </div>
@@ -45,9 +44,8 @@
           src="https://upload.wikimedia.org/wikipedia/commons/4/46/Brno%2C_Brno_M%C4%9Bsto%2C_historick%C3%A1_ko%C5%88sk%C3%A1_tramvaj.jpg"
           class="card-img-top"  style="max-height: 280px; object-fit: cover;" >
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
+          <h5 class="card-title">Gestación</h5>
+          <p class="card-text">La gestación de la futura red ferroviaria argentina comenzó en 1855, al firmarse seis diferentes contratos entre empresas inglesas y el Estado, con el fin de instalar ferrocarriles en territorio argentino.</p>
         </div>
       </div>
     </div>
@@ -57,9 +55,8 @@
           src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Tren_a_las_nubes_cruzando_Viaducto_la_Polvorilla.jpg"
           class="card-img-top" style="max-height: 280px; object-fit: cover;">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
+          <h5 class="card-title">Nacionalización</h5>
+          <p class="card-text">Tras los años, sellados en la historia argentina como la década infame, la nacionalización de los ferrocarriles se transformó en una causa que sirvió a un proceso cultural con eje en la revalorización nacional.</p>
         </div>
       </div>
     </div>
@@ -69,9 +66,8 @@
           src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Naples%2C_Central_station%2C_gorgeous_long-distance_train.jpg"
           class="card-img-top" style="max-height: 280px; object-fit: cover;">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
+          <h5 class="card-title">Trenes más veloces</h5>
+          <p class="card-text">El primer tren comercial de alta velocidad fue inaugurado en 1939 en Italia con el ElettroTreno ETR 200, alcanzando el para entonces récord mundial de 204 km/h, cerca de Milán.</p>
         </div>
       </div>
     </div>

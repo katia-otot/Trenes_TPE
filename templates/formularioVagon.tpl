@@ -1,5 +1,7 @@
 {include file="header.tpl"}
 {include file="nav.tpl"}
+<h2> Ingrese un vagón</h2>
+
 <form action="{$BASE_URL}insertarOmodificarVagon" method="POST" style="margin-top:1%;>">
 <input type = "hidden" name="id_vagon" value="{$vagon->id_vagon}">
 <div class="input-group input-group-sm mb-3">

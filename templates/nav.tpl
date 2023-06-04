@@ -15,18 +15,14 @@
         </li>
 
       </ul>
-      <span class="navbar-text">
-
-
+      <span class="navbar-text" >
 
         {if $logueado}
-
-          <a class="nav-item "  href="{BASE_URL}Cerrar"> Cerrar sesión</a>
+            <a class="nav-item " href="{$BASE_URL}Cerrar"> Cerrar sesión</a>
         {else}
           <a class="nav-link  " href="{$BASE_URL}Acceder">Acceder</a>
-       
-        {/if}
 
+        {/if}
 
       </span>
     </div>
