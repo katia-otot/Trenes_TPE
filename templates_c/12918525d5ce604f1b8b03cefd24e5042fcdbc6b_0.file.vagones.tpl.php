@@ -1,18 +1,30 @@
 <?php
+<<<<<<< .merge_file_fUhMSP
 /* Smarty version 4.3.1, created on 2023-06-04 00:22:14
+=======
+/* Smarty version 4.3.1, created on 2023-06-02 00:05:33
+>>>>>>> .merge_file_YFeBAb
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\vagones.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
+<<<<<<< .merge_file_fUhMSP
   'unifunc' => 'content_647bbd16e7d480_07766692',
+=======
+  'unifunc' => 'content_6479162d3158e0_37432013',
+>>>>>>> .merge_file_YFeBAb
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '12918525d5ce604f1b8b03cefd24e5042fcdbc6b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\vagones.tpl',
+<<<<<<< .merge_file_fUhMSP
       1 => 1685830930,
+=======
+      1 => 1685657126,
+>>>>>>> .merge_file_YFeBAb
       2 => 'file',
     ),
   ),
@@ -23,7 +35,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
+<<<<<<< .merge_file_fUhMSP
 function content_647bbd16e7d480_07766692 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+function content_6479162d3158e0_37432013 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> .merge_file_YFeBAb
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -56,6 +72,7 @@ $_smarty_tpl->tpl_vars['vagon']->do_else = false;
 </td>
                 <td><?php echo $_smarty_tpl->tpl_vars['vagon']->value->nro_vagon;?>
 </td>
+<<<<<<< .merge_file_fUhMSP
                              <td ><a   href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 Vagon/<?php echo $_smarty_tpl->tpl_vars['vagon']->value->id_vagon;?>
 " class="btn btn-outline-secondary"> Ver más</a></td>
@@ -64,6 +81,11 @@ Vagon/<?php echo $_smarty_tpl->tpl_vars['vagon']->value->id_vagon;?>
                   <a   href="borrarVagon/<?php echo $_smarty_tpl->tpl_vars['vagon']->value->id_vagon;?>
 " class="btn btn-outline-secondary"> Eliminar</a></td>
                   <?php }?>
+=======
+                <td><input class="btn btn-outline-secondary" type="submit" value="Ver más" onclick="window.location='<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+Vagon/'+<?php echo $_smarty_tpl->tpl_vars['vagon']->value->id_vagon;?>
+ ;"></td>
+>>>>>>> .merge_file_YFeBAb
             </tr>
         <?php
 }

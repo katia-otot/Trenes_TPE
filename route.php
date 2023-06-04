@@ -95,6 +95,17 @@ switch ($params[0]) {
         $locomotora_id = $_POST["locomotora_id"];
         $controllerVagon -> insertOrUpdateVagon($id_vagon, $nro_vagon, $tipo, $capacidad_max, $modelo, $descripcion, $locomotora_id);
         break;
+    // case 'Vagon':
+    //     if (isset($params[1])) {
+    //         $id_vagon = $params[1];
+    //         // echo"vagones todos";
+    //     } else {
+    //         $locomotora_id = null;
+    //         // echo "vagones id";
+    //     }
+    //     $controllerVagon->showVagones($locomotora_id);
+
+    //     break;
     default:
         # code...
         break;
