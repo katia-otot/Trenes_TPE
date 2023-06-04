@@ -2,11 +2,13 @@
 require_once "./models/locomotorasModel.php";
 require_once "./controllers/loginController.php";
 require_once "./views/locomotorasView.php";
+require_once "./views/vagonesView.php";
 
 class locomotorasController{
     private $model;
     private $view;
     private $loginController;
+    private $vagonesView;
 
     function __construct() {
         $this->model = new locomotorasModel();

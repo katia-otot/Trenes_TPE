@@ -36,6 +36,8 @@ switch ($params[0]) {
         break;
 
     case 'Locomotoras':
+
+
         $controllerLocomotora->showLocomotoras();
         break;
 

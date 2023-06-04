@@ -50,7 +50,7 @@ class vagonesController
         }
         header("Location: " . BASE_URL . "Vagones");
     }
-
+ 
     public function showFormulario($id_vagon){
         $logueado = $this->loginController->isLoggedIn();
         $locomotoras = $this->locomotorasController->getLocomotoras();
@@ -63,4 +63,5 @@ class vagonesController
         }
         $this -> view -> showFormulario($vagon, $logueado, $locomotoras);
     }
+ 
 }

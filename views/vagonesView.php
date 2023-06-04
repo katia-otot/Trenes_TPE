@@ -2,11 +2,13 @@
 require_once('libs/smarty/Smarty.class.php');
 require_once('./models/vagonesModel.php');
 
-class vagonesView{
+class vagonesView
+{
     private $smarty;
 
-    function __construct(){
-        $this -> smarty = new Smarty();
+    function __construct()
+    {
+        $this->smarty = new Smarty();
     }
 
     public function showVagones($vagones, $logueado){
