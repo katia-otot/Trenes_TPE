@@ -9,7 +9,6 @@ $controllerHome = new homeController;
 $controllerLogin = new loginController;
 $controllerLocomotora = new locomotorasController;
 $controllerVagon = new vagonesController;
-// $controllerVagonModelo = new vagonesController;
 
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];
@@ -23,22 +22,23 @@ switch ($params[0]) {
     case 'Ferrocarriles':
         $controllerHome->home();
         break;
+
     case 'Acceder':
         $controllerLogin->showLogin();
         break;
+
     case 'Accediendo':
         $controllerLogin->chequearLogin();
         break;
+
     case 'Cerrar':
         $controllerLogin->logout();
         break;
+
     case 'Locomotoras':
         $controllerLocomotora->showLocomotoras();
-    
-        // if (isset($params[1])) {
-        // "Ingresando" == $params[1];
-        // }
         break;
+
     case 'Vagones':
         if (isset($params[1])) {
             $locomotora_id = $params[1];
@@ -46,11 +46,8 @@ switch ($params[0]) {
             $locomotora_id = null;
         }
         $controllerVagon->showVagones($locomotora_id);
-        // VER DONDE VA EL CONTROLLER PARA QUE ANDE
-        // $controllerVagon->showModeloLocomotora(); 
-        // 
-        // $controllerVagon->showLocomotoraByVagon($locomotoras, $logueado);
         break;
+        
     case 'Vagon':
         if (isset($params[1])) {
             $id_vagon = $params[1];
@@ -59,25 +56,42 @@ switch ($params[0]) {
         }
         $controllerVagon->showVagon($id_vagon);
         break;
-    case 'Agregar':
 
-        $controllerLocomotora->insertLocomotora();
+    case 'BorrarVagon':
+        $id_vagon = $params[1];
+        $controllerVagon->deleteVagon($id_vagon);
         break;
-    case 'Borrar':
-
-        // obtengo el parametro de la acción
-        
+    case 'BorrarLocomotora':
         $id_locomotora = $params[1];
         $controllerLocomotora->deleteLocomotora($id_locomotora);
-//FALTA ESTO PARA QUE ANDE EL BORRAR DE VAGON
-
-        // $id_vagon = $params[1];
-        // $controllerVagon->deleteVagon($id_vagon);
         break;
-    case 'Modificar':
-        // $id_locomotora = $params[1];
-        // $controllerLocomotora->updateLocomotoraById($id_locomotora);
-        
+    case 'formularioLocomotora':
+        $id_locomotora = $params[1];
+        $controllerLocomotora -> showFormulario($id_locomotora);
+        break;
+
+    case 'formularioVagon':
+        $id_vagon = $params[1];
+        $controllerVagon -> showFormulario($id_vagon);
+        break;
+
+    case 'insertOrUpdateLocomotora':
+        $id_locomotora = $_POST['id_locomotora'];
+        $modelo = $_POST["modelo"];
+        $anio_fabricacion = $_POST["anio_fabricacion"];
+        $lugar_fabricacion = $_POST["lugar_fabricacion"];
+        $controllerLocomotora -> insertOrUpdateLocomotora($id_locomotora, $modelo, $anio_fabricacion, $lugar_fabricacion);
+        break;
+
+    case 'insertOrUpdateVagon':
+        $id_vagon = $_POST['id_vagon'];
+        $nro_vagon = $_POST["nro_vagon"];
+        $tipo = $_POST["tipo"];
+        $capacidad_max = $_POST["capacidad_max"];
+        $modelo = $_POST["modelo"];
+        $descripcion = $_POST["descripcion"];
+        $locomotora_id = $_POST["locomotora_id"];
+        $controllerVagon -> insertOrUpdateVagon($id_vagon, $nro_vagon, $tipo, $capacidad_max, $modelo, $descripcion, $locomotora_id);
         break;
     default:
         # code...

@@ -5,7 +5,7 @@ class locomotorasModel{
     function __construct(){
         $this -> db = new PDO ('mysql:host=localhost;'.'dbname=db_trenes;charset=utf8', 'root', '');
     }
-//cambie de locomotora a locomotoras
+
     public function getLocomotoras(){
         $sentencia = $this -> db -> prepare("SELECT * FROM  locomotora");
         $sentencia -> execute();
@@ -20,28 +20,20 @@ class locomotorasModel{
 
         return $locomotora;
     }
-    function insertLocomotora($modelo, $anio_fabricacion, $lugar_fabricacion)
-    {
-        $sentencia = $this->db->prepare("INSERT INTO Locomotora(modelo, anio_fabricacion, lugar_fabricacion) VALUES(?,?,?)");
-        $sentencia->execute([$modelo, $anio_fabricacion, $lugar_fabricacion]);
-// header("Content-Type: text/html; charset=UTF-8");
 
-        Header("Location:". BASE_URL . "Locomotoras");
-        
+    public function insertLocomotora($modelo, $anio_fabricacion, $lugar_fabricacion) {
+        $sentencia = $this->db->prepare("INSERT INTO locomotora(modelo, anio_fabricacion, lugar_fabricacion) VALUES(?,?,?)");
+        $sentencia->execute([$modelo, $anio_fabricacion, $lugar_fabricacion]);
     }
 
-    function deleteLocomotoraById($id_locomotora)
-    {
+    public function deleteLocomotora($id_locomotora) {
         $sentencia = $this->db->prepare("DELETE FROM locomotora WHERE id_locomotora=?");
         $sentencia->execute([$id_locomotora]);
-        Header("Location:". BASE_URL . "Locomotoras");
-
     }
-    // function updateLocomotoraById($modelo, $anio_fabricacion, $lugar_fabricacion,$id_locomotora){
-    //     $sentencia = $this->db->prepare("UPDATE locomotora SET modelo=?,anio_fabricacion=?,lugar_fabricacion=? WHERE id_locomotora=?");
-    //     $sentencia->execute([$modelo, $anio_fabricacion, $lugar_fabricacion,$id_locomotora]);
-    //     // $this->insertLocomotora($modelo, $anio_fabricacion, $lugar_fabricacion);
-    // }
-
+    
+    public function updateLocomotora($id_locomotora, $modelo, $anio_fabricacion, $lugar_fabricacion){
+        $sentencia = $this -> db -> prepare("UPDATE locomotora SET modelo = ?, anio_fabricacion = ?, lugar_fabricacion = ? WHERE id_locomotora = ? ");
+        $sentencia -> execute([$modelo, $anio_fabricacion, $lugar_fabricacion, $id_locomotora]);
+    }
     
 }

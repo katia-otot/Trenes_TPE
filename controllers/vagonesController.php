@@ -9,46 +9,26 @@ class vagonesController
     private $model;
     private $view;
     private $loginController;
-    // private $controllerVagon;
-    // private $locomotoraModel;
+    private $locomotorasController;
 
-    function __construct()
-    {
+    function __construct(){
         $this->model = new vagonesModel();
         $this->view = new vagonesView();
         $this->loginController = new loginController();
-        // $this->$controllerVagon = new vagonesController;
-        // $this->locomotoraModel = new locomotorasModel();
+        $this->locomotorasController = new locomotorasController();
     }
 
-    public function showVagones($locomotora_id)
-    {
+    public function showVagones($locomotora_id) {
         if ($locomotora_id == NULL)
-        $vagones = $this->model->getVagones();
+            $vagones = $this->model->getVagones();
         else
-        $vagones = $this->model->getVagonesDeLocomotora($locomotora_id);
+            $vagones = $this->model->getVagonesDeLocomotora($locomotora_id);
         $logueado = $this->loginController->isLoggedIn();
         
         $this->view->showVagones($vagones, $logueado);
     }
-    public function showModeloLocomotora()
-    {
-        $modeloLocomotora = $this->model->getLocomotoraByVagon();
-        var_dump($modeloLocomotora);
-        $logueado = $this->loginController->isLoggedIn();
-
-        $this->view->showLocomotoraByVagon($modeloLocomotora, $logueado);
-    }
-
-    // public function showLocomotoraByVagon($locomotoras, $logueado){
-    //     $locomotoras = $this->locomotoraModel->getLocomotoras();
-    //     var_dump($locomotoras);
-
-    //     $this->view-> showLocomotoraByVagon($locomotoras, $logueado);
-
-    // }
-    public function showVagon($id_vagon)
-    {
+   
+    public function showVagon($id_vagon) {
         $vagon = $this->model->getVagon($id_vagon);
         // var_dump($vagon);
         $logueado = $this->loginController->isLoggedIn();
@@ -56,9 +36,31 @@ class vagonesController
         $this->view->showVagon($vagon, $logueado);
         // $this -> view -> showVagon($vagon->id_vagon);
     }
-    function deleteVagon($id_vagon)
-    {
-        $this->model->deleteVagonById($id_vagon);
-        // header("Location: " . BASE_URL);
+
+    function deleteVagon($id_vagon) {
+        $this->model->deleteVagon($id_vagon);
+        Header("Location:". BASE_URL . "Vagones");
+    }
+
+    function insertOrUpdateVagon($id_vagon, $nro_vagon, $tipo, $capacidad_max, $modelo, $descripcion, $locomotora_id){
+        if($id_vagon == 0){
+            $this->model->insertVagon($nro_vagon, $tipo, $capacidad_max, $modelo, $descripcion, $locomotora_id);
+        }else{
+            $this -> model -> updateVagon($id_vagon, $nro_vagon, $tipo, $capacidad_max, $modelo, $descripcion, $locomotora_id);
+        }
+        header("Location: " . BASE_URL . "Vagones");
+    }
+
+    public function showFormulario($id_vagon){
+        $logueado = $this->loginController->isLoggedIn();
+        $locomotoras = $this->locomotorasController->getLocomotoras();
+
+        if ($id_vagon == 0){
+            $vagon =(object) array("id_vagon" => 0, "nro_vagon" => "", "tipo" => "", "capacidad_max" => "", "modelo" => "", "descripcion" => "", "locomotora_id"=>"");
+    
+        }else{
+            $vagon = $this -> model -> getVagon($id_vagon);
+        }
+        $this -> view -> showFormulario($vagon, $logueado, $locomotoras);
     }
 }

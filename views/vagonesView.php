@@ -12,34 +12,25 @@ class vagonesView{
     public function showVagones($vagones, $logueado){
         $this -> smarty -> assign('BASE_URL', BASE_URL);
         $this -> smarty -> assign('vagones', $vagones);
-        $this -> smarty -> assign('logueado', isset($_SESSION));
-        // $this -> smarty -> assign('logueado', isset($_SESSION));
+
+
         $this -> smarty -> assign('logueado', $logueado);
         $this -> smarty -> display('templates/vagones.tpl');
     
     }
 
     public function showVagon($vagon, $logueado){
-        // var_dump($vagon);
         $this -> smarty -> assign('BASE_URL', BASE_URL);
-        $this -> smarty -> assign('vagon', $vagon->id_vagon);
-        $this -> smarty -> assign('cap_max', $vagon->capacidad_max);
-        $this -> smarty -> assign('modelo', $vagon->modelo);
-        $this -> smarty -> assign('numero', $vagon->nro_vagon);
-        $this -> smarty -> assign('descripcion', $vagon->descripcion);
-        // $this -> smarty -> assign('logueado', isset($_SESSION));
-        $this -> smarty -> assign('logueado', isset($_SESSION));
+        $this -> smarty -> assign('vagon', $vagon);
         $this -> smarty -> assign('logueado', $logueado);
         $this -> smarty -> display('templates/vagon.tpl');
     }
-    public function showLocomotoraByVagon($modeloLocomotora,$logueado){
+    
+    public function showFormulario($vagon, $logueado, $locomotoras){
         $this -> smarty -> assign('BASE_URL', BASE_URL);
-        $this -> smarty -> assign('locomotoraModelo', $modeloLocomotora);
-
-        $this -> smarty -> assign('logueado', isset($_SESSION));
         $this -> smarty -> assign('logueado', $logueado);
-        $this -> smarty -> display('templates/vagon.tpl');
-
+        $this -> smarty -> assign('vagon', $vagon);
+        $this -> smarty -> assign('locomotoras', $locomotoras);
+        $this -> smarty -> display ('templates/formularioVagon.tpl');
     }
-  
 }

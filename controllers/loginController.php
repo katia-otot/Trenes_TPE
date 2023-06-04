@@ -19,10 +19,7 @@ class loginController
         $this->view->showLogin();
     }
 
-    public function chequearLogin()
-    {
-        // echo "entre a la funcion";
-        //Chequear que los datos lleguen
+    public function chequearLogin() {
         if (!empty($_POST['user']) && !empty($_POST['password'])) {
             $user = $_POST['user'];
             $password = $_POST['password'];
@@ -30,8 +27,7 @@ class loginController
             $usuario = $this->model->getUsuarioByName($user);
 
             if ($usuario == null) {
-                echo "Acceso fallido";
-                Header("Location:" . BASE_URL . "Accediendo");
+                $this->view->showError();
                 die();
             }
 
@@ -43,29 +39,20 @@ class loginController
                 echo "Sesion iniciada como:" . $_SESSION["username"];
                 var_dump($_SESSION);
                 Header("Location:" . BASE_URL . "Ferrocarriles");
-                // Header("Location:". BASE_URL . "Vagones");
             } else {
                 $this->view->showError();
-                // echo "Acceso fallido";
-                // Header("Location:". BASE_URL . "Accediendo");
             }
         } else {
             $this->view->showError();
-
-            // echo "Acceso fallido";
-
-            // Header("Location:". BASE_URL . "login");
         }
     }
 
-    public function isLoggedIn()
-    {
+    public function isLoggedIn(){
         session_start();
         return isset($_SESSION["logueado"]);
     }
 
-    public function logout()
-    {
+    public function logout(){
         session_start();
         session_destroy();
         Header("Location:" . BASE_URL . "Ferrocarriles");

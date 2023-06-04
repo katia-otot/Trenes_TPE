@@ -4,32 +4,33 @@
     <div class="card" style="margin-bottom:1%">
         <h5 class="card-header">Vagon</h5>
         <div class="card-body">
-            <p class="card-text">{$numero}</p>
+            <p class="card-text">{$vagon -> nro_vagon}</p>
         </div>
     </div>
     <div class="card" style="margin-bottom:1%">
         <h5 class="card-header">Modelo</h5>
         <div class="card-body">
-            <p class="card-text">{$modelo}</p>
+            <p class="card-text">{$vagon -> modelo}</p>
         </div>
     </div>
     <div class="card"style="margin-bottom:1%">
         <h5 class="card-header">Capacidad máxima</h5>
         <div class="card-body">
-            <p class="card-text">{$cap_max}</p>
+            <p class="card-text">{$vagon -> capacidad_max}</p>
         </div>
     </div>
     <div class="card">
         <h5 class="card-header">Descripción</h5>
         <div class="card-body">
-            <p class="card-text">{$descripcion}</p>
+            <p class="card-text">{$vagon -> descripcion}</p>
+        </div>
+    </div>
+    <div class="card">
+        <h5 class="card-header">Locomotora</h5>
+        <div class="card-body">
+        <p class="card-text">{$vagon -> locomotora_modelo}</p>
         </div>
     </div>
 </div>
-{* <h1>Este es el vagon: </h1>
-<h2>{$vagon}</h2>
 
-<h1>Capacidad maxima: </h1>
-<h2>{$cap_max}</h2>
-<h1>{$modelo}</h1> *}
 {include file="footer.tpl"}
