@@ -19,7 +19,7 @@
     <input type="text" class="form-control"  name="lugar_fabricacion"  value="{$locomotora->lugar_fabricacion}"  required>
 </div>
 <div class="d-grid">
-    <div style="display:flex; justify-content: center">
+    <div class="d-flex justify-content-center">
 
         <button class="btn   text-uppercase fw-bold btn-outline-secondary" style=" width:80px;height:45px; margin-bottom:1%; align:center" type="submit">  Enviar</button>
     </div>

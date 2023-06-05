@@ -54,19 +54,22 @@ class loginController
     public function isLoggedIn()
     {
         session_start();
-
         return isset($_SESSION["logueado"]);
     }
     public function redirect()
     {
-        if (!isset($_SESSION["logueado"])) {
-
+        if (!$this->isLoggedIn()) {
+            echo "redirect logueado";
+            session_destroy();
             Header("Location:" . BASE_URL . "Acceder");
         }
+        // else{
+
+        // }
     }
     public function timeLogin()
     {
-        if (isset($_SESSION["logueado"]) && (time() - $_SESSION["tiempo"]) > 60) {
+        if (isset($_SESSION["logueado"]) && (time() - $_SESSION["tiempo"]) > 90) {
 
             $this->logout();
         } else {

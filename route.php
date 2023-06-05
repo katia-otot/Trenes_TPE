@@ -51,38 +51,72 @@ switch ($params[0]) {
     case 'Vagon':
         if (isset($params[1])) {
             $id_vagon = $params[1];
+            $controllerVagon->showVagon($id_vagon);
         } else {
             $id_vagon = null;
+            $controllerHome->error();
         }
-        $controllerVagon->showVagon($id_vagon);
         break;
 
     case 'BorrarVagon':
-        $id_vagon = $params[1];
-        $controllerVagon->deleteVagon($id_vagon);
+        if (isset($params[1])) {
+            $id_vagon = $params[1];
+            $controllerVagon->deleteVagon($id_vagon);
+        } else {
+            $id_vagon = null;
+            $controllerHome->error();
+        }
         break;
     case 'BorrarLocomotora':
-        $id_locomotora = $params[1];
-        $controllerLocomotora->deleteLocomotora($id_locomotora);
+        if (isset($params[1])) {
+
+            $id_locomotora = $params[1];
+            $controllerLocomotora->deleteLocomotora($id_locomotora);
+        } else {
+            $id_locomotora = null;
+            $controllerHome->error();
+        }
         break;
 
     case 'ConfirmarBorrarLocomotora':
-        $id_locomotora = $params[1];
-        $controllerLocomotora->confirmarDeleteLocomotora($id_locomotora);
+        if (isset($params[1])) {
+
+            $id_locomotora = $params[1];
+            $controllerLocomotora->confirmarDeleteLocomotora($id_locomotora);
+        } else {
+            $id_locomotora = null;
+            $controllerHome->error();
+        }
         break;
     case 'ConfirmarBorrarVagon':
-        $id_vagon = $params[1];
-        $controllerVagon->confirmarDeleteVagon($id_vagon);
+        //ARREGLAR ISSET PARAMS
+        if (isset($params[1])) {
+            $id_vagon = $params[1];
+            $controllerVagon->confirmarDeleteVagon($id_vagon);
+        } else {
+            $id_vagon = null;
+            $controllerHome->error();
+        }
         break;
 
     case 'formularioLocomotora':
-        $id_locomotora = $params[1];
-        $controllerLocomotora->showFormulario($id_locomotora);
+        if (isset($params[1])) {
+            $id_locomotora = $params[1];
+            $controllerLocomotora->showFormulario($id_locomotora);
+        } else {
+            $id_locomotora = null;
+            $controllerHome->error();
+        }
         break;
 
     case 'formularioVagon':
-        $id_vagon = $params[1];
-        $controllerVagon->showFormulario($id_vagon);
+        if (isset($params[1])) {
+            $id_vagon = $params[1];
+            $controllerVagon->showFormulario($id_vagon);
+        } else {
+            $id_vagon = null;
+            $controllerHome->error();
+        }
         break;
 
     case 'insertarOmodificarLocomotora':
@@ -105,6 +139,7 @@ switch ($params[0]) {
         break;
 
     default:
-        echo "404 no existe la página";
-                break;
+        $controllerHome->error();
+        // echo "404 no existe la página";
+        break;
 }

@@ -36,14 +36,19 @@ class vagonesController{
     }
 
     public function confirmarDeleteVagon($id_vagon){
+        $this->loginController->redirect();
+        $this->loginController->timeLogin();
         $this->view->confirmacionVagon($id_vagon);
     }
     public function deleteVagon($id_vagon) {
         $this->model->deleteVagon($id_vagon);
-
+        $this->loginController->redirect();
+        $this->loginController->timeLogin();
         $this->view->eliminado();
     }
     public function insertOrUpdateVagon($id_vagon, $nro_vagon, $tipo, $capacidad_max, $modelo, $descripcion, $locomotora_id){
+        $this->loginController->timeLogin();
+        $this->loginController->redirect();
         if($id_vagon == 0){
             $this->model->insertVagon($nro_vagon, $tipo, $capacidad_max, $modelo, $descripcion, $locomotora_id);
         }else{
@@ -55,8 +60,8 @@ class vagonesController{
  
     public function showFormulario($id_vagon){
         $logueado = $this->loginController->isLoggedIn();
-        $this->loginController->timeLogin();
         $this->loginController->redirect();
+        $this->loginController->timeLogin();
 
         $locomotoras = $this->locomotorasController->getLocomotoras();
 

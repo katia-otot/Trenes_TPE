@@ -30,15 +30,35 @@ class locomotorasController{
     }
     
     public function confirmarDeleteLocomotora($id_locomotora){
-        $this->view->confirmacionLocomotora($id_locomotora);
+        // $logueado = $this->loginController->isLoggedIn();
+        // if($logueado){
+
+            $this->loginController->redirect();
+            $this->loginController->timeLogin();
+            $this->view->confirmacionLocomotora($id_locomotora);
+        // }
+        // else{
+            
+        // }
     }
 
     function deleteLocomotora($id_locomotora){
-        $this->model->deleteLocomotora($id_locomotora);
-        $this->view->eliminado();
+        // $logueado = $this->loginController->isLoggedIn
+        // if($logueado){
+
+            $this->loginController->redirect();
+            $this->loginController->timeLogin();
+            $this->model->deleteLocomotora($id_locomotora);
+            $this->view->eliminado();
+        // }
+        // else{
+        
+        // }
     } 
 
     function insertOrUpdateLocomotora($id_locomotora, $modelo, $anio_fabricacion, $lugar_fabricacion){
+        $this->loginController->redirect();
+        $this->loginController->timeLogin();
         if($id_locomotora == 0){
             $this->model->insertLocomotora($modelo, $anio_fabricacion, $lugar_fabricacion);
         }else{
@@ -49,8 +69,8 @@ class locomotorasController{
 
     public function showFormulario($id_locomotora){
         $logueado = $this->loginController->isLoggedIn();
-        $this->loginController->timeLogin();
         $this->loginController->redirect();
+        $this->loginController->timeLogin();
 
         if ($id_locomotora == 0){
             $locomotora =(object) array("id_locomotora" => 0, "modelo" => "", "anio_fabricacion" => "", "lugar_fabricacion" => "");

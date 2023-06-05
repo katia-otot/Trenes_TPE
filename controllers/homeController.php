@@ -17,4 +17,8 @@ class HomeController{
         $this -> view -> showHome($logueado);
 
     }
+    public function error(){
+        $this -> view -> error();
+
+    }
 }
