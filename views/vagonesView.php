@@ -23,7 +23,7 @@ class vagonesView
     public function confirmacionVagon($id_vagon){
         $this -> smarty -> assign('BASE_URL', BASE_URL);
         $this -> smarty -> assign('estado', "eliminar");
-        $this -> smarty -> assign('registro',  "vagón");
+        $this -> smarty -> assign('registro',  "este vagón");
         $this -> smarty -> assign('si', "BorrarVagon/{$id_vagon}");
         $this -> smarty -> assign('no', "Vagones");
         $this -> smarty -> assign('vagones', "");
