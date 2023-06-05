@@ -18,7 +18,7 @@
 
 
             <div class="d-grid">
-              <button class="btn   text-uppercase fw-bold btn-outline-secondary" type="submit">Iniciar sesión</button>
+              <button class="btn text-uppercase fw-bold btn-outline-secondary" type="submit">Iniciar sesión</button>
             </div>
 
             <hr class="my-4">
