@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-05 00:54:45
+/* Smarty version 4.3.1, created on 2023-06-05 21:15:39
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\vagones.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_647d1635b68c86_07544727',
+  'unifunc' => 'content_647e345bb55ff6_90655183',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '12918525d5ce604f1b8b03cefd24e5042fcdbc6b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\vagones.tpl',
-      1 => 1685919266,
+      1 => 1685992471,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_647d1635b68c86_07544727 (Smarty_Internal_Template $_smarty_tpl) {
+function content_647e345bb55ff6_90655183 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -67,10 +67,9 @@ Vagon/<?php echo $_smarty_tpl->tpl_vars['vagon']->value->id_vagon;?>
 formularioVagon/<?php echo $_smarty_tpl->tpl_vars['vagon']->value->id_vagon;?>
 " class="btn btn-outline-secondary">
                                 Modificar</a>
-                            <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-BorrarVagon/<?php echo $_smarty_tpl->tpl_vars['vagon']->value->id_vagon;?>
+                            <a href="ConfirmarBorrarVagon/<?php echo $_smarty_tpl->tpl_vars['vagon']->value->id_vagon;?>
 " class="btn btn-outline-secondary"> Eliminar</a>
-                        </td>
+                                                    </td>
                     <?php }?>
                 </tr>
             <?php

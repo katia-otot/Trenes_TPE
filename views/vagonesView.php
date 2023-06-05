@@ -20,7 +20,15 @@ class vagonesView
         $this -> smarty -> display('templates/vagones.tpl');
     
     }
-
+    public function confirmacionVagon($id_vagon){
+        $this -> smarty -> assign('BASE_URL', BASE_URL);
+        $this -> smarty -> assign('estado', "eliminar");
+        $this -> smarty -> assign('registro',  "vagón");
+        $this -> smarty -> assign('si', "BorrarVagon/{$id_vagon}");
+        $this -> smarty -> assign('no', "Vagones");
+        $this -> smarty -> assign('vagones', "");
+        $this -> smarty -> display('templates/confirmacion.tpl');
+    }
     public function showVagon($vagon, $logueado){
         $this -> smarty -> assign('BASE_URL', BASE_URL);
         $this -> smarty -> assign('vagon', $vagon);

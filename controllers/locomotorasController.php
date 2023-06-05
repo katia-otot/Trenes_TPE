@@ -28,7 +28,7 @@ class locomotorasController{
     }
     
     public function confirmarDeleteLocomotora($id_locomotora){
-        $this->view->confirmacion($id_locomotora);
+        $this->view->confirmacionLocomotora($id_locomotora);
     }
 
     function deleteLocomotora($id_locomotora){

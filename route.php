@@ -70,6 +70,10 @@ switch ($params[0]) {
         $id_locomotora = $params[1];
         $controllerLocomotora->confirmarDeleteLocomotora($id_locomotora);
         break;
+    case 'ConfirmarBorrarVagon':
+        $id_vagon = $params[1];
+        $controllerVagon->confirmarDeleteVagon($id_vagon);
+        break;
 
     case 'formularioLocomotora':
         $id_locomotora = $params[1];

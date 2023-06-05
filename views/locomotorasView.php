@@ -9,7 +9,7 @@ class locomotorasView{
         $this -> smarty = new Smarty();
     }
 
-    public function confirmacion($id_locomotora){
+    public function confirmacionLocomotora($id_locomotora){
         $this -> smarty -> assign('BASE_URL', BASE_URL);
         $this -> smarty -> assign('estado', "eliminar");
         $this -> smarty -> assign('registro',  "locomotora");
