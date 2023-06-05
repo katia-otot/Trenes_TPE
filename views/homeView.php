@@ -15,6 +15,7 @@ class homeView{
         
     }
     public function error(){
+        $this -> smarty -> assign('BASE_URL', BASE_URL); 
         // $this -> smarty -> assign('BASE_URL', BASE_URL); 
         // $this -> smarty -> assign('logueado', $logueado);
         $this -> smarty -> display ('templates/notfound.tpl');
