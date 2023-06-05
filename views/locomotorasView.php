@@ -15,6 +15,7 @@ class locomotorasView{
         $this -> smarty -> assign('registro',  "locomotora");
         $this -> smarty -> assign('si', "BorrarLocomotora/{$id_locomotora}");
         $this -> smarty -> assign('no', "Locomotoras");
+        $this -> smarty -> assign('vagones', "Podrían eliminarse vagones asociados a la locomotora");
         $this -> smarty -> display('templates/confirmacion.tpl');
     }
     public function showLocomotoras($locomotoras, $logueado){

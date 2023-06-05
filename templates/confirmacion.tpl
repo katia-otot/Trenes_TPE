@@ -7,6 +7,7 @@
 
   <div class="alert alert-success" role="alert">
     <h4 class="alert-heading">¿Seguro quiere {$estado} esta {$registro}?</h4>
+    <p class="alert-heading" style="display:flex;justify-content: center">{$vagones}</p>
     <div style="margin-left:34%">
       <a href="{$BASE_URL}{$si}" class="mb-0 btn   text-uppercase fw-bold btn-outline-secondary" style="text-decoration:none; margin-right:15%">SI</a>
 
