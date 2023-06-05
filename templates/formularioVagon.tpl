@@ -39,10 +39,12 @@
     <input type="text" class="form-control"  name="descripcion"  value="{$vagon->descripcion}"  required>
 </div>
 <div class="input-group input-group-sm mb-3 "> *}
-<span class="input-group-text" id="inputGroup-sizing-sm">Descripción</span>
+<div class="input-group input-group-sm mb-3">
 
-<textarea class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="descripcion"  value="{$vagon->descripcion}"
-    required> </textarea>
+<span class="input-group-text" id="inputGroup-sizing-sm">Descripción</span>
+<textarea class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="descripcion"  
+    required>{$vagon->descripcion} </textarea>
+</div>
 </div>
 <div class="d-grid">
     <div style="display:flex; justify-content: center">

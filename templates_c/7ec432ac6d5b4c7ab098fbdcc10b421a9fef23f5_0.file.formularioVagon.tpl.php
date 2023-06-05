@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-05 02:17:03
+/* Smarty version 4.3.1, created on 2023-06-05 20:57:01
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\formularioVagon.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_647d297fd13d97_88218857',
+  'unifunc' => 'content_647e2ffda55618_20715435',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7ec432ac6d5b4c7ab098fbdcc10b421a9fef23f5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\formularioVagon.tpl',
-      1 => 1685919579,
+      1 => 1685991388,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_647d297fd13d97_88218857 (Smarty_Internal_Template $_smarty_tpl) {
+function content_647e2ffda55618_20715435 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -79,9 +79,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 "  required>
 </div>
 <div class="input-group input-group-sm mb-3">
-    <span class="input-group-text">Descripcion</span>
-    <input type="text" class="form-control"  name="descripcion"  value="<?php echo $_smarty_tpl->tpl_vars['vagon']->value->descripcion;?>
-"  required>
+
+<span class="input-group-text" id="inputGroup-sizing-sm">Descripción</span>
+<textarea class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="descripcion"  
+    required><?php echo $_smarty_tpl->tpl_vars['vagon']->value->descripcion;?>
+ </textarea>
+</div>
 </div>
 <div class="d-grid">
     <div style="display:flex; justify-content: center">
