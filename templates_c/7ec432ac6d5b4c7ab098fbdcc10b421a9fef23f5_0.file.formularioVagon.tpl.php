@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-05 00:55:22
+/* Smarty version 4.3.1, created on 2023-06-05 02:17:03
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\formularioVagon.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_647d165a7bac03_71050939',
+  'unifunc' => 'content_647d297fd13d97_88218857',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7ec432ac6d5b4c7ab098fbdcc10b421a9fef23f5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\formularioVagon.tpl',
-      1 => 1685919320,
+      1 => 1685919579,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_647d165a7bac03_71050939 (Smarty_Internal_Template $_smarty_tpl) {
+function content_647d297fd13d97_88218857 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
