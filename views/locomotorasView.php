@@ -4,16 +4,28 @@ require_once('./models/locomotorasModel.php');
 
 class locomotorasView{
     private $smarty;
-
+    
     function __construct(){
         $this -> smarty = new Smarty();
     }
 
+    public function confirmacion($id_locomotora){
+        $this -> smarty -> assign('BASE_URL', BASE_URL);
+        $this -> smarty -> assign('estado', "eliminar");
+        $this -> smarty -> assign('registro',  "locomotora");
+        $this -> smarty -> assign('si', "BorrarLocomotora/{$id_locomotora}");
+        $this -> smarty -> assign('no', "Locomotoras");
+        $this -> smarty -> display('templates/confirmacion.tpl');
+    }
     public function showLocomotoras($locomotoras, $logueado){
         $this -> smarty -> assign('BASE_URL', BASE_URL);
         $this -> smarty -> assign('locomotoras', $locomotoras);
         $this -> smarty -> assign('logueado', $logueado);
-
+        // $this -> smarty -> assign('estado', "eliminar");
+        // $this -> smarty -> assign('registro',  "locomotora");
+        // $this -> smarty -> assign('si', "BorrarLocomotora/{$locomotoras->id_locomotora}");
+        $this -> smarty -> assign('no', "Locomotoras");
+        
         $this -> smarty -> display('templates/locomotora.tpl');
     }
 
@@ -47,13 +59,5 @@ class locomotorasView{
         $this -> smarty -> display('templates/ABM.tpl');
     }
 
-    public function confirmacion($id_locomotora){
-        $this -> smarty -> assign('BASE_URL', BASE_URL);
-        $this -> smarty -> assign('estado', "eliminar");
-        $this -> smarty -> assign('registro',  "locomotora");
-        $this -> smarty -> assign('si', "BorrarLocomotora/{$id_locomotora}");
-        $this -> smarty -> assign('no', "Locomotoras");
-        $this -> smarty -> display('templates/confirmacion.tpl');
-    }
 }
 
