@@ -22,6 +22,8 @@ class locomotorasController{
 
     public function showLocomotoras() {
         $logueado = $this->loginController->isLoggedIn();
+        $this->loginController->timeLogin();
+      
 
         $locomotoras = $this->model->getLocomotoras();
         $this->view->showLocomotoras($locomotoras, $logueado);
@@ -47,6 +49,9 @@ class locomotorasController{
 
     public function showFormulario($id_locomotora){
         $logueado = $this->loginController->isLoggedIn();
+        $this->loginController->timeLogin();
+        $this->loginController->redirect();
+
         if ($id_locomotora == 0){
             $locomotora =(object) array("id_locomotora" => 0, "modelo" => "", "anio_fabricacion" => "", "lugar_fabricacion" => "");
     

@@ -18,7 +18,8 @@ class loginController
         $this->view->showLogin();
     }
 
-    public function chequearLogin() {
+    public function chequearLogin()
+    {
         if (!empty($_POST['user']) && !empty($_POST['password'])) {
             $user = $_POST['user'];
             $password = $_POST['password'];
@@ -37,7 +38,9 @@ class loginController
                 $_SESSION["username"] = $usuario->nombre;
                 // echo "Sesion iniciada como:" . $_SESSION["username"];
                 // var_dump($_SESSION);
-             
+                $_SESSION["tiempo"] = time();
+
+                // Header("Location:" . BASE_URL . "Vagones");
                 Header("Location:" . BASE_URL . "Ferrocarriles");
             } else {
                 $this->view->showError();
@@ -47,13 +50,32 @@ class loginController
         }
     }
 
-    public function isLoggedIn(){
+    // time()- $_SESSION['username']>60
+    public function isLoggedIn()
+    {
         session_start();
-  
+
         return isset($_SESSION["logueado"]);
     }
+    public function redirect()
+    {
+        if (!isset($_SESSION["logueado"])) {
 
-    public function logout(){
+            Header("Location:" . BASE_URL . "Acceder");
+        }
+    }
+    public function timeLogin()
+    {
+        if (isset($_SESSION["logueado"]) && (time() - $_SESSION["tiempo"]) > 60) {
+
+            $this->logout();
+        } else {
+            $_SESSION["tiempo"] = time();
+        }
+    }
+
+    public function logout()
+    {
         session_start();
         session_destroy();
         Header("Location:" . BASE_URL . "Ferrocarriles");

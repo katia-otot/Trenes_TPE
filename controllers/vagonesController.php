@@ -29,6 +29,8 @@ class vagonesController{
     public function showVagon($id_vagon) {
         $vagon = $this->model->getVagon($id_vagon);
         $logueado = $this->loginController->isLoggedIn();
+        $this->loginController->timeLogin();
+        // $this->loginController->redirect();
 
         $this->view->showVagon($vagon, $logueado);
     }
@@ -53,6 +55,9 @@ class vagonesController{
  
     public function showFormulario($id_vagon){
         $logueado = $this->loginController->isLoggedIn();
+        $this->loginController->timeLogin();
+        $this->loginController->redirect();
+
         $locomotoras = $this->locomotorasController->getLocomotoras();
 
         if ($id_vagon == 0){

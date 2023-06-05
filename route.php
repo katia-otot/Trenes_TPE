@@ -47,7 +47,7 @@ switch ($params[0]) {
         }
         $controllerVagon->showVagones($locomotora_id);
         break;
-        
+
     case 'Vagon':
         if (isset($params[1])) {
             $id_vagon = $params[1];
@@ -77,12 +77,12 @@ switch ($params[0]) {
 
     case 'formularioLocomotora':
         $id_locomotora = $params[1];
-        $controllerLocomotora -> showFormulario($id_locomotora);
+        $controllerLocomotora->showFormulario($id_locomotora);
         break;
 
     case 'formularioVagon':
         $id_vagon = $params[1];
-        $controllerVagon -> showFormulario($id_vagon);
+        $controllerVagon->showFormulario($id_vagon);
         break;
 
     case 'insertarOmodificarLocomotora':
@@ -90,7 +90,7 @@ switch ($params[0]) {
         $modelo = $_POST["modelo"];
         $anio_fabricacion = $_POST["anio_fabricacion"];
         $lugar_fabricacion = $_POST["lugar_fabricacion"];
-        $controllerLocomotora -> insertOrUpdateLocomotora($id_locomotora, $modelo, $anio_fabricacion, $lugar_fabricacion);
+        $controllerLocomotora->insertOrUpdateLocomotora($id_locomotora, $modelo, $anio_fabricacion, $lugar_fabricacion);
         break;
 
     case 'insertarOmodificarVagon':
@@ -101,10 +101,10 @@ switch ($params[0]) {
         $modelo = $_POST["modelo"];
         $descripcion = $_POST["descripcion"];
         $locomotora_id = $_POST["locomotora_id"];
-        $controllerVagon -> insertOrUpdateVagon($id_vagon, $nro_vagon, $tipo, $capacidad_max, $modelo, $descripcion, $locomotora_id);
+        $controllerVagon->insertOrUpdateVagon($id_vagon, $nro_vagon, $tipo, $capacidad_max, $modelo, $descripcion, $locomotora_id);
         break;
 
     default:
-        # code...
-        break;
+        echo "404 no existe la página";
+                break;
 }
