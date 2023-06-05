@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-06-04 04:45:59
+/* Smarty version 4.3.1, created on 2023-06-05 20:57:01
   from 'C:\xampp\htdocs\WEB_TPE\Trenes_TPE\templates\formularioVagon.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_647bfae7daea84_13499726',
+  'unifunc' => 'content_647e2ffda55618_20715435',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7ec432ac6d5b4c7ab098fbdcc10b421a9fef23f5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB_TPE\\Trenes_TPE\\templates\\formularioVagon.tpl',
-      1 => 1685846757,
+      1 => 1685991388,
       2 => 'file',
     ),
   ),
@@ -23,15 +23,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_647bfae7daea84_13499726 (Smarty_Internal_Template $_smarty_tpl) {
+function content_647e2ffda55618_20715435 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
+<h2> Ingrese un vagón</h2>
+
 <form action="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-insertOrUpdateVagon" method="POST">
+insertarOmodificarVagon" method="POST" style="margin-top:1%;>">
+<input type = "hidden" name="id_vagon" value="<?php echo $_smarty_tpl->tpl_vars['vagon']->value->id_vagon;?>
+">
 <div class="input-group input-group-sm mb-3">
     <span class="input-group-text">Locomotora</span>
-    <select name="locomotora_id"  required>
+    <select name="locomotora_id" class="form-select" aria-label="Default select example" required>
     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['locomotoras']->value, 'locomotora');
 $_smarty_tpl->tpl_vars['locomotora']->do_else = true;
@@ -54,20 +58,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </div>
 
 <div class="input-group input-group-sm mb-3">
-    <span class="input-group-text">Numero de Vagon</span>
-    <input type="text" class="form-control"  name="nro_vagon"  value="<?php echo $_smarty_tpl->tpl_vars['vagon']->value->nro_vagon;?>
-" required>
-</div>
-<div class="input-group input-group-sm mb-3">
     <span class="input-group-text">Tipo</span>
     <input type="text" class="form-control" name="tipo" value="<?php echo $_smarty_tpl->tpl_vars['vagon']->value->tipo;?>
 "/>
         
-</div>
-<div class="input-group input-group-sm mb-3">
-    <span class="input-group-text">Capacidad maxima</span>
-    <input type="text" class="form-control"  name="capacidad_max"  value="<?php echo $_smarty_tpl->tpl_vars['vagon']->value->capacidad_max;?>
-"  required>
 </div>
 <div class="input-group input-group-sm mb-3">
     <span class="input-group-text">Modelo</span>
@@ -75,9 +69,22 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 "  required>
 </div>
 <div class="input-group input-group-sm mb-3">
-    <span class="input-group-text">Descripcion</span>
-    <input type="text" class="form-control"  name="descripcion"  value="<?php echo $_smarty_tpl->tpl_vars['vagon']->value->descripcion;?>
+<span class="input-group-text">Numero de Vagon</span>
+<input type="number" class="form-control"  name="nro_vagon"  value="<?php echo $_smarty_tpl->tpl_vars['vagon']->value->nro_vagon;?>
+" required>
+</div>
+<div class="input-group input-group-sm mb-3">
+    <span class="input-group-text">Capacidad maxima</span>
+    <input type="number" class="form-control"  name="capacidad_max"  value="<?php echo $_smarty_tpl->tpl_vars['vagon']->value->capacidad_max;?>
 "  required>
+</div>
+<div class="input-group input-group-sm mb-3">
+
+<span class="input-group-text" id="inputGroup-sizing-sm">Descripción</span>
+<textarea class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="descripcion"  
+    required><?php echo $_smarty_tpl->tpl_vars['vagon']->value->descripcion;?>
+ </textarea>
+</div>
 </div>
 <div class="d-grid">
     <div style="display:flex; justify-content: center">
