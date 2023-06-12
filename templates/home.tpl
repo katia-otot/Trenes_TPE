@@ -7,7 +7,7 @@
   <div class="row row-cols-1 row-cols-md-3 g-4" style="padding-bottom:2%">
     <div class="col">
       <div class="card h-100">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/TGV_double_decker_DSC00132.jpg"
+        <img src="images/tren1.jpg"
           class="card-img-top" style="max-height: 280px; object-fit: cover;">
         <div class="card-body">
           <h5 class="card-title">Ferrocarril</h5>
@@ -18,7 +18,7 @@
     </div>
     <div class="col">
       <div class="card h-100">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/La_Porte%C3%B1a.jpg" class="card-img-top"
+        <img src="images/tren2.jpg" class="card-img-top"
         style="max-height: 280px; object-fit: cover;" >
         <div class="card-body">
           <h5 class="card-title">Líneas sobre carriles</h5>
@@ -29,7 +29,7 @@
     </div>
     <div class="col">
       <div class="card h-100">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Shinkansen_500_Kyoto_2005-03-19.jpg"
+        <img src="images/tren3.jpg"
           class="card-img-top" style="max-height: 280px; object-fit: cover;">
         <div class="card-body">
           <h5 class="card-title">Electrificación y dieselización</h5>
@@ -41,7 +41,7 @@
     <div class="col">
       <div class="card h-100">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/4/46/Brno%2C_Brno_M%C4%9Bsto%2C_historick%C3%A1_ko%C5%88sk%C3%A1_tramvaj.jpg"
+          src="images/tren4.jpg"
           class="card-img-top"  style="max-height: 280px; object-fit: cover;" >
         <div class="card-body">
           <h5 class="card-title">Gestación</h5>
@@ -52,7 +52,7 @@
     <div class="col">
       <div class="card h-100">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Tren_a_las_nubes_cruzando_Viaducto_la_Polvorilla.jpg"
+          src="images/tren5.jpg"
           class="card-img-top" style="max-height: 280px; object-fit: cover;">
         <div class="card-body">
           <h5 class="card-title">Nacionalización</h5>
@@ -63,7 +63,7 @@
     <div class="col">
       <div class="card h-100">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Naples%2C_Central_station%2C_gorgeous_long-distance_train.jpg"
+          src="images/tren6.jpg"
           class="card-img-top" style="max-height: 280px; object-fit: cover;">
         <div class="card-body">
           <h5 class="card-title">Trenes más veloces</h5>

@@ -22,7 +22,7 @@
             </div>
 
             <hr class="my-4">
-            <a href="Ferrocarriles" style="text-decoration:none; padding-left:40%">Ir al inicio</a>
+            <a href="{BASE_URL}Ferrocarriles" style="text-decoration:none; padding-left:40%">Ir al inicio</a>
           </form>
         </div>
       </div>

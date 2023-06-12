@@ -32,12 +32,9 @@ class loginController
             }
 
             if (password_verify($password, $usuario->clave)) {
-                // echo "Acceso exitoso";
                 session_start();
                 $_SESSION["logueado"] = true;
                 $_SESSION["username"] = $usuario->nombre;
-                // echo "Sesion iniciada como:" . $_SESSION["username"];
-                // var_dump($_SESSION);
                 $_SESSION["tiempo"] = time();
 
                 // Header("Location:" . BASE_URL . "Vagones");
@@ -50,23 +47,22 @@ class loginController
         }
     }
 
-    // time()- $_SESSION['username']>60
     public function isLoggedIn()
     {
         session_start();
         return isset($_SESSION["logueado"]);
     }
+
     public function redirect()
     {
-        if (!$this->isLoggedIn()) {
+        if (!isset($_SESSION["logueado"])) {
             echo "redirect logueado";
             session_destroy();
             Header("Location:" . BASE_URL . "Acceder");
         }
-        // else{
 
-        // }
     }
+    
     public function timeLogin()
     {
         if (isset($_SESSION["logueado"]) && (time() - $_SESSION["tiempo"]) > 90) {
