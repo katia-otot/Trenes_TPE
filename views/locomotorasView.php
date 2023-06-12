@@ -13,7 +13,7 @@ class locomotorasView{
         $this -> smarty -> assign('BASE_URL', BASE_URL);
         $this -> smarty -> assign('estado', "eliminar");
         $this -> smarty -> assign('registro',  "esta locomotora");
-        $this -> smarty -> assign('si', "BorrarLocomotora/{$id_locomotora}");
+        $this -> smarty -> assign('si', "borrarLocomotora/{$id_locomotora}");
         $this -> smarty -> assign('no', "Locomotoras");
         $this -> smarty -> assign('vagones', "Podrían eliminarse vagones asociados a la locomotora");
         $this -> smarty -> display('templates/confirmacion.tpl');
@@ -22,11 +22,7 @@ class locomotorasView{
         $this -> smarty -> assign('BASE_URL', BASE_URL);
         $this -> smarty -> assign('locomotoras', $locomotoras);
         $this -> smarty -> assign('logueado', $logueado);
-        // $this -> smarty -> assign('estado', "eliminar");
-        // $this -> smarty -> assign('registro',  "locomotora");
-        // $this -> smarty -> assign('si', "BorrarLocomotora/{$locomotoras->id_locomotora}");
         $this -> smarty -> assign('no', "Locomotoras");
-        
         $this -> smarty -> display('templates/locomotora.tpl');
     }
 

@@ -2,13 +2,13 @@
 require_once "./models/locomotorasModel.php";
 require_once "./controllers/loginController.php";
 require_once "./views/locomotorasView.php";
-require_once "./views/vagonesView.php";
+// require_once "./views/vagonesView.php";
 
 class locomotorasController{
     private $model;
     private $view;
     private $loginController;
-    private $vagonesView;
+    // private $vagonesView;
 
     function __construct() {
         $this->model = new locomotorasModel();
@@ -30,33 +30,27 @@ class locomotorasController{
     }
     
     public function confirmarDeleteLocomotora($id_locomotora){
-        // $logueado = $this->loginController->isLoggedIn();
-        // if($logueado){
+ 
 
             $this->loginController->redirect();
             $this->loginController->timeLogin();
             $this->view->confirmacionLocomotora($id_locomotora);
-        // }
-        // else{
-            
-        // }
+   
     }
 
     function deleteLocomotora($id_locomotora){
-        // $logueado = $this->loginController->isLoggedIn
-        // if($logueado){
+   
 
             $this->loginController->redirect();
             $this->loginController->timeLogin();
             $this->model->deleteLocomotora($id_locomotora);
             $this->view->eliminado();
-        // }
-        // else{
-        
-        // }
+
     } 
 
     function insertOrUpdateLocomotora($id_locomotora, $modelo, $anio_fabricacion, $lugar_fabricacion){
+        // $logueado = $this->loginController->isLoggedIn();
+        
         $this->loginController->redirect();
         $this->loginController->timeLogin();
         if($id_locomotora == 0){

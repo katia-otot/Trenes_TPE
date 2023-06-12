@@ -24,7 +24,7 @@ class vagonesView
         $this -> smarty -> assign('BASE_URL', BASE_URL);
         $this -> smarty -> assign('estado', "eliminar");
         $this -> smarty -> assign('registro',  "este vagón");
-        $this -> smarty -> assign('si', "BorrarVagon/{$id_vagon}");
+        $this -> smarty -> assign('si', "borrarVagon/{$id_vagon}");
         $this -> smarty -> assign('no', "Vagones");
         $this -> smarty -> assign('vagones', "");
         $this -> smarty -> display('templates/confirmacion.tpl');
@@ -58,5 +58,10 @@ class vagonesView
         $this->smarty->assign('dir', "Vagones");
         $this -> smarty -> assign('registro', "un vagón");
         $this->smarty->display('templates/ABM.tpl');
+    }
+    public function error(){
+        $this->smarty->assign('BASE_URL', BASE_URL);
+    
+        $this->smarty->display('templates/noVagones.tpl');
     }
 }

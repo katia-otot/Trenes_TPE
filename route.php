@@ -20,11 +20,21 @@ $params = explode('/', $action);
 
 switch ($params[0]) {
     case 'Ferrocarriles':
-        $controllerHome->home();
+        if (isset($params[1])) {
+            $controllerHome->error();
+        }
+        else{
+            $controllerHome->home();
+        }
         break;
 
     case 'Acceder':
+        if (isset($params[1])) {
+            $controllerHome->error();
+        }
+        else{
         $controllerLogin->showLogin();
+        }
         break;
 
     case 'Accediendo':
@@ -32,11 +42,19 @@ switch ($params[0]) {
         break;
 
     case 'Cerrar':
+        
         $controllerLogin->logout();
         break;
 
     case 'Locomotoras':
-        $controllerLocomotora->showLocomotoras();
+        if (isset($params[1])) {
+            $controllerHome->error();
+            
+        }
+        else{
+            $controllerLocomotora->showLocomotoras();
+
+        }
         break;
 
     case 'Vagones':
@@ -60,46 +78,52 @@ switch ($params[0]) {
         $controllerVagon->showVagon($id_vagon);
         break;
 
-    case 'BorrarVagon':
+    case 'borrarVagon':
         if (isset($params[1])) {
                 $id_vagon = $params[1];
+                $controllerVagon->deleteVagon($id_vagon);
                 
             } else {
                 $id_vagon = null;
                 $controllerHome->error();
             }
-            $controllerVagon->deleteVagon($id_vagon);
         break;
-    case 'BorrarLocomotora':
+    case 'borrarLocomotora':
+        // echo ($params[1]);
         if (isset($params[1])) {
             $id_locomotora = $params[1];
-        } else {
+            
+            $controllerLocomotora->deleteLocomotora($id_locomotora);
+        } 
+        else {
             $id_locomotora = null;
             $controllerHome->error();
         }
-        $controllerLocomotora->deleteLocomotora($id_locomotora);
         break;
 
-    case 'ConfirmarBorrarLocomotora':
+    case 'confirmarBorrarLocomotora':
+        // echo ($params[1]);
         if (isset($params[1])) {
             $id_locomotora = $params[1];
-        } else {
+            $controllerLocomotora->confirmarDeleteLocomotora($id_locomotora);
+        } 
+
+        else {
             $id_locomotora = null;
             $controllerHome->error();
         }
-        $controllerLocomotora->confirmarDeleteLocomotora($id_locomotora);
         break;
-    case 'ConfirmarBorrarVagon':
+    case 'confirmarBorrarVagon':
         //ARREGLAR ISSET PARAMS
         if (isset($params[1])) {
                 $id_vagon = $params[1];
                 
+                $controllerVagon->confirmarDeleteVagon($id_vagon);
             
         } else {
             $id_vagon = null;
             $controllerHome->error();
         }
-        $controllerVagon->confirmarDeleteVagon($id_vagon);
         break;
 
     case 'formularioLocomotora':

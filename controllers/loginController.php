@@ -1,8 +1,7 @@
 <?php
 require_once "./models/loginModel.php";
 require_once "./views/loginView.php";
-// require_once "./helpers/AuthHelper.php";
-// echo $hash;
+
 class loginController
 {
     private $model;
@@ -49,14 +48,20 @@ class loginController
 
     public function isLoggedIn()
     {
-        session_start();
+        //VER
+       if(session_status()==PHP_SESSION_NONE){
+
+           session_start();
+        } 
         return isset($_SESSION["logueado"]);
     }
-
+    
     public function redirect()
     {
+        $this->isLoggedIn();
+        // var_dump($_SESSION);
         if (!isset($_SESSION["logueado"])) {
-            echo "redirect logueado";
+            // var_dump($_SESSION);
             session_destroy();
             Header("Location:" . BASE_URL . "Acceder");
         }
@@ -65,7 +70,7 @@ class loginController
     
     public function timeLogin()
     {
-        if (isset($_SESSION["logueado"]) && (time() - $_SESSION["tiempo"]) > 90) {
+        if (isset($_SESSION["logueado"]) && (time() - $_SESSION["tiempo"]) > 60) {
 
             $this->logout();
         } else {

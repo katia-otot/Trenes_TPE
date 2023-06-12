@@ -19,7 +19,7 @@
 
 <div class="input-group input-group-sm mb-3">
     <span class="input-group-text">Tipo</span>
-    <input type="text" class="form-control" name="tipo" value="{$vagon->tipo}"/>
+    <input type="text" class="form-control" name="tipo" value="{$vagon->tipo}" required>
         
 </div>
 <div class="input-group input-group-sm mb-3">

@@ -27,7 +27,7 @@
                     {if $logueado}
                         <td><a href="{$BASE_URL}formularioVagon/{$vagon->id_vagon}" class="btn btn-outline-secondary">
                                 Modificar</a>
-                            <a href="ConfirmarBorrarVagon/{$vagon->id_vagon}" class="btn btn-outline-secondary"> Eliminar</a>
+                            <a href="confirmarBorrarVagon/{$vagon->id_vagon}" class="btn btn-outline-secondary"> Eliminar</a>
                             {* <a href="{$BASE_URL}BorrarVagon/{$vagon->id_vagon}" class="btn btn-outline-secondary"> Eliminar</a> *}
                         </td>
                     {/if}
