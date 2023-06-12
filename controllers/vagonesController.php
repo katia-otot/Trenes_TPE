@@ -37,21 +37,18 @@ class vagonesController
             $locomotora = $this->locomotorasModel->getLocomotora($locomotora_id);
             // var_dump($locomotora);
             // if(($locomotora->id_locomotora)){
-                if (!$locomotora) {
-                    $this->homeView->error();
-                }
-                else {
+            if (!$locomotora) {
+                $this->homeView->error();
+            } else {
                 $vagones = $this->model->getVagonesDeLocomotora($locomotora_id);
-                
-                // var_dump($vagones);
-                if (empty($vagones)){
-                    $this->view->error();
 
-                }
-                else {
+                // var_dump($vagones);
+                if (empty($vagones)) {
+                    $this->view->error();
+                } else {
                     $this->view->showVagones($vagones, $logueado);
                 }
-            } 
+            }
         }
     }
 
@@ -81,9 +78,19 @@ class vagonesController
     }
     public function deleteVagon($id_vagon)
     {
-        $this->model->deleteVagon($id_vagon);
-        $this->loginController->redirect();
+        $logueado = $this->loginController->isLoggedIn();
+
         $this->loginController->timeLogin();
+        if($logueado){
+            
+            $this->model->deleteVagon($id_vagon);
+        }
+        else{
+            $this->loginController->redirect();
+            // $this->homeView->error();
+
+        }
+        
         $this->view->eliminado();
     }
     public function insertOrUpdateVagon($id_vagon, $nro_vagon, $tipo, $capacidad_max, $modelo, $descripcion, $locomotora_id)

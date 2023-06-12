@@ -22,8 +22,7 @@ switch ($params[0]) {
     case 'Ferrocarriles':
         if (isset($params[1])) {
             $controllerHome->error();
-        }
-        else{
+        } else {
             $controllerHome->home();
         }
         break;
@@ -31,9 +30,8 @@ switch ($params[0]) {
     case 'Acceder':
         if (isset($params[1])) {
             $controllerHome->error();
-        }
-        else{
-        $controllerLogin->showLogin();
+        } else {
+            $controllerLogin->showLogin();
         }
         break;
 
@@ -42,18 +40,15 @@ switch ($params[0]) {
         break;
 
     case 'Cerrar':
-        
+
         $controllerLogin->logout();
         break;
 
     case 'Locomotoras':
         if (isset($params[1])) {
             $controllerHome->error();
-            
-        }
-        else{
+        } else {
             $controllerLocomotora->showLocomotoras();
-
         }
         break;
 
@@ -80,22 +75,20 @@ switch ($params[0]) {
 
     case 'borrarVagon':
         if (isset($params[1])) {
-                $id_vagon = $params[1];
-                $controllerVagon->deleteVagon($id_vagon);
-                
-            } else {
-                $id_vagon = null;
-                $controllerHome->error();
-            }
+            $id_vagon = $params[1];
+            $controllerVagon->deleteVagon($id_vagon);
+        } else {
+            $id_vagon = null;
+            $controllerHome->error();
+        }
         break;
     case 'borrarLocomotora':
         // echo ($params[1]);
         if (isset($params[1])) {
             $id_locomotora = $params[1];
-            
+
             $controllerLocomotora->deleteLocomotora($id_locomotora);
-        } 
-        else {
+        } else {
             $id_locomotora = null;
             $controllerHome->error();
         }
@@ -106,9 +99,7 @@ switch ($params[0]) {
         if (isset($params[1])) {
             $id_locomotora = $params[1];
             $controllerLocomotora->confirmarDeleteLocomotora($id_locomotora);
-        } 
-
-        else {
+        } else {
             $id_locomotora = null;
             $controllerHome->error();
         }
@@ -116,10 +107,9 @@ switch ($params[0]) {
     case 'confirmarBorrarVagon':
         //ARREGLAR ISSET PARAMS
         if (isset($params[1])) {
-                $id_vagon = $params[1];
-                
-                $controllerVagon->confirmarDeleteVagon($id_vagon);
-            
+            $id_vagon = $params[1];
+
+            $controllerVagon->confirmarDeleteVagon($id_vagon);
         } else {
             $id_vagon = null;
             $controllerHome->error();
@@ -128,24 +118,22 @@ switch ($params[0]) {
 
     case 'formularioLocomotora':
         if (isset($params[1])) {
-                $id_locomotora = $params[1];
-                
-            } else {
-                $id_locomotora = null;
-                $controllerHome->error();
-            }
-            $controllerLocomotora->showFormulario($id_locomotora);
+            $id_locomotora = $params[1];
+        } else {
+            $id_locomotora = null;
+            $controllerHome->error();
+        }
+        $controllerLocomotora->showFormulario($id_locomotora);
         break;
 
     case 'formularioVagon':
         if (isset($params[1])) {
-                $id_vagon = $params[1];
-                
-            } else {
-                $id_vagon = null;
-                $controllerHome->error();
-            }
-            $controllerVagon->showFormulario($id_vagon);
+            $id_vagon = $params[1];
+        } else {
+            $id_vagon = null;
+            $controllerHome->error();
+        }
+        $controllerVagon->showFormulario($id_vagon);
         break;
 
     case 'insertarOmodificarLocomotora':
