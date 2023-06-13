@@ -73,6 +73,8 @@ class loginController
         if (isset($_SESSION["logueado"]) && (time() - $_SESSION["tiempo"]) > 60) {
 
             $this->logout();
+            Header("Location:" . BASE_URL . "Acceder");
+
         } else {
             $_SESSION["tiempo"] = time();
         }
