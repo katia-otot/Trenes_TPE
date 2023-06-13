@@ -81,7 +81,6 @@ class loginController
     public function logout()
     {
         session_start();
-        session_unset();
         session_destroy();
         Header("Location:" . BASE_URL . "Ferrocarriles");
     }
