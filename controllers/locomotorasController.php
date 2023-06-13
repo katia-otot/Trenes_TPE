@@ -17,7 +17,7 @@ class locomotorasController
         $this->view = new locomotorasView();
         $this->loginController = new loginController();
     }
-
+///VER ESTO, no es necesario
     public function getLocomotoras()
     {
         return $this->model->getLocomotoras();
