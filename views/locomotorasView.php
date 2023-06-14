@@ -18,6 +18,7 @@ class locomotorasView{
         $this -> smarty -> assign('vagones', "Podrían eliminarse vagones asociados a la locomotora");
         $this -> smarty -> display('templates/confirmacion.tpl');
     }
+    
     public function showLocomotoras($locomotoras, $logueado){
         $this -> smarty -> assign('BASE_URL', BASE_URL);
         $this -> smarty -> assign('locomotoras', $locomotoras);
@@ -30,7 +31,6 @@ class locomotorasView{
         $this -> smarty -> assign('BASE_URL', BASE_URL);
         $this -> smarty -> assign('logueado', $logueado);
         $this -> smarty -> display ('templates/home.tpl');
-        
     }
 
     public function showFormulario($locomotora, $logueado){

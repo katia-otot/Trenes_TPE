@@ -11,15 +11,12 @@ class homeView{
     public function showHome($logueado){
         $this -> smarty -> assign('BASE_URL', BASE_URL); 
         $this -> smarty -> assign('logueado', $logueado);
-        $this -> smarty -> display ('templates/home.tpl');
-        
+        $this -> smarty -> display ('templates/home.tpl') 
     }
+    
     public function error(){
         $this -> smarty -> assign('BASE_URL', BASE_URL); 
-        // $this -> smarty -> assign('BASE_URL', BASE_URL); 
-        // $this -> smarty -> assign('logueado', $logueado);
         $this -> smarty -> display ('templates/notfound.tpl');
-        
     }
 }
 

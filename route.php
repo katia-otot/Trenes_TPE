@@ -40,7 +40,6 @@ switch ($params[0]) {
         break;
 
     case 'Cerrar':
-
         $controllerLogin->logout();
         break;
 
@@ -68,7 +67,6 @@ switch ($params[0]) {
             $id_vagon = $params[1];
         } else {
             $id_vagon = null;
-            // $controllerHome->error();
         }
         $controllerVagon->showVagon($id_vagon);
         break;
@@ -82,11 +80,10 @@ switch ($params[0]) {
             $controllerHome->error();
         }
         break;
+
     case 'borrarLocomotora':
-        // echo ($params[1]);
         if (isset($params[1])) {
             $id_locomotora = $params[1];
-
             $controllerLocomotora->deleteLocomotora($id_locomotora);
         } else {
             $id_locomotora = null;
@@ -95,7 +92,6 @@ switch ($params[0]) {
         break;
 
     case 'confirmarBorrarLocomotora':
-        // echo ($params[1]);
         if (isset($params[1])) {
             $id_locomotora = $params[1];
             $controllerLocomotora->confirmarDeleteLocomotora($id_locomotora);
@@ -104,11 +100,10 @@ switch ($params[0]) {
             $controllerHome->error();
         }
         break;
+
     case 'confirmarBorrarVagon':
-        //ARREGLAR ISSET PARAMS
         if (isset($params[1])) {
             $id_vagon = $params[1];
-
             $controllerVagon->confirmarDeleteVagon($id_vagon);
         } else {
             $id_vagon = null;
@@ -157,6 +152,5 @@ switch ($params[0]) {
 
     default:
         $controllerHome->error();
-        // echo "404 no existe la página";
         break;
 }

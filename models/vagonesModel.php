@@ -11,13 +11,14 @@ class vagonesModel{
         $sentencia -> execute();
         $vagon = $sentencia -> fetchAll(PDO::FETCH_OBJ);
 
-       return $vagon;
+        return $vagon;
     }
     
     public function getVagonesDeLocomotora ($locomotora_id){
         $sentencia = $this -> db -> prepare("SELECT vagon.* , locomotora.modelo as locomotora_modelo FROM vagon JOIN locomotora ON vagon.locomotora_id = locomotora.id_locomotora WHERE locomotora_id = ?");
         $sentencia -> execute([$locomotora_id]);
         $vagon = $sentencia -> fetchAll(PDO::FETCH_OBJ);
+        
         return $vagon;
     }
     

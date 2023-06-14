@@ -6,20 +6,18 @@ class vagonesView
 {
     private $smarty;
 
-    function __construct()
-    {
+    function __construct(){
         $this->smarty = new Smarty();
     }
 
     public function showVagones($vagones, $logueado){
         $this -> smarty -> assign('BASE_URL', BASE_URL);
         $this -> smarty -> assign('vagones', $vagones);
-
-
         $this -> smarty -> assign('logueado', $logueado);
         $this -> smarty -> display('templates/vagones.tpl');
     
     }
+
     public function confirmacionVagon($id_vagon){
         $this -> smarty -> assign('BASE_URL', BASE_URL);
         $this -> smarty -> assign('estado', "eliminar");
@@ -29,6 +27,7 @@ class vagonesView
         $this -> smarty -> assign('vagones', "");
         $this -> smarty -> display('templates/confirmacion.tpl');
     }
+
     public function showVagon($vagon, $logueado){
         $this -> smarty -> assign('BASE_URL', BASE_URL);
         $this -> smarty -> assign('vagon', $vagon);
@@ -59,6 +58,7 @@ class vagonesView
         $this -> smarty -> assign('registro', "un vagón");
         $this->smarty->display('templates/ABM.tpl');
     }
+    
     public function error(){
         $this->smarty->assign('BASE_URL', BASE_URL);
     

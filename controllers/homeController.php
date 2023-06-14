@@ -12,13 +12,11 @@ class HomeController{
 
     public function home(){
         $logueado = $this -> loginController -> isLoggedIn();
-        // $this->loginController->timeLogin();
-     
         $this -> view -> showHome($logueado);
 
     }
+    
     public function error(){
         $this -> view -> error();
-
     }
 }

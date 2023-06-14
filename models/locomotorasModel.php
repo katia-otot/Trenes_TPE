@@ -13,6 +13,7 @@ class locomotorasModel{
 
         return $locomotoras;
     }
+    
     public function getLocomotora($id_locomotora){
         $sentencia = $this -> db -> prepare("SELECT * FROM  locomotora WHERE id_locomotora=?");
         $sentencia -> execute([$id_locomotora]);
