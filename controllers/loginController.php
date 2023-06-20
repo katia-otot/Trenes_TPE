@@ -2,24 +2,27 @@
 require_once "./models/loginModel.php";
 require_once "./views/loginView.php";
 
-class loginController{
+class loginController
+{
     private $model;
     private $view;
 
-    function __construct(){
+    function __construct()
+    {
         $this->model = new loginModel();
         $this->view = new loginView();
     }
 
-    public function showLogin(){
+    public function showLogin()
+    {
         $this->view->showLogin();
     }
 
-    public function chequearLogin(){
+    public function chequearLogin()
+    {
         if (!empty($_POST['user']) && !empty($_POST['password'])) {
             $user = $_POST['user'];
             $password = $_POST['password'];
-
             $usuario = $this->model->getUsuarioByName($user);
 
             if ($usuario == null) {
@@ -32,7 +35,6 @@ class loginController{
                 $_SESSION["logueado"] = true;
                 $_SESSION["username"] = $usuario->nombre;
                 $_SESSION["tiempo"] = time();
-
                 Header("Location:" . BASE_URL . "Ferrocarriles");
             } else {
                 $this->view->showError();
@@ -42,23 +44,25 @@ class loginController{
         }
     }
 
-    public function isLoggedIn(){
-       if(session_status()==PHP_SESSION_NONE){
-           session_start();
-        } 
+    public function isLoggedIn()
+    {
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
         return isset($_SESSION["logueado"]);
     }
-    
-    public function redirect(){
+
+    public function redirect()
+    {
         $this->isLoggedIn();
         if (!isset($_SESSION["logueado"])) {
             session_destroy();
             Header("Location:" . BASE_URL . "Acceder");
         }
-
     }
-    
-    public function timeLogin(){
+
+    public function timeLogin()
+    {
         if (isset($_SESSION["logueado"]) && (time() - $_SESSION["tiempo"]) > 60) {
             $this->logout();
             Header("Location:" . BASE_URL . "Acceder");
@@ -67,7 +71,8 @@ class loginController{
         }
     }
 
-    public function logout(){
+    public function logout()
+    {
         session_start();
         session_destroy();
         Header("Location:" . BASE_URL . "Ferrocarriles");

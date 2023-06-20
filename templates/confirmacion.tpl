@@ -9,10 +9,10 @@
     <h4 class="alert-heading">¿Seguro quiere {$estado} {$registro}?</h4>
     <p class="alert-heading" style="display:flex;justify-content: center">{$vagones}</p>
     <div style="margin-left:34%">
-      <a href="{$BASE_URL}{$si}" class="mb-0 btn   text-uppercase fw-bold btn-outline-secondary" style="text-decoration:none; margin-right:15%">SI</a>
-
-      <a href="{$BASE_URL}{$no}" class="mb-0 btn   text-uppercase fw-bold btn-outline-secondary" style="text-decoration:none">NO</a>
-
+      <a href="{$BASE_URL}{$si}" class="mb-0 btn   text-uppercase fw-bold btn-outline-secondary"
+        style="text-decoration:none; margin-right:15%">SI</a>
+      <a href="{$BASE_URL}{$no}" class="mb-0 btn   text-uppercase fw-bold btn-outline-secondary"
+        style="text-decoration:none">NO</a>
     </div>
   </div>
 </div>

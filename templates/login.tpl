@@ -15,12 +15,9 @@
                 required>
               <label for="floatingPassword">Contraseña</label>
             </div>
-
-
             <div class="d-grid">
               <button class="btn text-uppercase fw-bold btn-outline-secondary" type="submit">Iniciar sesión</button>
             </div>
-
             <hr class="my-4">
             <a href="{BASE_URL}Ferrocarriles" style="text-decoration:none; padding-left:40%">Ir al inicio</a>
           </form>
@@ -29,4 +26,4 @@
     </div>
   </div>
 </div>
-{include file="footer.tpl"} 
+{include file="footer.tpl"}

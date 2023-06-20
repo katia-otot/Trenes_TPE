@@ -3,47 +3,50 @@ require_once "./models/locomotorasModel.php";
 require_once "./controllers/loginController.php";
 require_once "./views/locomotorasView.php";
 
-class locomotorasController{
+class locomotorasController
+{
     private $model;
     private $view;
     private $loginController;
 
-    function __construct(){
+    function __construct()
+    {
         $this->model = new locomotorasModel();
         $this->view = new locomotorasView();
         $this->loginController = new loginController();
     }
 
-    public function showLocomotoras(){
+    public function showLocomotoras()
+    {
         $logueado = $this->loginController->isLoggedIn();
         $this->loginController->timeLogin();
-
         $locomotoras = $this->model->getLocomotoras();
         $this->view->showLocomotoras($locomotoras, $logueado);
     }
 
-    public function confirmarDeleteLocomotora($id_locomotora){
+    public function confirmarDeleteLocomotora($id_locomotora)
+    {
         $this->loginController->redirect();
         $this->loginController->timeLogin();
         $this->view->confirmacionLocomotora($id_locomotora);
     }
 
-    function deleteLocomotora($id_locomotora){
+    function deleteLocomotora($id_locomotora)
+    {
         $logueado = $this->loginController->isLoggedIn();
-
         $this->loginController->timeLogin();
-        if ($logueado){
+        if ($logueado) {
             $this->model->deleteLocomotora($id_locomotora);
-        } else{
+        } else {
             $this->loginController->redirect();
         }
         $this->view->eliminado();
     }
 
-    function insertOrUpdateLocomotora($id_locomotora, $modelo, $anio_fabricacion, $lugar_fabricacion) {
+    function insertOrUpdateLocomotora($id_locomotora, $modelo, $anio_fabricacion, $lugar_fabricacion)
+    {
         $this->loginController->redirect();
         $this->loginController->timeLogin();
-
         if ($id_locomotora == 0) {
             $this->model->insertLocomotora($modelo, $anio_fabricacion, $lugar_fabricacion);
         } else {
@@ -52,7 +55,8 @@ class locomotorasController{
         $this->view->agregado();
     }
 
-    public function showFormulario($id_locomotora){
+    public function showFormulario($id_locomotora)
+    {
         $logueado = $this->loginController->isLoggedIn();
         $this->loginController->redirect();
         $this->loginController->timeLogin();

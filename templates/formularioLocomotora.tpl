@@ -27,7 +27,5 @@
                 style=" width:80px;height:45px; margin-bottom:1%; align:center" type="submit"> Enviar</button>
         </div>
     </div>
-
 </form>
-
 {include file="footer.tpl"}

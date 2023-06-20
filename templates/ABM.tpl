@@ -10,8 +10,8 @@
     <p style="text-align:center;">Vuelva para verlo</p>
     <hr>
     <div style="margin-left:43%">
-    <a href="{$BASE_URL}{$dir}" class="mb-0 btn   text-uppercase fw-bold btn-outline-secondary"
-      style="text-decoration:none;">Volver</a>
-  </div>
+      <a href="{$BASE_URL}{$dir}" class="mb-0 btn   text-uppercase fw-bold btn-outline-secondary"
+        style="text-decoration:none;">Volver</a>
+    </div>
   </div>
 </div>

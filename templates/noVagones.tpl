@@ -5,7 +5,6 @@ width: 100vw;
 height: 100vh;
 justify-content: center;
 align-items: center;">
-
     <div class="alert alert-success d-flex align-items-center" role="alert">
         <div>
             <h4 class="alert-heading">No hay vagones asociados a la locomotora</h4>

@@ -1,22 +1,24 @@
 <?php
 require_once "./views/homeView.php";
 
-class HomeController{
+class HomeController
+{
     private $view;
     private $loginController;
-
-    function __construct(){
-        $this -> view = new homeView();
-        $this -> loginController = new loginController();
+    function __construct()
+    {
+        $this->view = new homeView();
+        $this->loginController = new loginController();
     }
 
-    public function home(){
-        $logueado = $this -> loginController -> isLoggedIn();
-        $this -> view -> showHome($logueado);
-
+    public function home()
+    {
+        $logueado = $this->loginController->isLoggedIn();
+        $this->view->showHome($logueado);
     }
-    
-    public function error(){
-        $this -> view -> error();
+
+    public function error()
+    {
+        $this->view->error();
     }
 }

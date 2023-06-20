@@ -6,12 +6,12 @@ height: 100vh;
 justify-content: center;
 align-items: center;">
 
-<div class="alert alert-danger d-flex align-items-center" role="alert" >
-  <div >
-  <h4 class="alert-heading" >Usuario y/o contraseña incorrecto</h4>
-  <p style="text-align:center;">Intentalo de nuevo.</p>
-  <hr>
-  <a href="{$BASE_URL}Acceder" class="mb-0" style="padding-left:43%">Volver</a>
+  <div class="alert alert-danger d-flex align-items-center" role="alert">
+    <div>
+      <h4 class="alert-heading">Usuario y/o contraseña incorrecto</h4>
+      <p style="text-align:center;">Intentalo de nuevo.</p>
+      <hr>
+      <a href="{$BASE_URL}Acceder" class="mb-0" style="padding-left:43%">Volver</a>
+    </div>
   </div>
-</div>
 </div>

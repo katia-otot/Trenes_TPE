@@ -13,7 +13,7 @@
             <p class="card-text">{$vagon -> modelo}</p>
         </div>
     </div>
-    <div class="card"style="margin-bottom:1%">
+    <div class="card" style="margin-bottom:1%">
         <h5 class="card-header">Capacidad máxima</h5>
         <div class="card-body">
             <p class="card-text">{$vagon -> capacidad_max}</p>
@@ -28,7 +28,7 @@
     <div class="card">
         <h5 class="card-header">Locomotora</h5>
         <div class="card-body">
-        <p class="card-text">{$vagon -> locomotora_modelo}</p>
+            <p class="card-text">{$vagon -> locomotora_modelo}</p>
         </div>
     </div>
 </div>

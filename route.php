@@ -53,7 +53,6 @@ switch ($params[0]) {
 
     case 'Vagones':
         if (isset($params[1])) {
-
             $locomotora_id = $params[1];
         } else {
             $locomotora_id = null;
@@ -63,7 +62,6 @@ switch ($params[0]) {
 
     case 'Vagon':
         if (isset($params[1])) {
-
             $id_vagon = $params[1];
         } else {
             $id_vagon = null;

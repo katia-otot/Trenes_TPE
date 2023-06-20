@@ -2,21 +2,25 @@
 require_once('libs/smarty/Smarty.class.php');
 require_once('controllers/loginController.php');
 
-class loginView{
+class loginView
+{
     private $smarty;
 
-    function __construct(){
-        $this -> smarty = new Smarty();
+    function __construct()
+    {
+        $this->smarty = new Smarty();
     }
 
-    public function showLogin(){
-        $this -> smarty -> assign('BASE_URL', BASE_URL);
-        $this -> smarty -> assign('logueado', isset($_SESSION));
-        $this -> smarty -> display ('templates/login.tpl');
+    public function showLogin()
+    {
+        $this->smarty->assign('BASE_URL', BASE_URL);
+        $this->smarty->assign('logueado', isset($_SESSION));
+        $this->smarty->display('templates/login.tpl');
     }
-    public function showError(){
-        $this -> smarty -> assign('BASE_URL', BASE_URL);
-        $this -> smarty -> assign('logueado', isset($_SESSION));
-        $this -> smarty -> display ('templates/error.tpl');
+    public function showError()
+    {
+        $this->smarty->assign('BASE_URL', BASE_URL);
+        $this->smarty->assign('logueado', isset($_SESSION));
+        $this->smarty->display('templates/error.tpl');
     }
 }

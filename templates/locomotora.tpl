@@ -27,7 +27,7 @@
                         <td><a href="formularioLocomotora/{$locomotora->id_locomotora}" class="btn btn-outline-secondary"
                                 name="btnModificarLocomotora"> Modificar</a>
                             <a href="confirmarBorrarLocomotora/{$locomotora->id_locomotora}" class="btn btn-outline-secondary"
-                                 name="btnEliminarLocomotora">Eliminar</a>
+                                name="btnEliminarLocomotora">Eliminar</a>
                         </td>
                     {/if}
                 </tr>
@@ -35,20 +35,12 @@
             {/foreach}
         </tbody>
     </table>
-
-    <!-- Button trigger modal -->
-
-
-    <!-- Modal -->
-  
 </section>
 <section style="margin-bottom:1%;">
     <div style="display: flex;
 justify-content: center;">
         {if $logueado }
             <a href='formularioLocomotora/0' class="btn btn-outline-secondary" name="btnModificarLocomotora">Agregar</a>
-            {* <input class="btn btn-outline-secondary" type="submit" value="Agregar"
-        onclick="window.location='formularioLocomotora/0';" /> *}
         {/if}
     </div>
 </section>

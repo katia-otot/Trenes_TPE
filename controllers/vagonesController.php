@@ -6,14 +6,16 @@ require_once "./views/homeView.php";
 require_once "./models/locomotorasModel.php";
 
 
-class vagonesController{
+class vagonesController
+{
     private $model;
     private $view;
     private $loginController;
     private $homeView;
     private $locomotorasModel;
 
-    function __construct(){
+    function __construct()
+    {
         $this->model = new vagonesModel();
         $this->view = new vagonesView();
         $this->loginController = new loginController();
@@ -21,9 +23,9 @@ class vagonesController{
         $this->locomotorasModel = new locomotorasModel();
     }
 
-    public function showVagones($locomotora_id){
+    public function showVagones($locomotora_id)
+    {
         $logueado = $this->loginController->isLoggedIn();
-
         if ($locomotora_id == NULL) {
             $vagones = $this->model->getVagones();
             $this->view->showVagones($vagones, $logueado);
@@ -42,11 +44,11 @@ class vagonesController{
         }
     }
 
-    public function showVagon($id_vagon){
+    public function showVagon($id_vagon)
+    {
         $vagon = $this->model->getVagon($id_vagon);
         $logueado = $this->loginController->isLoggedIn();
         if (!isset($vagon->id_vagon) || empty($vagon->id_vagon)) {
-
             $this->homeView->error();
         } else {
             $this->view->showVagon($vagon, $logueado);
@@ -54,27 +56,27 @@ class vagonesController{
         $this->loginController->timeLogin();
     }
 
-    public function confirmarDeleteVagon($id_vagon){
+    public function confirmarDeleteVagon($id_vagon)
+    {
         $this->loginController->redirect();
         $this->loginController->timeLogin();
         $this->view->confirmacionVagon($id_vagon);
     }
 
-    public function deleteVagon($id_vagon){
+    public function deleteVagon($id_vagon)
+    {
         $logueado = $this->loginController->isLoggedIn();
-
         $this->loginController->timeLogin();
-        if($logueado){
-            
+        if ($logueado) {
             $this->model->deleteVagon($id_vagon);
-        }
-        else{
+        } else {
             $this->loginController->redirect();
-        }  
+        }
         $this->view->eliminado();
     }
 
-    public function insertOrUpdateVagon($id_vagon, $nro_vagon, $tipo, $capacidad_max, $modelo, $descripcion, $locomotora_id){
+    public function insertOrUpdateVagon($id_vagon, $nro_vagon, $tipo, $capacidad_max, $modelo, $descripcion, $locomotora_id)
+    {
         $this->loginController->timeLogin();
         $this->loginController->redirect();
         if ($id_vagon == 0) {
@@ -82,15 +84,14 @@ class vagonesController{
         } else {
             $this->model->updateVagon($id_vagon, $nro_vagon, $tipo, $capacidad_max, $modelo, $descripcion, $locomotora_id);
         }
-
         $this->view->agregado();
     }
 
-    public function showFormulario($id_vagon){
+    public function showFormulario($id_vagon)
+    {
         $logueado = $this->loginController->isLoggedIn();
         $this->loginController->redirect();
         $this->loginController->timeLogin();
-
         $locomotoras = $this->locomotorasModel->getLocomotoras();
         if ($id_vagon == 0) {
             $vagon = (object) array("id_vagon" => 0, "nro_vagon" => "", "tipo" => "", "capacidad_max" => "", "modelo" => "", "descripcion" => "", "locomotora_id" => "");
