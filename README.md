@@ -1,3 +1,3 @@
 # Trenes_TPE
-Usuario: Admin ,
+Usuario: Admin 
 Contraseña: 1234
